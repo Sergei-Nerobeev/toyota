@@ -1,7 +1,7 @@
 package hu.nero.toyota.abstractcar;
 
 public abstract class Car implements SpareWheelChangeable {
-  private int spareWheelRadius;
+  private Wheel spareWheel;
   private boolean isFlatWheel;
   private String color;
   private int maxSpeed;
@@ -15,8 +15,8 @@ public abstract class Car implements SpareWheelChangeable {
   private Light light;
 
   public Car(
+      Wheel spareWheel,
       boolean isFlatWheel,
-      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -28,7 +28,7 @@ public abstract class Car implements SpareWheelChangeable {
       ElectricalSystem electricalSystem,
       Light light) {
     this.isFlatWheel = isFlatWheel;
-    this.spareWheelRadius = spareWheelRadius;
+    this.spareWheel = spareWheel;
     this.color = color;
     this.maxSpeed = maxSpeed;
     this.transmissionType = transmissionType;
@@ -56,9 +56,13 @@ public abstract class Car implements SpareWheelChangeable {
     }
   }
 
+  public Wheel getSpareWheel() {
+    return spareWheel;
+  }
+
   @Override
-  public void spareWheelChange(int radius) {
-    if (radius == getSpareWheelRadius()) {
+  public void spareWheelChange(Wheel wheel) {
+    if (wheel.getRadius() == wheel.getRadius() ) {
       System.out.println("Successful wheel changed!");
     }
     else {
@@ -76,9 +80,6 @@ public abstract class Car implements SpareWheelChangeable {
     light.tornOn();
   }
 
-  public int getSpareWheelRadius() {
-    return spareWheelRadius;
-  }
 }
 
 

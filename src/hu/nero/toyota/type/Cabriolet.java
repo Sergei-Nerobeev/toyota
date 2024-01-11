@@ -6,8 +6,8 @@ public class Cabriolet extends Car {
   private boolean roofState;
 
   public Cabriolet(
+      Wheel spareWheel,
       boolean isFlatWheel,
-      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -20,8 +20,8 @@ public class Cabriolet extends Car {
       Light light,
       boolean roofState) {
     super(
+        spareWheel,
         isFlatWheel,
-        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,

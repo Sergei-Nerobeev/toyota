@@ -6,8 +6,8 @@ import hu.nero.toyota.type.Cabriolet;
 public class Solara extends Cabriolet implements Optionable {
 
   public Solara(
+      Wheel spareWheel,
       boolean isFlatWheel,
-      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -20,8 +20,8 @@ public class Solara extends Cabriolet implements Optionable {
       Light light,
       boolean roofState) {
     super(
+        spareWheel,
         isFlatWheel,
-        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,

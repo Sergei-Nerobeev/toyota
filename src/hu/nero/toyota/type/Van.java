@@ -6,8 +6,8 @@ public class Van extends Car {
   private int cargoCapacity;
 
   public Van(
+      Wheel spareWheel,
       boolean isFlatWheel,
-      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -20,8 +20,8 @@ public class Van extends Car {
       Light light,
       int cargoCapacity) {
     super(
+        spareWheel,
         isFlatWheel,
-        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,

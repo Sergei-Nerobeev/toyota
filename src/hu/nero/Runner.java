@@ -10,8 +10,8 @@ public class Runner {
   public static void main(String[] args) {
 
     Camry camry = new Camry(
+        new Wheel(),
         false,
-        17,
         "Red",
         220,
         "Automate",
@@ -29,7 +29,7 @@ public class Runner {
       camry.addOptional();
       camry.tornOnLight();
       camry.stopMoving();
-      camry.spareWheelChange(17);
+      camry.spareWheelChange(new Wheel());
 
     }
     catch (StartCarException exception) {
@@ -39,8 +39,8 @@ public class Runner {
     System.out.println("--------------------------------");
 
     Solara solara = new Solara(
+        new Wheel(),
         false,
-        16,
         "Black",
         280,
         "Robot",
@@ -57,7 +57,7 @@ public class Runner {
       solara.startMovement();
       solara.addOptional();
       solara.tornOnLight();
-      solara.spareWheelChange(12);
+      solara.spareWheelChange(new Wheel());
 
     }
     catch (StartCarException exception) {
@@ -67,8 +67,8 @@ public class Runner {
     System.out.println("--------------------------------");
 
     Dyna dyna = new Dyna(
+        new Wheel(),
         false,
-        20,
         "Green",
         180,
         "Mechanical",
@@ -86,7 +86,7 @@ public class Runner {
       dyna.startMovement();
       dyna.addOptional();
       dyna.tornOnLight();
-      dyna.spareWheelChange(20);
+      dyna.spareWheelChange(new Wheel());
       dyna.stopMoving();
     }
     catch (StartCarException exception) {
@@ -96,8 +96,8 @@ public class Runner {
     System.out.println("--------------------------------");
 
     Hiance hiance = new Hiance(
+
         false,
-        20,
         "White",
         160,
         "Automate",
@@ -109,14 +109,14 @@ public class Runner {
         new ElectricalSystem(),
         new Light(),
         8,
-        1
+        new Wheel()
 
     );
     try {
       hiance.startMovement();
       hiance.getSpareWheel();
       hiance.tornOnLight();
-      hiance.spareWheelChange(20);
+      hiance.spareWheelChange(new Wheel());
       hiance.stopMoving();
     }
     catch (StartCarException exception) {

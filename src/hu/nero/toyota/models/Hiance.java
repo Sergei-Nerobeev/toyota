@@ -4,11 +4,9 @@ import hu.nero.toyota.abstractcar.*;
 import hu.nero.toyota.type.Van;
 
 public class Hiance extends Van {
-  private int spareWheel = 1;
 
   public Hiance(
       boolean isFlatWheel,
-      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -20,10 +18,10 @@ public class Hiance extends Van {
       ElectricalSystem electricalSystem,
       Light light,
       int cargoCapacity,
-      int spareWheel) {
+      Wheel spareWheel) {
     super(
+        spareWheel,
         isFlatWheel,
-        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,
@@ -36,10 +34,7 @@ public class Hiance extends Van {
         light,
         cargoCapacity
     );
-    this.spareWheel = spareWheel;
+
   }
 
-  public int getSpareWheel() {
-    return spareWheel;
-  }
 }

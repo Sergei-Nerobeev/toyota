@@ -6,8 +6,8 @@ public class Passengers extends Car {
   private boolean cruiseControl = false;
 
   public Passengers(
+      Wheel spareWheel,
       boolean isFlatWheel,
-      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -20,8 +20,8 @@ public class Passengers extends Car {
       Light light,
       boolean cruiseControl) {
     super(
+        spareWheel,
         isFlatWheel,
-        spareWheelRadius,
         color, maxSpeed,
         transmissionType,
         isMoving,

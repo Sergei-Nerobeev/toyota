@@ -6,8 +6,8 @@ import hu.nero.toyota.type.Passengers;
 public class Camry extends Passengers implements Optionable {
 
   public Camry(
+      Wheel spareWheel,
       boolean isFlatWheel,
-      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -20,8 +20,8 @@ public class Camry extends Passengers implements Optionable {
       Light light,
       boolean cruiseControl) {
     super(
+        spareWheel,
         isFlatWheel,
-        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,
