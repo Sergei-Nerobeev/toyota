@@ -1,11 +1,13 @@
-package hu.nero.car.models;
+package hu.nero.toyota.models;
 
-import hu.nero.car.*;
-import hu.nero.car.type.Van;
+import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.type.Van;
 
-public class Dyna extends Van implements OptionWritable {
+public class Dyna extends Van implements Optionable {
 
   public Dyna(
+      boolean isFlatWheel,
+      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -18,6 +20,8 @@ public class Dyna extends Van implements OptionWritable {
       Light light,
       int cargoCapacity) {
     super(
+        isFlatWheel,
+        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,

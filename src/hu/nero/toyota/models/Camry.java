@@ -1,11 +1,13 @@
-package hu.nero.car.models;
+package hu.nero.toyota.models;
 
-import hu.nero.car.*;
-import hu.nero.car.type.Passengers;
+import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.type.Passengers;
 
-public class Camry extends Passengers implements OptionWritable {
+public class Camry extends Passengers implements Optionable {
 
   public Camry(
+      boolean isFlatWheel,
+      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -18,6 +20,8 @@ public class Camry extends Passengers implements OptionWritable {
       Light light,
       boolean cruiseControl) {
     super(
+        isFlatWheel,
+        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,
@@ -36,4 +40,12 @@ public class Camry extends Passengers implements OptionWritable {
   public void addOptional() {
     System.out.println("Usb connected");
   }
+
+
+
+
 }
+
+
+
+

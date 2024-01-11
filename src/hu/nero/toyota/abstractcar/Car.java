@@ -1,6 +1,8 @@
-package hu.nero.car;
+package hu.nero.toyota.abstractcar;
 
-public abstract class Car {
+public abstract class Car implements SpareWheelChangeable {
+  private int spareWheelRadius;
+  private boolean isFlatWheel;
   private String color;
   private int maxSpeed;
   private String transmissionType;
@@ -13,6 +15,8 @@ public abstract class Car {
   private Light light;
 
   public Car(
+      boolean isFlatWheel,
+      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -23,7 +27,8 @@ public abstract class Car {
       Engine engine,
       ElectricalSystem electricalSystem,
       Light light) {
-
+    this.isFlatWheel = isFlatWheel;
+    this.spareWheelRadius = spareWheelRadius;
     this.color = color;
     this.maxSpeed = maxSpeed;
     this.transmissionType = transmissionType;
@@ -33,12 +38,13 @@ public abstract class Car {
     this.engine = engine;
     this.electricalSystem = electricalSystem;
     this.light = light;
-    this.isMoving = false;
+    this.isMoving = isMoving;
 
   }
 
   public void startMovement() throws StartCarException {
     if (wheels.length == 4 &&
+        isFlatWheel == false &&
         fuelTank.getFuelLevel() > 0 &&
         engine.getEngineOn() &&
         electricalSystem.getElectricalSystem()) {
@@ -46,7 +52,18 @@ public abstract class Car {
       System.out.println("Car starts moving");
     }
     else {
-      throw new StartCarException("Unable to start the car. Check conditions.");
+      throw new StartCarException("Unable to start the car.Check conditions.");
+    }
+  }
+
+  @Override
+  public void spareWheelChange(int radius) {
+    if (radius == getSpareWheelRadius()) {
+      System.out.println("Successful wheel changed!");
+    }
+    else {
+      stopMoving();
+      System.out.println("Wheel diameter is not the same");
     }
   }
 
@@ -59,6 +76,9 @@ public abstract class Car {
     light.tornOn();
   }
 
+  public int getSpareWheelRadius() {
+    return spareWheelRadius;
+  }
 }
 
 

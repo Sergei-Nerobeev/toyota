@@ -1,4 +1,4 @@
-package hu.nero.car;
+package hu.nero.toyota.abstractcar;
 
 public class Light {
   private boolean isOn;

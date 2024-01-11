@@ -1,4 +1,4 @@
-package hu.nero.car;
+package hu.nero.toyota.abstractcar;
 
 public class FuelTank {
   private double fuelLevel;

@@ -1,15 +1,17 @@
 package hu.nero;
 
-import hu.nero.car.*;
-import hu.nero.car.models.Camry;
-import hu.nero.car.models.Dyna;
-import hu.nero.car.models.Hiance;
-import hu.nero.car.models.Solara;
+import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.models.Camry;
+import hu.nero.toyota.models.Dyna;
+import hu.nero.toyota.models.Hiance;
+import hu.nero.toyota.models.Solara;
 
 public class Runner {
-  public static void main(String[] args) throws StartCarException {
+  public static void main(String[] args) {
 
     Camry camry = new Camry(
+        false,
+        17,
         "Red",
         220,
         "Automate",
@@ -22,14 +24,23 @@ public class Runner {
         new Light(),
         true
     );
-    camry.startMovement();
-    camry.addOptional();
-    camry.tornOnLight();
-    camry.stopMoving();
+    try {
+      camry.startMovement();
+      camry.addOptional();
+      camry.tornOnLight();
+      camry.stopMoving();
+      camry.spareWheelChange(17);
+
+    }
+    catch (StartCarException exception) {
+      System.out.println("Error: " + exception.getMessage());
+    }
 
     System.out.println("--------------------------------");
 
     Solara solara = new Solara(
+        false,
+        16,
         "Black",
         280,
         "Robot",
@@ -42,14 +53,22 @@ public class Runner {
         new Light(),
         true
     );
-    solara.startMovement();
-    solara.addOptional();
-    solara.tornOnLight();
-    solara.stopMoving();
+    try {
+      solara.startMovement();
+      solara.addOptional();
+      solara.tornOnLight();
+      solara.spareWheelChange(12);
+
+    }
+    catch (StartCarException exception) {
+      System.out.println("Error: " + exception.getMessage());
+    }
 
     System.out.println("--------------------------------");
 
     Dyna dyna = new Dyna(
+        false,
+        20,
         "Green",
         180,
         "Mechanical",
@@ -63,14 +82,22 @@ public class Runner {
         6
 
     );
-    dyna.startMovement();
-    dyna.addOptional();
-    dyna.tornOnLight();
-    dyna.stopMoving();
+    try {
+      dyna.startMovement();
+      dyna.addOptional();
+      dyna.tornOnLight();
+      dyna.spareWheelChange(20);
+      dyna.stopMoving();
+    }
+    catch (StartCarException exception) {
+      System.out.println("Error: " + exception.getMessage());
+    }
 
     System.out.println("--------------------------------");
 
     Hiance hiance = new Hiance(
+        false,
+        20,
         "White",
         160,
         "Automate",
@@ -85,10 +112,17 @@ public class Runner {
         1
 
     );
-    hiance.startMovement();
-    hiance.getSpareWheel();
-    hiance.tornOnLight();
-    hiance.stopMoving();
+    try {
+      hiance.startMovement();
+      hiance.getSpareWheel();
+      hiance.tornOnLight();
+      hiance.spareWheelChange(20);
+      hiance.stopMoving();
+    }
+    catch (StartCarException exception) {
+      System.out.println("Error: " + exception.getMessage());
+    }
+
   }
 
 }

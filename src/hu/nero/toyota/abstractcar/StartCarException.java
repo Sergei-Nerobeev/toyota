@@ -1,4 +1,4 @@
-package hu.nero.car;
+package hu.nero.toyota.abstractcar;
 
 public class StartCarException extends Exception {
   public StartCarException(String message){

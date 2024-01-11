@@ -1,11 +1,14 @@
-package hu.nero.car.models;
+package hu.nero.toyota.models;
 
-import hu.nero.car.*;
-import hu.nero.car.type.Cabriolet;
+import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.type.Van;
 
-public class Solara extends Cabriolet implements OptionWritable {
+public class Hiance extends Van {
+  private int spareWheel = 1;
 
-  public Solara(
+  public Hiance(
+      boolean isFlatWheel,
+      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -16,8 +19,11 @@ public class Solara extends Cabriolet implements OptionWritable {
       Engine engine,
       ElectricalSystem electricalSystem,
       Light light,
-      boolean roofState) {
+      int cargoCapacity,
+      int spareWheel) {
     super(
+        isFlatWheel,
+        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,
@@ -28,13 +34,12 @@ public class Solara extends Cabriolet implements OptionWritable {
         engine,
         electricalSystem,
         light,
-        roofState
+        cargoCapacity
     );
+    this.spareWheel = spareWheel;
   }
 
-  @Override
-  public void addOptional() {
-    System.out.println("Mini-fridge connected");
+  public int getSpareWheel() {
+    return spareWheel;
   }
-
 }

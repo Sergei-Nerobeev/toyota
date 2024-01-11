@@ -1,11 +1,13 @@
-package hu.nero.car.type;
+package hu.nero.toyota.type;
 
-import hu.nero.car.*;
+import hu.nero.toyota.abstractcar.*;
 
-public class Van extends Car {
-  private int cargoCapacity;
+public class Cabriolet extends Car {
+  private boolean roofState;
 
-  public Van(
+  public Cabriolet(
+      boolean isFlatWheel,
+      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -16,19 +18,20 @@ public class Van extends Car {
       Engine engine,
       ElectricalSystem electricalSystem,
       Light light,
-      int cargoCapacity) {
+      boolean roofState) {
     super(
+        isFlatWheel,
+        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,
-        isMoving,
-        price,
+        isMoving, price,
         wheels,
         fuelTank,
         engine,
         electricalSystem,
-         light
+        light
     );
-    this.cargoCapacity = cargoCapacity;
+    this.roofState = roofState;
   }
 }

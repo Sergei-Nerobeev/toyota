@@ -1,12 +1,13 @@
-package hu.nero.car.models;
+package hu.nero.toyota.models;
 
-import hu.nero.car.*;
-import hu.nero.car.type.Van;
+import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.type.Cabriolet;
 
-public class Hiance extends Van {
-  private int spareWheel = 1;
+public class Solara extends Cabriolet implements Optionable {
 
-  public Hiance(
+  public Solara(
+      boolean isFlatWheel,
+      int spareWheelRadius,
       String color,
       int maxSpeed,
       String transmissionType,
@@ -17,9 +18,10 @@ public class Hiance extends Van {
       Engine engine,
       ElectricalSystem electricalSystem,
       Light light,
-      int cargoCapacity,
-      int spareWheel) {
+      boolean roofState) {
     super(
+        isFlatWheel,
+        spareWheelRadius,
         color,
         maxSpeed,
         transmissionType,
@@ -30,12 +32,13 @@ public class Hiance extends Van {
         engine,
         electricalSystem,
         light,
-        cargoCapacity
+        roofState
     );
-    this.spareWheel = spareWheel;
   }
 
-  public int getSpareWheel() {
-    return spareWheel;
+  @Override
+  public void addOptional() {
+    System.out.println("Mini-fridge connected");
   }
+
 }
