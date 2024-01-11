@@ -1,4 +1,4 @@
-package hu.nero.toyota.abstractcar;
+package hu.nero.toyota.abscar;
 
 public abstract class Car implements SpareWheelChangeable {
   private Wheel spareWheel;
@@ -10,6 +10,7 @@ public abstract class Car implements SpareWheelChangeable {
   private double price;
   private Wheel[] wheels;
   protected FuelTank fuelTank;
+
   protected Engine engine;
   protected ElectricalSystem electricalSystem;
   private Light light;
@@ -62,7 +63,7 @@ public abstract class Car implements SpareWheelChangeable {
 
   @Override
   public void spareWheelChange(Wheel wheel) {
-    if (wheel.getRadius() == wheel.getRadius() ) {
+    if (wheel.getRadius() == wheel.getRadius()) {
       System.out.println("Successful wheel changed!");
     }
     else {

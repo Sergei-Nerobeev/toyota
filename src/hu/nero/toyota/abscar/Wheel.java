@@ -1,4 +1,4 @@
-package hu.nero.toyota.abstractcar;
+package hu.nero.toyota.abscar;
 
 public class Wheel {
   private boolean isFlat;

@@ -1,6 +1,6 @@
 package hu.nero.toyota.models;
 
-import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.abscar.*;
 import hu.nero.toyota.type.Van;
 
 public class Dyna extends Van implements Optionable {

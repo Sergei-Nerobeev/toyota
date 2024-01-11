@@ -1,6 +1,6 @@
 package hu.nero.toyota.models;
 
-import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.abscar.*;
 import hu.nero.toyota.type.Cabriolet;
 
 public class Solara extends Cabriolet implements Optionable {

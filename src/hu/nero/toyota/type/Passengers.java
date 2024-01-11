@@ -1,6 +1,6 @@
 package hu.nero.toyota.type;
 
-import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.abscar.*;
 
 public class Passengers extends Car {
   private boolean cruiseControl = false;

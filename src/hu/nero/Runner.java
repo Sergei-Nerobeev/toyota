@@ -1,6 +1,6 @@
 package hu.nero;
 
-import hu.nero.toyota.abstractcar.*;
+import hu.nero.toyota.abscar.*;
 import hu.nero.toyota.models.Camry;
 import hu.nero.toyota.models.Dyna;
 import hu.nero.toyota.models.Hiance;
