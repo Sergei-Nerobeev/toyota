@@ -6,7 +6,8 @@ public class FuelTank {
   public FuelTank(double fuelLevel) {
     this.fuelLevel = fuelLevel;
   }
-  public boolean isNotEmpty(){
+
+  public boolean isNotEmpty() {
     return fuelLevel >= 0.0;
   }
 
