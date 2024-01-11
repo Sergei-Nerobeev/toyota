@@ -1,33 +1,15 @@
 
-=
-src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
->
-src/.gitignore,9\3\93cbdd0973c9a7b59e5cef90a94300ab95fd66e5
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-R
-"src/hu/nero/car/Runner/Runner.java,c\4\c44d4a55b63154ac78a64b1c503261b6fd8f02f6
-K
-src/hu/nero/car/Runner.java,0\3\03e5be33280fd733505019ded7d5069f385646d4
 G
 src/hu/nero/Runner.java,7\e\7ee3a54072ca2d0e65c792fa7e3cbb66554ab1c5
 H
 src/hu/nero/car/Car.java,d\9\d9945169174166bf31e53e480a917fb2313736af
 V
 &src/hu/nero/car/StartCarException.java,2\8\28b7cdc4410868aca9200fabd099905ad73716fa
-V
-&src/hu/nero/car/typecar/Cabriolet.java,d\b\db3e2dc641b786dc80ab772fbe702306b4786c89
-V
-&src/hu/nero/car/modeltoyota/Camry.java,9\3\93a6824cca8b77d31382d932c6128e53837acc3b
 S
 #src/hu/nero/car/OptionWritable.java,2\4\24dc4fabb07b3abbf12d6edfe42569059f6c3864
-W
-'src/hu/nero/car/typecar/Passengers.java,f\3\f31e728f830604e9c94c17dcb365c289657c8733
-W
-'src/hu/nero/car/modeltoyota/Solara.java,d\6\d6bb6ab06f6844698fb6b27160b7c62a33eb5b95
-W
-'src/hu/nero/car/modeltoyota/Hiance.java,c\9\c9a5487bb0c86b6d686a225a3541f3f45cabd743
 R
 "src/hu/nero/car/models/Solara.java,0\a\0a2f717ad31fd109e805400b04537a156bffbc49
 Q
