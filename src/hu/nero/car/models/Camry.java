@@ -9,6 +9,7 @@ public class Camry extends Passengers implements OptionWritable {
       String color,
       int maxSpeed,
       String transmissionType,
+      boolean isMoving,
       double price,
       Wheel[] wheels,
       FuelTank fuelTank,
@@ -16,7 +17,19 @@ public class Camry extends Passengers implements OptionWritable {
       ElectricalSystem electricalSystem,
       Light light,
       boolean cruiseControl) {
-    super(color, maxSpeed, transmissionType, price, wheels, fuelTank, engine, electricalSystem, light, cruiseControl);
+    super(
+        color,
+        maxSpeed,
+        transmissionType,
+        isMoving,
+        price,
+        wheels,
+        fuelTank,
+        engine,
+        electricalSystem,
+        light,
+        cruiseControl
+    );
   }
 
   @Override

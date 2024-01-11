@@ -11,14 +11,18 @@ public abstract class Car {
   protected Engine engine;
   protected ElectricalSystem electricalSystem;
   private Light light;
-  private boolean usbPort;
-  private boolean miniFridge;
-  private boolean spareWheel;
-  private boolean powerOutlet;
 
   public Car(
-      String color, int maxSpeed, String transmissionType, double price,
-      Wheel[] wheels, FuelTank fuelTank, Engine engine, ElectricalSystem electricalSystem, Light light) {
+      String color,
+      int maxSpeed,
+      String transmissionType,
+      boolean isMoving,
+      double price,
+      Wheel[] wheels,
+      FuelTank fuelTank,
+      Engine engine,
+      ElectricalSystem electricalSystem,
+      Light light) {
 
     this.color = color;
     this.maxSpeed = maxSpeed;
@@ -31,10 +35,6 @@ public abstract class Car {
     this.light = light;
     this.isMoving = false;
 
-    this.usbPort = false;
-    this.miniFridge = false;
-    this.spareWheel = false;
-    this.powerOutlet = false;
   }
 
   public void startMovement() throws StartCarException {
@@ -43,6 +43,7 @@ public abstract class Car {
         engine.getEngineOn() &&
         electricalSystem.getElectricalSystem()) {
       isMoving = true;
+      System.out.println("Car starts moving");
     }
     else {
       throw new StartCarException("Unable to start the car. Check conditions.");

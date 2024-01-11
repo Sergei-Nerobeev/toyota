@@ -10,6 +10,7 @@ public class Hiance extends Van {
       String color,
       int maxSpeed,
       String transmissionType,
+      boolean isMoving,
       double price,
       Wheel[] wheels,
       FuelTank fuelTank,
@@ -18,7 +19,19 @@ public class Hiance extends Van {
       Light light,
       int cargoCapacity,
       int spareWheel) {
-    super(color, maxSpeed, transmissionType, price, wheels, fuelTank, engine, electricalSystem, light, cargoCapacity);
+    super(
+        color,
+        maxSpeed,
+        transmissionType,
+        isMoving,
+        price,
+        wheels,
+        fuelTank,
+        engine,
+        electricalSystem,
+        light,
+        cargoCapacity
+    );
     this.spareWheel = spareWheel;
   }
 
