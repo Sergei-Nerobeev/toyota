@@ -1,8 +1,11 @@
 package hu.nero.toyota.abscar;
 
+import hu.nero.toyota.factory.Country;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class AbstractCar {
+  protected Country country;
   protected Wheel[] wheels;
   protected Color color;
   protected double price;
@@ -17,6 +20,7 @@ public abstract class AbstractCar {
   public AbstractCar(){}
 
   public AbstractCar(
+      Country country,
       Wheel[] wheels,
       Color color,
       double price,
@@ -28,6 +32,7 @@ public abstract class AbstractCar {
       Engine engine,
       ElectricalSystem electricalSystem,
       Light light) {
+    this.country = country;
     this.wheels = wheels;
     this.color = color;
     this.price = price;

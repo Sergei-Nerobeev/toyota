@@ -16,10 +16,10 @@ public class CarStorage {
 
   public CarStorage() {
     this.totalCars = 0;
-    camry = new Camry[maxCars];
-    solara = new Solara[maxCars];
-    dyna = new Dyna[maxCars];
-    hiance = new Hiance[maxCars];
+    this.camry = new Camry[maxCars];
+    this.solara = new Solara[maxCars];
+    this.dyna = new Dyna[maxCars];
+    this.hiance = new Hiance[maxCars];
   }
 
   public void addCamry(Camry camry, int quantity) {
@@ -33,10 +33,27 @@ public class CarStorage {
   }
 
   public Camry takenCamry() {
-    Camry takenCamry = camry[totalCars - 1];
+    Camry takenCamry = new Camry();// TODO!
+    takenCamry = this.camry[totalCars - 1];
     totalCars -= 1;
     System.out.println("Total cars: " + totalCars + "." + " Taken one of " + takenCamry.toString());
     return takenCamry;
+  }
+  public void addSolara(Solara solara, int quantity) {
+    for (int i = 0; i < quantity; i++) {
+      this.solara[totalCars + i] = solara;
+    }
+    totalCars += quantity;
+    maxCars -= totalCars;
+    System.out.println(quantity + " cars type of " + solara + " added in CarStorage. Total cars: "
+                           + totalCars + " Free storage place: " + maxCars);
+  }
+
+  public Solara takenSolara() {
+    Solara takenSolara = this.solara[totalCars - 1];
+    totalCars -= 1;
+    System.out.println("Total cars: " + totalCars + "." + " Taken one of " + takenSolara.toString());
+    return takenSolara;
   }
 
 }

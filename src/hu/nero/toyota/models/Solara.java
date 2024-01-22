@@ -1,10 +1,12 @@
 package hu.nero.toyota.models;
 
 import hu.nero.toyota.abscar.*;
+import hu.nero.toyota.factory.Country;
 
 public class Solara extends AbstractCar implements Optionable {
 
   public Solara(
+      Country country,
       Wheel wheel,
       Wheel[] wheels,
       Color color,
@@ -18,6 +20,7 @@ public class Solara extends AbstractCar implements Optionable {
       ElectricalSystem electricalSystem,
       Light light) {
     super(
+        country,
         wheels,
         color,
         price,
@@ -37,5 +40,9 @@ public class Solara extends AbstractCar implements Optionable {
     System.out.println("Mini-fridge connected");
   }
 
+  @Override
+  public String toString() {
+    return "Solara: " + color + "/" + price;
 
+  }
 }

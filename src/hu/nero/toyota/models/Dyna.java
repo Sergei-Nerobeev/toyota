@@ -1,11 +1,13 @@
 package hu.nero.toyota.models;
 
 import hu.nero.toyota.abscar.*;
+import hu.nero.toyota.factory.Country;
 
 public class Dyna extends AbstractCar implements Optionable {
   private int maxCapacity;
 
   public Dyna(
+      Country country,
       Wheel wheel,
       Wheel[] wheels,
       Color color,
@@ -20,6 +22,7 @@ public class Dyna extends AbstractCar implements Optionable {
       Light light,
       int maxCapacity) {
     super(
+        country,
         wheels,
         color,
         price,

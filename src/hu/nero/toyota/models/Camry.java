@@ -1,11 +1,16 @@
 package hu.nero.toyota.models;
 
 import hu.nero.toyota.abscar.*;
+import hu.nero.toyota.factory.Country;
 
 public class Camry extends AbstractCar implements Optionable {
   private Wheel spareWheel;
 
+  public Camry() {
+  }
+  
   public Camry(
+      Country country,
       Wheel spareWheel,
       Wheel[] wheels,
       Color color,
@@ -19,6 +24,7 @@ public class Camry extends AbstractCar implements Optionable {
       ElectricalSystem electricalSystem,
       Light light) {
     super(
+        country,
         wheels,
         color,
         price,

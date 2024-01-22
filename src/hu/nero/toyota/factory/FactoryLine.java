@@ -25,6 +25,7 @@ public class FactoryLine {
         wheels[i] = new Wheel(17);
     }
     return new Camry(
+        Country.CHINE,
         new Wheel(17),
         wheels,
         color,
@@ -51,6 +52,7 @@ public class FactoryLine {
         wheels[i] = new Wheel(16);
     }
     return new Solara(
+        Country.USA,
         new Wheel(16),
         wheels,
         color,
@@ -77,6 +79,7 @@ public class FactoryLine {
         wheels[i] = new Wheel(20);
     }
     return new Dyna(
+        Country.CHINE,
         new Wheel(20),
         wheels,
         color,
@@ -104,6 +107,7 @@ public class FactoryLine {
         wheels[i] = new Wheel(20);
     }
     return new Hiance(
+        Country.JAPAN,
         new Wheel(20),
         wheels,
         color,
