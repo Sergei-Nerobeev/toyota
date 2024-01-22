@@ -6,9 +6,9 @@ import hu.nero.toyota.models.Hiance;
 import hu.nero.toyota.models.Solara;
 
 public class CarStorage {
-  private static final int MAX_CARS = 1000; // макс количество машин на складе
+  private static int maxCars = 1000; // макс количество машин на складе
   private int totalCars; // общее количество машин на складе
-  private  int[] carQuantites; // массив для хранения количества каждого типа машин
+  private int[] carQuantites; // массив для хранения количества каждого типа машин
   private Camry[] camry;
   private Solara[] solara;
   private Dyna[] dyna;
@@ -16,16 +16,27 @@ public class CarStorage {
 
   public CarStorage() {
     this.totalCars = 0;
-    camry = new Camry[MAX_CARS];
-    solara = new Solara[MAX_CARS];
-    dyna = new Dyna[MAX_CARS];
-    hiance = new Hiance[MAX_CARS];
+    camry = new Camry[maxCars];
+    solara = new Solara[maxCars];
+    dyna = new Dyna[maxCars];
+    hiance = new Hiance[maxCars];
   }
-  public void addCamry(Camry camry, int quantity) {
-    this.camry = new Camry[quantity];
-    totalCars += quantity;
-    System.out.println(quantity + " cars type of " + camry + " added in CarStorage. Total cars: " + totalCars);
 
+  public void addCamry(Camry camry, int quantity) {
+    for (int i = 0; i < quantity; i++) {
+      this.camry[totalCars + i] = camry;
+    }
+    totalCars += quantity;
+    maxCars -= totalCars;
+    System.out.println(quantity + " cars type of " + camry + " added in CarStorage. Total cars: "
+                           + totalCars + " Free storage place: " + maxCars);
+  }
+
+  public Camry takenCamry() {
+    Camry takenCamry = camry[totalCars - 1];
+    totalCars -= 1;
+    System.out.println("Total cars: " + totalCars + "." + " Taken one of " + takenCamry.toString());
+    return takenCamry;
   }
 
 }

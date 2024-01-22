@@ -49,6 +49,7 @@ public class Main {
       CarStorage carStorage = new CarStorage();
       carStorage.addCamry(camry,10);
       carStorage.addCamry(camry,2);
+      carStorage.takenCamry();
 
     }catch (CountyFactoryNotEqualException | StartCarException ex) {
       ex.printStackTrace();
