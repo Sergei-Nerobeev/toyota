@@ -2,6 +2,9 @@ package hu.nero.toyota.factory;
 
 import hu.nero.toyota.abscar.*;
 import hu.nero.toyota.models.Camry;
+import hu.nero.toyota.models.Dyna;
+import hu.nero.toyota.models.Hiance;
+import hu.nero.toyota.models.Solara;
 
 public class FactoryLine {
   private DetailFactory detailFactory;
@@ -10,27 +13,110 @@ public class FactoryLine {
     this.detailFactory = detailFactory;
   }
 
-  public Camry createCamry(String color, double price) throws CountyFactoryNotEqualException {
+  public Camry createCamry(Color color, double price) throws CountyFactoryNotEqualException {
+
     if (!detailFactory.getCountry().equals(this.detailFactory.getCountry())) {
       throw new CountyFactoryNotEqualException(
           "The factories are located in different countries: " +
-          detailFactory.getCountry() + " and " + this.detailFactory.getCountry());
+              detailFactory.getCountry() + " and " + this.detailFactory.getCountry());
+    }
+    Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
+    for (int i = 0; i < wheels.length; i++) {
+        wheels[i] = new Wheel(17);
     }
     return new Camry(
-        new Wheel(),
-        false,
-        "Red",
-        260,
-        "Automate",
+        new Wheel(17),
+        wheels,
+        color,
+        price,
+        Type.PASSENGERS,
+        MaxSpeed.CAMRY,
+        Transmission.AUTOMATE,
         true,
-        20000.00,
-        new Wheel[4],
-        new FuelTank(10),
+        new FuelTank(20.00),
+        new Engine(),
+        new ElectricalSystem(),
+        new Light()
+    );
+  }
+  public Solara createSolara(Color color, double price) throws CountyFactoryNotEqualException {
+
+    if (!detailFactory.getCountry().equals(this.detailFactory.getCountry())) {
+      throw new CountyFactoryNotEqualException(
+          "The factories are located in different countries: " +
+              detailFactory.getCountry() + " and " + this.detailFactory.getCountry());
+    }
+    Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
+    for (int i = 0; i < wheels.length; i++) {
+        wheels[i] = new Wheel(16);
+    }
+    return new Solara(
+        new Wheel(16),
+        wheels,
+        color,
+        price,
+        Type.PASSENGERS,
+        MaxSpeed.CAMRY,
+        Transmission.AUTOMATE,
+        true,
+        new FuelTank(20.00),
+        new Engine(),
+        new ElectricalSystem(),
+        new Light()
+    );
+  }
+  public Dyna createDyna(Color color, double price) throws CountyFactoryNotEqualException {
+
+    if (!detailFactory.getCountry().equals(this.detailFactory.getCountry())) {
+      throw new CountyFactoryNotEqualException(
+          "The factories are located in different countries: " +
+              detailFactory.getCountry() + " and " + this.detailFactory.getCountry());
+    }
+    Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
+    for (int i = 0; i < wheels.length; i++) {
+        wheels[i] = new Wheel(20);
+    }
+    return new Dyna(
+        new Wheel(20),
+        wheels,
+        color,
+        price,
+        Type.PASSENGERS,
+        MaxSpeed.CAMRY,
+        Transmission.AUTOMATE,
+        true,
+        new FuelTank(20.00),
         new Engine(),
         new ElectricalSystem(),
         new Light(),
-        true
-        );
+        1000
+    );
+  }
+  public Hiance createHiance(Color color, double price) throws CountyFactoryNotEqualException {
+
+    if (!detailFactory.getCountry().equals(this.detailFactory.getCountry())) {
+      throw new CountyFactoryNotEqualException(
+          "The factories are located in different countries: " +
+              detailFactory.getCountry() + " and " + this.detailFactory.getCountry());
+    }
+    Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
+    for (int i = 0; i < wheels.length; i++) {
+        wheels[i] = new Wheel(20);
+    }
+    return new Hiance(
+        new Wheel(20),
+        wheels,
+        color,
+        price,
+        Type.PASSENGERS,
+        MaxSpeed.CAMRY,
+        Transmission.AUTOMATE,
+        true,
+        new FuelTank(20.00),
+        new Engine(),
+        new ElectricalSystem(),
+        new Light()
+    );
   }
 }
 

@@ -1,38 +1,34 @@
 package hu.nero.toyota.models;
 
 import hu.nero.toyota.abscar.*;
-import hu.nero.toyota.type.Cabriolet;
 
-public class Solara extends Cabriolet implements Optionable {
+public class Solara extends AbstractCar implements Optionable {
 
   public Solara(
-      Wheel spareWheel,
-      boolean isFlatWheel,
-      String color,
-      int maxSpeed,
-      String transmissionType,
-      boolean isMoving,
-      double price,
+      Wheel wheel,
       Wheel[] wheels,
+      Color color,
+      double price,
+      Type type,
+      MaxSpeed maxSpeed,
+      Transmission transmission,
+      boolean isMoving,
       FuelTank fuelTank,
       Engine engine,
       ElectricalSystem electricalSystem,
-      Light light,
-      boolean roofState) {
+      Light light) {
     super(
-        spareWheel,
-        isFlatWheel,
-        color,
-        maxSpeed,
-        transmissionType,
-        isMoving,
-        price,
         wheels,
+        color,
+        price,
+        type,
+        maxSpeed,
+        transmission,
+        isMoving,
         fuelTank,
         engine,
         electricalSystem,
-        light,
-        roofState
+        light
     );
   }
 
@@ -40,5 +36,6 @@ public class Solara extends Cabriolet implements Optionable {
   public void addOptional() {
     System.out.println("Mini-fridge connected");
   }
+
 
 }

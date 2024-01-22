@@ -9,7 +9,7 @@ public class Light {
 
   public void tornOn() {
     if (isOn) {
-      System.out.println("Light on");
+      System.out.println("Light on ------------------------------------");
     }
     else {
       System.out.println("Light is not working");

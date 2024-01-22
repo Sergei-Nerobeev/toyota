@@ -1,51 +1,45 @@
 package hu.nero.toyota.models;
 
 import hu.nero.toyota.abscar.*;
-import hu.nero.toyota.type.Passengers;
 
-public class Camry extends Passengers implements Optionable {
+public class Camry extends AbstractCar implements Optionable {
+  private Wheel spareWheel;
 
   public Camry(
       Wheel spareWheel,
-      boolean isFlatWheel,
-      String color,
-      int maxSpeed,
-      String transmissionType,
-      boolean isMoving,
-      double price,
       Wheel[] wheels,
+      Color color,
+      double price,
+      Type type,
+      MaxSpeed maxSpeed,
+      Transmission transmission,
+      boolean isMoving,
       FuelTank fuelTank,
       Engine engine,
       ElectricalSystem electricalSystem,
-      Light light,
-      boolean cruiseControl) {
+      Light light) {
     super(
-        spareWheel,
-        isFlatWheel,
-        color,
-        maxSpeed,
-        transmissionType,
-        isMoving,
-        price,
         wheels,
+        color,
+        price,
+        type,
+        maxSpeed,
+        transmission,
+        isMoving,
         fuelTank,
         engine,
         electricalSystem,
-        light,
-        cruiseControl
+        light
     );
+    this.spareWheel = spareWheel;
   }
 
   @Override
   public void addOptional() {
-    System.out.println("Usb connected");
+    System.out.println("USB connected");
   }
 
-
-
-
 }
-
 
 
 

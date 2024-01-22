@@ -1,3 +1,4 @@
+/*
 package hu.nero;
 
 import hu.nero.toyota.abscar.*;
@@ -10,9 +11,7 @@ public class Runner {
   public static void main(String[] args) {
 
     Camry camry = new Camry(
-        new Wheel(),
         false,
-        "Red",
         220,
         "Automate",
         true,
@@ -29,7 +28,8 @@ public class Runner {
       camry.addOptional();
       camry.tornOnLight();
       camry.stopMoving();
-      camry.spareWheelChange(new Wheel());
+      camry.spareWheelChange(new Wheel(17));
+
 
     }
     catch (StartCarException exception) {
@@ -57,7 +57,7 @@ public class Runner {
       solara.startMovement();
       solara.addOptional();
       solara.tornOnLight();
-      solara.spareWheelChange(new Wheel());
+      solara.spareWheelChange(new Wheel(18));
 
     }
     catch (StartCarException exception) {
@@ -86,7 +86,7 @@ public class Runner {
       dyna.startMovement();
       dyna.addOptional();
       dyna.tornOnLight();
-      dyna.spareWheelChange(new Wheel());
+      dyna.spareWheelChange(new Wheel(20));
       dyna.stopMoving();
     }
     catch (StartCarException exception) {
@@ -116,7 +116,7 @@ public class Runner {
       hiance.startMovement();
       hiance.getSpareWheel();
       hiance.tornOnLight();
-      hiance.spareWheelChange(new Wheel());
+      hiance.spareWheelChange(new Wheel(20));
       hiance.stopMoving();
     }
     catch (StartCarException exception) {
@@ -126,3 +126,4 @@ public class Runner {
   }
 
 }
+*/

@@ -9,10 +9,9 @@ public class DetailFactory {
     this.country = country;
   }
 
-  public Wheel createWheel() {
+  public Wheel createWheel() { // set size wheels
     return new Wheel();
   }
-
   public FuelTank createFuelTank() {
     return new FuelTank(0.0);
   }

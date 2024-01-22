@@ -1,13 +1,13 @@
 package hu.nero.toyota.abscar;
 
 public class Engine {
-  private boolean engineOn;
+  private boolean isEngineOn;
 
   public Engine() {
-    this.engineOn = true;
+    this.isEngineOn = isEngineOn;
   }
 
-  public boolean getEngineOn() {
-    return engineOn;
+  public boolean isEngineOn() {
+    return isEngineOn;
   }
 }

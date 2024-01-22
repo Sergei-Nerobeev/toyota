@@ -4,12 +4,13 @@ public class Wheel {
   private boolean isFlat;
   private int radius;
 
-  public Wheel() {
-    this.isFlat = false;
-    this.radius = 0;
-  }
+  public Wheel(int radius) {
 
-  public boolean getIsFlat() {
+    this.radius = radius;
+  }
+  public Wheel(){}
+
+  public boolean isFlat() {
     return isFlat;
   }
 
@@ -17,9 +18,11 @@ public class Wheel {
     return radius;
   }
 
-  public void replaceWheel(Wheel wheel) {
-    if (this.radius == wheel.getRadius()) {
-      this.radius = wheel.getRadius();
-    }
+  public void setRadius(int radius) {
+    this.radius = radius;
+  }
+
+  public void setFlat(boolean flat) {
+    isFlat = flat;
   }
 }

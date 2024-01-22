@@ -1,44 +1,44 @@
 package hu.nero.toyota.models;
 
 import hu.nero.toyota.abscar.*;
-import hu.nero.toyota.type.Van;
 
-public class Dyna extends Van implements Optionable {
+public class Dyna extends AbstractCar implements Optionable {
+  private int maxCapacity;
 
   public Dyna(
-      Wheel spareWheel,
-      boolean isFlatWheel,
-      String color,
-      int maxSpeed,
-      String transmissionType,
-      boolean isMoving,
-      double price,
+      Wheel wheel,
       Wheel[] wheels,
+      Color color,
+      double price,
+      Type type,
+      MaxSpeed maxSpeed,
+      Transmission transmission,
+      boolean isMoving,
       FuelTank fuelTank,
       Engine engine,
       ElectricalSystem electricalSystem,
       Light light,
-      int cargoCapacity) {
+      int maxCapacity) {
     super(
-        spareWheel,
-        isFlatWheel,
-        color,
-        maxSpeed,
-        transmissionType,
-        isMoving,
-        price,
         wheels,
+        color,
+        price,
+        type,
+        maxSpeed,
+        transmission,
+        isMoving,
         fuelTank,
         engine,
         electricalSystem,
-        light,
-        cargoCapacity
+        light
     );
+    this.maxCapacity = maxCapacity;
   }
 
   @Override
   public void addOptional() {
     System.out.println("Charge phone option connected");
   }
+
 
 }
