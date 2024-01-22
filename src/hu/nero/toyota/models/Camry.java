@@ -39,6 +39,10 @@ public class Camry extends AbstractCar implements Optionable {
     System.out.println("USB connected");
   }
 
+  @Override
+  public String toString() {
+    return "Camry: " + color + "/" + price;
+  }
 }
 
 

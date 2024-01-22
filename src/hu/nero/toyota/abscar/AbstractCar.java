@@ -14,6 +14,7 @@ public abstract class AbstractCar {
   protected Engine engine;
   protected ElectricalSystem electricalSystem;
   protected Light light;
+  public AbstractCar(){}
 
   public AbstractCar(
       Wheel[] wheels,
@@ -85,5 +86,6 @@ public abstract class AbstractCar {
     final var randomIndex = ThreadLocalRandom.current().nextInt(0, wheels.length);
     return wheels[randomIndex];
   }
+
 }
 

@@ -57,3 +57,5 @@ E
 src/hu/nero/Main.java,3\2\32f84a830bbc1edfac77e5c76d645af8c989f1ce
 Z
 *src/hu/nero/toyota/abscar/AbstractCar.java,7\6\7673731609afc99a4cb69c512ffcfa92ecbd6cd7
+Z
+*src/hu/nero/toyota/storage/CarStorage.java,b\b\bb295e970f32c48a7ae293de6a642a68c584c057

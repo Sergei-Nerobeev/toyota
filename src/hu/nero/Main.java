@@ -9,11 +9,12 @@ import hu.nero.toyota.models.Camry;
 import hu.nero.toyota.models.Dyna;
 import hu.nero.toyota.models.Hiance;
 import hu.nero.toyota.models.Solara;
+import hu.nero.toyota.storage.CarStorage;
 
 public class Main {
   public static void main(String[] args) {
 
-    FactoryLine factoryLine = new FactoryLine(new DetailFactory(Country.CHINE));
+    FactoryLine factoryLine = new FactoryLine(new DetailFactory(Country.USA));
     try{
 
       Camry camry = factoryLine.createCamry(Color.BLUE,29000.00);
@@ -45,9 +46,16 @@ public class Main {
       hiance.changeWheel(new Wheel(20));
       hiance.tornOnLight();
 
+      CarStorage carStorage = new CarStorage();
+      carStorage.addCamry(camry,10);
+      carStorage.addCamry(camry,2);
 
     }catch (CountyFactoryNotEqualException | StartCarException ex) {
       ex.printStackTrace();
     }
+
+
+
   }
+
 }
