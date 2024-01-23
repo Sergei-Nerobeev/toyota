@@ -2,8 +2,6 @@
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-G
-src/hu/nero/Runner.java,7\e\7ee3a54072ca2d0e65c792fa7e3cbb66554ab1c5
 :
 
 toyota.iml,1\7\17d99a84a203438effef318489242a4a371406d5
@@ -27,8 +25,6 @@ W
 +src/hu/nero/toyota/factory/FactoryLine.java,6\2\6285243a6acac29dc7376b043b5caf323c4148fe
 n
 >src/hu/nero/toyota/factory/CountyFactoryNotEqualException.java,f\6\f662264f7a6c671a66f61ef1e6078a0472267770
-c
-3src/hu/nero/toyota/abscar/SpareWheelChangeable.java,e\2\e2a2744448d26f767415c5ee93fdf8aada911f24
 _
 /src/hu/nero/toyota/abscar/ElectricalSystem.java,f\e\fedbeff301c20fd8d089c43038a4f2efe870c819
 T
@@ -59,3 +55,5 @@ Z
 *src/hu/nero/toyota/abscar/AbstractCar.java,7\6\7673731609afc99a4cb69c512ffcfa92ecbd6cd7
 Z
 *src/hu/nero/toyota/storage/CarStorage.java,b\b\bb295e970f32c48a7ae293de6a642a68c584c057
+W
+'src/hu/nero/toyota/storage/Storage.java,5\8\584835e5df14123e1539c7a44863034eb24bca77

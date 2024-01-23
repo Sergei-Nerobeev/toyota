@@ -9,7 +9,7 @@ import hu.nero.toyota.models.Camry;
 import hu.nero.toyota.models.Dyna;
 import hu.nero.toyota.models.Hiance;
 import hu.nero.toyota.models.Solara;
-import hu.nero.toyota.storage.CarStorage;
+import hu.nero.toyota.storage.Storage;
 
 public class Main {
   public static void main(String[] args) {
@@ -46,13 +46,18 @@ public class Main {
       hiance.changeWheel(new Wheel(20));
       hiance.tornOnLight();
 
-      CarStorage carStorage = new CarStorage();
-      carStorage.addCamry(camry,10);
-      carStorage.addCamry(camry,2);
-      carStorage.addSolara(solara,5);
+      Storage storage = new Storage();
 
-      carStorage.takenCamry();
-      carStorage.takenSolara();
+
+      storage.addCamry(camry);
+
+
+//      storage.takenCamry(); //TODO
+
+
+
+
+
     }catch (CountyFactoryNotEqualException | StartCarException ex) {
       ex.printStackTrace();
     }
