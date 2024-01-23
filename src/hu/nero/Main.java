@@ -14,7 +14,8 @@ import hu.nero.toyota.storage.Storage;
 public class Main {
   public static void main(String[] args) {
 
-    FactoryLine factoryLine = new FactoryLine(new DetailFactory(Country.USA));
+    DetailFactory detailFactory = new DetailFactory(Country.JAPAN);
+    FactoryLine factoryLine = new FactoryLine(detailFactory);
     try{
 
       Camry camry = factoryLine.createCamry(Color.BLUE,29000.00);

@@ -57,3 +57,11 @@ Z
 *src/hu/nero/toyota/storage/CarStorage.java,b\b\bb295e970f32c48a7ae293de6a642a68c584c057
 W
 'src/hu/nero/toyota/storage/Storage.java,5\8\584835e5df14123e1539c7a44863034eb24bca77
+V
+&src/hu/nero/toyota/dealers/Dealer.java,a\d\ad81d6580f276cfef50c9546834a57346e435d75
+\
+,src/hu/nero/toyota/dealers/DealerCenter.java,f\e\fe27e44a44088fd5150f2179de01759c1d658db9
+G
+src/hu/nero/Runner.java,7\e\7ee3a54072ca2d0e65c792fa7e3cbb66554ab1c5
+[
++src/hu/nero/toyota/dealer/DealerCenter.java,0\0\00792c780e5f559099db01a15355a07efca0639d
