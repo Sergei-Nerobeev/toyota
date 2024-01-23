@@ -28,38 +28,87 @@ public class Storage {
   }
 
   public void addCamry(Camry camry) {
-    for (int i = 0; i < cars.length; i++)
+    for (int i = 0; i < cars.length; i++) {
       for (int j = 0; j < cars.length; j++) {
         this.cars[0][0] = camry;
         totalCars += 1;
         maxCars -= 1;
         System.out.println("Added to Storage: " + camry + ". Total cars: " + totalCars + ". Free place: " + maxCars);
       }
+    }
   }
 
   public Camry takenCamry() {
-    Camry takenCamry = this.camry[totalCars - 1];
+    Camry takenCamry = (Camry) this.cars[0][0];
     totalCars -= 1;
-    System.out.println("Total cars: " + totalCars + "." + " Taken: " + takenCamry);
+    maxCars += 1;
+    System.out.println(
+        "Taken from Storage: " + takenCamry + ". Total cars: " + totalCars + "." + " Free place: " + maxCars);
     return takenCamry;
 
   }
 
-  public void addSolara(Solara solara, int quantity) {
-    for (int i = 0; i < quantity; i++) {
-      this.solara[totalCars + i] = solara;
+  public void addSolar(Solara solara) {
+    for (int i = 0; i < cars.length; i++) {
+      for (int j = 0; j < cars.length; j++) {
+        this.cars[0][1] = solara;
+        totalCars += 1;
+        maxCars -= 1;
+        System.out.println("Added to Storage: " + solara + ". Total cars: " + totalCars + ". Free place: " + maxCars);
+      }
     }
-    totalCars += quantity;
-    maxCars -= totalCars;
-    System.out.println(quantity + " cars type of " + solara + " added in Storage. Total cars: "
-                           + totalCars + " Free storage place: " + maxCars);
   }
 
-  public Solara takenSolara() {
-    Solara takenSolara = this.solara[totalCars - 1];
+  public Solara takenSolar() {
+    Solara takenSolar = (Solara) this.cars[0][1];
     totalCars -= 1;
-    System.out.println("Total cars: " + totalCars + "." + " Taken: " + takenSolara);
-    return takenSolara;
+    maxCars += 1;
+    System.out.println(
+        "Taken from Storage: " + takenSolar + ". Total cars: " + totalCars + "." + " Free place: " + maxCars);
+    return takenSolar;
+
+  }
+
+  public void addDyna(Dyna dyna) {
+    for (int i = 0; i < cars.length; i++) {
+      for (int j = 0; j < cars.length; j++) {
+        this.cars[0][2] = dyna;
+        totalCars += 1;
+        maxCars -= 1;
+        System.out.println("Added to Storage: " + dyna + ". Total cars: " + totalCars + ". Free place: " + maxCars);
+      }
+    }
+  }
+
+  public Dyna takenDyna() {
+    Dyna takenDyna = (Dyna) this.cars[0][2];
+    totalCars -= 1;
+    maxCars += 1;
+    System.out.println(
+        "Taken from Storage: " + takenDyna + ". Total cars: " + totalCars + "." + " Free place: " + maxCars);
+    return takenDyna;
+
+  }
+
+  public void addHiance(Hiance hiance) {
+    for (int i = 0; i < cars.length; i++) {
+      for (int j = 0; j < cars.length; j++) {
+        this.cars[0][3] = hiance;
+        totalCars += 1;
+        maxCars -= 1;
+        System.out.println("Added to Storage: " + hiance + ". Total cars: " + totalCars + ". Free place: " + maxCars);
+      }
+    }
+  }
+
+  public Hiance takenHiance() {
+    Hiance takenHiance = (Hiance) this.cars[0][3];
+    totalCars -= 1;
+    maxCars += 1;
+    System.out.println(
+        "Taken from Storage: " + takenHiance + ". Total cars: " + totalCars + "." + " Free place: " + maxCars);
+    return takenHiance;
+
   }
 
 }

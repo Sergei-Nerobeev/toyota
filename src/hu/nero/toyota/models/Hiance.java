@@ -38,9 +38,11 @@ public class Hiance extends AbstractCar implements Optionable {
   @Override
   public void addOptional() {
     System.out.println("SpareWheel option connected");
-
   }
-
+  @Override
+  public String toString() {
+    return "Hiance: " + color + "/" + price;
+  }
 }
 
 

@@ -43,5 +43,8 @@ public class Dyna extends AbstractCar implements Optionable {
     System.out.println("Charge phone option connected");
   }
 
-
+  @Override
+  public String toString() {
+    return "Dyna: " + color + "/" + price;
+  }
 }

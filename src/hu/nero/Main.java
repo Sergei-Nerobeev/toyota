@@ -50,9 +50,16 @@ public class Main {
 
 
       storage.addCamry(camry);
+      storage.addSolar(solara);
+      storage.addDyna(dyna);
+      storage.addHiance(hiance);
 
 
-//      storage.takenCamry(); //TODO
+      storage.takenCamry();
+      storage.takenSolar();
+      storage.takenDyna();
+      storage.takenHiance();
+
 
 
 
