@@ -2,9 +2,11 @@ package hu.nero.toyota.abscar;
 
 import hu.nero.toyota.factory.Country;
 
+import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class AbstractCar {
+  protected Title title;
   protected Country country;
   protected Wheel[] wheels;
   protected Color color;
@@ -20,6 +22,7 @@ public abstract class AbstractCar {
   public AbstractCar(){}
 
   public AbstractCar(
+      Title title,
       Country country,
       Wheel[] wheels,
       Color color,
@@ -32,6 +35,7 @@ public abstract class AbstractCar {
       Engine engine,
       ElectricalSystem electricalSystem,
       Light light) {
+    this.title = title;
     this.country = country;
     this.wheels = wheels;
     this.color = color;
@@ -92,5 +96,21 @@ public abstract class AbstractCar {
     return wheels[randomIndex];
   }
 
+  @Override
+  public boolean equals(Object object) {
+    if (this == object) {
+      return true;
+    }
+    if (object == null || getClass() != object.getClass()) {
+      return false;
+    }
+    AbstractCar that = (AbstractCar) object;
+    return title == that.title;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(title);
+  }
 }
 

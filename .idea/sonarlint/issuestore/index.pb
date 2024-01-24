@@ -59,3 +59,5 @@ G
 src/hu/nero/Runner.java,7\e\7ee3a54072ca2d0e65c792fa7e3cbb66554ab1c5
 [
 +src/hu/nero/toyota/dealer/DealerCenter.java,0\0\00792c780e5f559099db01a15355a07efca0639d
+T
+$src/hu/nero/toyota/abscar/Title.java,d\6\d641b3368b738841cfef8d6de69ad8f709091813

@@ -50,6 +50,7 @@ public class Main {
       Storage storage = new Storage();
 
       storage.addCar(camry);
+      storage.addCar(solara);
 
 //      storage.addCamry(camry);
 //      storage.addSolar(solara);

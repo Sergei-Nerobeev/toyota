@@ -10,6 +10,7 @@ public class Camry extends AbstractCar implements Optionable {
   }
   
   public Camry(
+      Title title,
       Country country,
       Wheel spareWheel,
       Wheel[] wheels,
@@ -24,6 +25,7 @@ public class Camry extends AbstractCar implements Optionable {
       ElectricalSystem electricalSystem,
       Light light) {
     super(
+        title,
         country,
         wheels,
         color,
@@ -49,6 +51,7 @@ public class Camry extends AbstractCar implements Optionable {
   public String toString() {
     return "Camry: " + color + "/" + price;
   }
+
 }
 
 

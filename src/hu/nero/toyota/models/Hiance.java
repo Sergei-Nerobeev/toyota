@@ -6,6 +6,7 @@ import hu.nero.toyota.factory.Country;
 public class Hiance extends AbstractCar implements Optionable {
 
   public Hiance(
+      Title title,
       Country country,
       Wheel wheel,
       Wheel[] wheels,
@@ -20,6 +21,7 @@ public class Hiance extends AbstractCar implements Optionable {
       ElectricalSystem electricalSystem,
       Light light) {
     super(
+        title,
         country,
         wheels,
         color,

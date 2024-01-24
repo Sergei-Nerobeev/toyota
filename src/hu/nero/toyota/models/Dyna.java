@@ -7,6 +7,7 @@ public class Dyna extends AbstractCar implements Optionable {
   private int maxCapacity;
 
   public Dyna(
+      Title title,
       Country country,
       Wheel wheel,
       Wheel[] wheels,
@@ -22,6 +23,7 @@ public class Dyna extends AbstractCar implements Optionable {
       Light light,
       int maxCapacity) {
     super(
+        title,
         country,
         wheels,
         color,

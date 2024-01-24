@@ -6,6 +6,7 @@ import hu.nero.toyota.factory.Country;
 public class Solara extends AbstractCar implements Optionable {
 
   public Solara(
+      Title title,
       Country country,
       Wheel wheel,
       Wheel[] wheels,
@@ -20,6 +21,7 @@ public class Solara extends AbstractCar implements Optionable {
       ElectricalSystem electricalSystem,
       Light light) {
     super(
+        title,
         country,
         wheels,
         color,
