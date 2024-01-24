@@ -24,16 +24,16 @@ public class DealerCenter {
     this.factoryLine = new FactoryLine(detailFactory);
   }
 
-  public void createCars() throws CountyFactoryNotEqualException {
-    Camry camry = factoryLine.createCamry(Color.BLACK, 10000.00);
-    Solara solara = factoryLine.createSolara(Color.WHITE, 12000.00);
-    Hiance hiance = factoryLine.createHiance(Color.BLACK, 15000.00);
-    Dyna dyna = factoryLine.createDyna(Color.BLACK, 22000.00);
-    storage.addCamry(camry);
-    storage.addSolar(solara);
-    storage.addHiance(hiance);
-    storage.addDyna(dyna);
-  }
+//  public void createCars() throws CountyFactoryNotEqualException {
+//    Camry camry = factoryLine.createCamry(Color.BLACK, 10000.00);
+//    Solara solara = factoryLine.createSolara(Color.WHITE, 12000.00);
+//    Hiance hiance = factoryLine.createHiance(Color.BLACK, 15000.00);
+//    Dyna dyna = factoryLine.createDyna(Color.BLACK, 22000.00);
+//    storage.addCamry(camry);
+//    storage.addSolar(solara);
+//    storage.addHiance(hiance);
+//    storage.addDyna(dyna);
+//  }
   public Storage getStorage() {
     return storage;
   }

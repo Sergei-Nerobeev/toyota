@@ -96,21 +96,6 @@ public abstract class AbstractCar {
     return wheels[randomIndex];
   }
 
-  @Override
-  public boolean equals(Object object) {
-    if (this == object) {
-      return true;
-    }
-    if (object == null || getClass() != object.getClass()) {
-      return false;
-    }
-    AbstractCar that = (AbstractCar) object;
-    return title == that.title;
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(title);
-  }
 }
 

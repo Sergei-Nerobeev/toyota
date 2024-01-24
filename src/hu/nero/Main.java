@@ -51,6 +51,11 @@ public class Main {
 
       storage.addCar(camry);
       storage.addCar(solara);
+      storage.addCar(dyna);
+      storage.addCar(hiance);
+
+      storage.takenCar();
+
 
 //      storage.addCamry(camry);
 //      storage.addSolar(solara);
