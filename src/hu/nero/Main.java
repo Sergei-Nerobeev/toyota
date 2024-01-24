@@ -49,17 +49,18 @@ public class Main {
 
       Storage storage = new Storage();
 
+      storage.addCar(camry);
 
-      storage.addCamry(camry);
-      storage.addSolar(solara);
-      storage.addDyna(dyna);
-      storage.addHiance(hiance);
-
-
-      storage.takenCamry();
-      storage.takenSolar();
-      storage.takenDyna();
-      storage.takenHiance();
+//      storage.addCamry(camry);
+//      storage.addSolar(solara);
+//      storage.addDyna(dyna);
+//      storage.addHiance(hiance);
+//
+//
+//      storage.takenCamry();
+//      storage.takenSolar();
+//      storage.takenDyna();
+//      storage.takenHiance();
 
 
 
