@@ -39,7 +39,7 @@ public class Storage {
     }
   }
 
-  public Object takenCar() {
+  public Object takenCar() { //TODO IT
     Object takenCar = null;
     for (int i = 0; i < cars.length; i++) {
       for (int j = 0; j < cars.length; j++ ) {

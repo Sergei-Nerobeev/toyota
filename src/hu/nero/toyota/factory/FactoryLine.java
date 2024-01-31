@@ -20,7 +20,7 @@ public class FactoryLine {
           "The factories are located in different countries: " +
               detailFactory.getCountry() + " and " + this.detailFactory.getCountry());
     }
-    Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
+    Wheel[] wheels = new Wheel[4]; // Сделать через фабричные методы
     for (int i = 0; i < wheels.length; i++) {
         wheels[i] = new Wheel(17);
     }
