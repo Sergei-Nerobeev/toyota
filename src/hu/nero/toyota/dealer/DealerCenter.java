@@ -17,7 +17,7 @@ public class DealerCenter {
   private DetailFactory detailFactory;
   private FactoryLine factoryLine;
 
-  public DealerCenter(Country country) {
+  public DealerCenter(Country country, Storage storage,FactoryLine factoryLine) {
     this.country = country;
     this.storage = new Storage();
     this.detailFactory = new DetailFactory(Country.JAPAN);
@@ -29,10 +29,10 @@ public class DealerCenter {
     Solara solara = factoryLine.createSolara(Color.WHITE, 12000.00);
     Hiance hiance = factoryLine.createHiance(Color.BLACK, 15000.00);
     Dyna dyna = factoryLine.createDyna(Color.BLACK, 22000.00);
-    storage.addCamry(camry);
-    storage.addSolar(solara);
-    storage.addHiance(hiance);
-    storage.addDyna(dyna);
+    storage.addCar(camry);
+    storage.addCar(solara);
+    storage.addCar(hiance);
+    storage.addCar(dyna);
   }
   public Storage getStorage() {
     return storage;

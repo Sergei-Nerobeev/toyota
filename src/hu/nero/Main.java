@@ -58,16 +58,6 @@ public class Main {
 
       storage.takenCar();
 
-//      storage.addCamry(camry);
-//      storage.addSolar(solara);
-//      storage.addDyna(dyna);
-//      storage.addHiance(hiance);
-//
-//
-//      storage.takenCamry();
-//      storage.takenSolar();
-//      storage.takenDyna();
-//      storage.takenHiance();
 
     }
     catch (CountryFactoryNotEqualException | StartCarException ex) {

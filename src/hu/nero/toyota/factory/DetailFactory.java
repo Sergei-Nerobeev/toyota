@@ -7,9 +7,13 @@ public class DetailFactory {
 
   public DetailFactory(Country country) {
     this.country = country;
+    createWheel(country);
   }
 
-  public Wheel createWheel() { // set size wheels!
+  public Wheel createWheel(Country country) { // set size wheels!
+    if(!getCountry() == this.getCountry()){
+      setCountry(country);
+    }
     return new Wheel(); // в какой стране сделана запчасть, маркировка
   }
   public FuelTank createFuelTank() {
@@ -34,5 +38,6 @@ public class DetailFactory {
   public void setCountry(Country country) {
     this.country = country;
   }
+
 
 }
