@@ -1,8 +1,10 @@
 package hu.nero;
 
-import hu.nero.toyota.abscar.*;
+import hu.nero.toyota.abscar.Color;
+import hu.nero.toyota.abscar.StartCarException;
+import hu.nero.toyota.abscar.Wheel;
 import hu.nero.toyota.factory.Country;
-import hu.nero.toyota.factory.CountyFactoryNotEqualException;
+import hu.nero.toyota.factory.CountryFactoryNotEqualException;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.factory.FactoryLine;
 import hu.nero.toyota.models.Camry;
@@ -16,9 +18,9 @@ public class Main {
 
     DetailFactory detailFactory = new DetailFactory(Country.JAPAN);
     FactoryLine factoryLine = new FactoryLine(detailFactory);
-    try{
+    try {
 
-      Camry camry = factoryLine.createCamry(Color.BLUE,29000.00);
+      Camry camry = factoryLine.createCamry(Color.BLUE, 29000.00);
       Solara solara = factoryLine.createSolara(Color.GREEEN, 34000.00);
       Dyna dyna = factoryLine.createDyna(Color.RED, 59000.00);
       Hiance hiance = factoryLine.createHiance(Color.ORANGE, 80000.00);
@@ -56,7 +58,6 @@ public class Main {
 
       storage.takenCar();
 
-
 //      storage.addCamry(camry);
 //      storage.addSolar(solara);
 //      storage.addDyna(dyna);
@@ -68,16 +69,10 @@ public class Main {
 //      storage.takenDyna();
 //      storage.takenHiance();
 
-
-
-
-
-
-    }catch (CountyFactoryNotEqualException | StartCarException ex) {
+    }
+    catch (CountryFactoryNotEqualException | StartCarException ex) {
       ex.printStackTrace();
     }
-
-
 
   }
 

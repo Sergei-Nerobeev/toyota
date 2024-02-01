@@ -28,7 +28,11 @@ public class DetailFactory {
     return new Light();
   }
 
-  public Country getCountry() {
-    return country;
-  } // сделать сет страны,
+  public boolean getCountry() {
+    return true;
+  }
+  public void setCountry(Country country) {
+    this.country = country;
+  }
+
 }
