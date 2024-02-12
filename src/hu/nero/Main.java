@@ -5,7 +5,7 @@ import hu.nero.toyota.abscar.StartCarException;
 import hu.nero.toyota.abscar.Wheel;
 import hu.nero.toyota.factory.Country;
 import hu.nero.toyota.factory.CountryFactoryNotEqualException;
-import hu.nero.toyota.factory.DetailFactory;
+import hu.nero.toyota.factory.Detail;
 import hu.nero.toyota.factory.FactoryLine;
 import hu.nero.toyota.models.Camry;
 import hu.nero.toyota.models.Dyna;
@@ -16,8 +16,8 @@ import hu.nero.toyota.storage.Storage;
 public class Main {
   public static void main(String[] args) {
 
-    DetailFactory detailFactory = new DetailFactory(Country.JAPAN);
-    FactoryLine factoryLine = new FactoryLine(detailFactory);
+    Detail detail = new Detail(Country.JAPAN);
+    FactoryLine factoryLine = new FactoryLine(detail);
     try {
 
       Camry camry = factoryLine.createCamry(Color.BLUE, 29000.00);

@@ -7,18 +7,22 @@ import hu.nero.toyota.models.Hiance;
 import hu.nero.toyota.models.Solara;
 
 public class FactoryLine {
-  private DetailFactory detailFactory;
+  private FactoryLine factoryLine;
+  private Country country;
+  private Detail detail;
   private final String exceptionMassage = "The factories are located in different countries: ";
   private final String and = " and ";
 
-  public FactoryLine(DetailFactory detailFactory) {
-    this.detailFactory = detailFactory;
+  public FactoryLine(Detail detail, Country country) {
+    this.detail = detail;
+    this.country = country;
+    detail.setCountry(country);
   }
 
   public Camry createCamry(Color color, double price) throws CountryFactoryNotEqualException {
-    if (!detailFactory.getCountry() == this.detailFactory.getCountry()) {
+    if (!detail.getCountry() == this.detail.getCountry()) {
       throw new CountryFactoryNotEqualException(
-          exceptionMassage + detailFactory.getCountry() + and + this.detailFactory.getCountry());
+          exceptionMassage + detail.getCountry() + and + this.detail.getCountry());
     }
     Wheel[] wheels = new Wheel[4]; // Сделать через фабричные методы
     for (int i = 0; i < wheels.length; i++) {
@@ -43,9 +47,9 @@ public class FactoryLine {
   }
 
   public Solara createSolara(Color color, double price) throws CountryFactoryNotEqualException {
-    if (!detailFactory.getCountry() == (this.detailFactory.getCountry())) {
+    if (!detail.getCountry() == (this.detail.getCountry())) {
       throw new CountryFactoryNotEqualException(
-          exceptionMassage + detailFactory.getCountry() + and + this.detailFactory.getCountry());
+          exceptionMassage + detail.getCountry() + and + this.detail.getCountry());
     }
     Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
     for (int i = 0; i < wheels.length; i++) {
@@ -71,9 +75,9 @@ public class FactoryLine {
 
   public Dyna createDyna(Color color, double price) throws CountryFactoryNotEqualException {
 
-    if (!detailFactory.getCountry() == (this.detailFactory.getCountry())) {
+    if (!detail.getCountry() == (this.detail.getCountry())) {
       throw new CountryFactoryNotEqualException(
-          exceptionMassage + detailFactory.getCountry() + and + this.detailFactory.getCountry());
+          exceptionMassage + detail.getCountry() + and + this.detail.getCountry());
     }
     Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
     for (int i = 0; i < wheels.length; i++) {
@@ -100,9 +104,9 @@ public class FactoryLine {
 
   public Hiance createHiance(Color color, double price) throws CountryFactoryNotEqualException {
 
-    if (!detailFactory.getCountry() == (this.detailFactory.getCountry())) {
+    if (!detail.getCountry() == (this.detail.getCountry())) {
       throw new CountryFactoryNotEqualException(
-         exceptionMassage +  detailFactory.getCountry() + and + this.detailFactory.getCountry());
+          exceptionMassage + detail.getCountry() + and + this.detail.getCountry());
     }
     Wheel[] wheels = new Wheel[4]; // Спросить у Дани как лучше
     for (int i = 0; i < wheels.length; i++) {

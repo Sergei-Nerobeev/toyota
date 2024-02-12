@@ -2,7 +2,6 @@ package hu.nero.toyota.abscar;
 
 import hu.nero.toyota.factory.Country;
 
-import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class AbstractCar {
@@ -19,7 +18,9 @@ public abstract class AbstractCar {
   protected Engine engine;
   protected ElectricalSystem electricalSystem;
   protected Light light;
-  public AbstractCar(){}
+
+  public AbstractCar() {
+  }
 
   public AbstractCar(
       Title title,
@@ -62,7 +63,8 @@ public abstract class AbstractCar {
     }
     if (engine.isEngineOn()) {
       throw new StartCarException("Check engine: " + engine.isEngineOn());
-    } else {
+    }
+    else {
       System.out.println("Car starts moving");
     }
   }
@@ -77,16 +79,18 @@ public abstract class AbstractCar {
   }
 
   public boolean changeWheel(Wheel wheelForReplacement) {
-    for (int i = 0; i < wheels.length; i++)
-        if (!wheels[i].isFlat() && wheels[i].getRadius() == wheelForReplacement.getRadius()) {
+    for (int i = 0; i < wheels.length; i++) {
+      if (!wheels[i].isFlat() && wheels[i].getRadius() == wheelForReplacement.getRadius()) {
         wheels[i] = wheelForReplacement;
         System.out.println("Wheel changed");
         return true;
       }
+    }
 
     System.out.println("Radius is not correct");
     return false;
   }
+
   public void getFlatTire() {
     getRandomWheel().setFlat(true);
   }

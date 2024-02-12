@@ -12,7 +12,7 @@ S
 U
 %src/hu/nero/toyota/models/Solara.java,3\a\3aa035f5111e0873aae8bf2758ea3873b308d3cb
 T
-$src/hu/nero/toyota/models/Camry.java,5\7\577766a68d894e494567c87d27f55c9552546940
+$src/hu/nero/toyota/models/Camry.java,5/7/577766a68d894e494567c87d27f55c9552546940
 U
 %src/hu/nero/toyota/models/Hiance.java,3\3\3300a2dee27f8e5e652f33dc1381542b298b3303
 S
@@ -23,8 +23,6 @@ W
 -src/hu/nero/toyota/factory/DetailFactory.java,4/4/441d0b5657d128a1c3884af10cdbbbd8fba84090
 [
 +src/hu/nero/toyota/factory/FactoryLine.java,6/2/6285243a6acac29dc7376b043b5caf323c4148fe
-n
->src/hu/nero/toyota/factory/CountyFactoryNotEqualException.java,f/6/f662264f7a6c671a66f61ef1e6078a0472267770
 _
 /src/hu/nero/toyota/abscar/ElectricalSystem.java,f\e\fedbeff301c20fd8d089c43038a4f2efe870c819
 T
@@ -63,3 +61,5 @@ T
 $src/hu/nero/toyota/abscar/Title.java,d\6\d641b3368b738841cfef8d6de69ad8f709091813
 o
 ?src/hu/nero/toyota/factory/CountryFactoryNotEqualException.java,5/f/5f47262231924d3c0fbce835be17ed386e53b576
+V
+&src/hu/nero/toyota/factory/Detail.java,7/3/7347e96374089768225d9841bddf3e917e4e5ec6

@@ -3,7 +3,7 @@ package hu.nero.toyota.dealer;
 import hu.nero.toyota.abscar.Color;
 import hu.nero.toyota.factory.Country;
 import hu.nero.toyota.factory.CountryFactoryNotEqualException;
-import hu.nero.toyota.factory.DetailFactory;
+import hu.nero.toyota.factory.Detail;
 import hu.nero.toyota.factory.FactoryLine;
 import hu.nero.toyota.models.Camry;
 import hu.nero.toyota.models.Dyna;
@@ -14,14 +14,12 @@ import hu.nero.toyota.storage.Storage;
 public class DealerCenter {
   private Country country;
   private Storage storage;
-  private DetailFactory detailFactory;
+  private Detail detail;
   private FactoryLine factoryLine;
 
-  public DealerCenter(Country country, Storage storage,FactoryLine factoryLine) {
-    this.country = country;
+  public DealerCenter(Storage storage, FactoryLine factoryLine) {
     this.storage = new Storage();
-    this.detailFactory = new DetailFactory(Country.JAPAN);
-    this.factoryLine = new FactoryLine(detailFactory);
+
   }
 
   public void createCars() throws CountryFactoryNotEqualException {
@@ -42,12 +40,12 @@ public class DealerCenter {
     this.storage = storage;
   }
 
-  public DetailFactory getDetailFactory() {
-    return detailFactory;
+  public Detail getDetailFactory() {
+    return detail;
   }
 
-  public void setDetailFactory(DetailFactory detailFactory) {
-    this.detailFactory = detailFactory;
+  public void setDetailFactory(Detail detail) {
+    this.detail = detail;
   }
 
   public FactoryLine getFactoryLine() {
