@@ -6,9 +6,9 @@
 
 toyota.iml,1\7\17d99a84a203438effef318489242a4a371406d5
 S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+-.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
 U
 %src/hu/nero/toyota/models/Solara.java,3\a\3aa035f5111e0873aae8bf2758ea3873b308d3cb
 T
@@ -20,13 +20,13 @@ S
 W
 'src/hu/nero/toyota/factory/Country.java,4\9\4921a6c1c3cd968712f343cb2b17c130793d6784
 ]
--src/hu/nero/toyota/factory/DetailFactory.java,4\4\441d0b5657d128a1c3884af10cdbbbd8fba84090
+-src/hu/nero/toyota/factory/DetailFactory.java,4/4/441d0b5657d128a1c3884af10cdbbbd8fba84090
 [
-+src/hu/nero/toyota/factory/FactoryLine.java,6\2\6285243a6acac29dc7376b043b5caf323c4148fe
++src/hu/nero/toyota/factory/FactoryLine.java,6/2/6285243a6acac29dc7376b043b5caf323c4148fe
 n
 >src/hu/nero/toyota/factory/CountyFactoryNotEqualException.java,f\6\f662264f7a6c671a66f61ef1e6078a0472267770
 _
-/src/hu/nero/toyota/abscar/ElectricalSystem.java,f\e\fedbeff301c20fd8d089c43038a4f2efe870c819
+/src/hu/nero/toyota/abscar/ElectricalSystem.java,f/e/fedbeff301c20fd8d089c43038a4f2efe870c819
 T
 $src/hu/nero/toyota/abscar/Light.java,1\4\14d213a75953ef44acfaac281939d863425a54f6
 Y
@@ -52,15 +52,9 @@ S
 E
 src/hu/nero/Main.java,3\2\32f84a830bbc1edfac77e5c76d645af8c989f1ce
 Z
-*src/hu/nero/toyota/abscar/AbstractCar.java,7\6\7673731609afc99a4cb69c512ffcfa92ecbd6cd7
-Z
-*src/hu/nero/toyota/storage/CarStorage.java,b\b\bb295e970f32c48a7ae293de6a642a68c584c057
+*src/hu/nero/toyota/abscar/AbstractCar.java,7/6/7673731609afc99a4cb69c512ffcfa92ecbd6cd7
 W
 'src/hu/nero/toyota/storage/Storage.java,5\8\584835e5df14123e1539c7a44863034eb24bca77
-V
-&src/hu/nero/toyota/dealers/Dealer.java,a\d\ad81d6580f276cfef50c9546834a57346e435d75
-\
-,src/hu/nero/toyota/dealers/DealerCenter.java,f\e\fe27e44a44088fd5150f2179de01759c1d658db9
 G
 src/hu/nero/Runner.java,7\e\7ee3a54072ca2d0e65c792fa7e3cbb66554ab1c5
 [
