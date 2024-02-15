@@ -1,96 +1,164 @@
 package hu.nero.toyota.abscar;
 
+import hu.nero.toyota.detail.*;
 import hu.nero.toyota.factory.Country;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 public abstract class AbstractCar {
-  protected Country country;
-  protected Wheel[] wheels;
-  protected Color color;
-  protected double price;
-  protected Type type;
-  protected MaxSpeed maxSpeed;
-  protected Transmission transmission;
-  protected boolean isMoving;
-  protected FuelTank fuelTank;
-  protected Engine engine;
-  protected ElectricalSystem electricalSystem;
-  protected Light light;
-  public AbstractCar(){}
+    public static final int COUNT_WHEELS = 4;
+    protected Color color;
+    protected int maxSpeed;
+    protected Transmission transmission;
+    protected boolean isMove = false;
+    protected FuelTank fuelTank;
+    protected Engine engine;
+    protected Wheel[] wheels = new Wheel[COUNT_WHEELS];
+    protected ElectricalSystem electricalSystem;
+    protected HeadLights headLights;
+    protected WheelRadius wheelRadius;
+    protected Country countryAssembly;
+    protected Model model;
 
-  public AbstractCar(
-      Country country,
-      Wheel[] wheels,
-      Color color,
-      double price,
-      Type type,
-      MaxSpeed maxSpeed,
-      Transmission transmission,
-      boolean isMoving,
-      FuelTank fuelTank,
-      Engine engine,
-      ElectricalSystem electricalSystem,
-      Light light) {
-    this.country = country;
-    this.wheels = wheels;
-    this.color = color;
-    this.price = price;
-    this.type = type;
-    this.maxSpeed = maxSpeed;
-    this.transmission = transmission;
-    this.isMoving = isMoving;
-    this.fuelTank = fuelTank;
-    this.engine = engine;
-    this.electricalSystem = electricalSystem;
-    this.light = light;
-  }
-
-  public void startMovement() throws StartCarException { // спросить у Дани
-    if (wheels.length != 4) {
-      throw new StartCarException("Check count of wheels: " + wheels.length);
+    protected AbstractCar(Color color, int maxSpeed, Transmission transmission, WheelRadius wheelRadius,
+                          Country countryAssembly, Model model) {
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+        this.transmission = transmission;
+        this.wheelRadius = wheelRadius;
+        this.countryAssembly = countryAssembly;
+        this.model = model;
     }
-    if (wheels[0].isFlat()) {
-      throw new StartCarException("Check wheel condition: " + wheels[0].isFlat());
-    }
-    if (fuelTank.getFuelLevel() < 0) {
-      throw new StartCarException("Check fuelTank level: " + (fuelTank.getFuelLevel() > 0));
-    }
-    if (engine.isEngineOn()) {
-      throw new StartCarException("Check engine: " + engine.isEngineOn());
-    } else {
-      System.out.println("Car starts moving");
-    }
-  }
 
-  public void stopMoving() {
-    isMoving = false;
-    System.out.println("Car is not moving");
-  }
+    public void start() throws StartCarFailedException {
+        if (isMove) {
+            throw new StartCarFailedException("Car is already start");
+        }
+        checkDetailsBeforeStart();
+        isMove = true;
 
-  public void tornOnLight() {
-    light.tornOn();
-  }
+    }
 
-  public boolean changeWheel(Wheel wheelForReplacement) {
-    for (int i = 0; i < wheels.length; i++)
-        if (!wheels[i].isFlat() && wheels[i].getRadius() == wheelForReplacement.getRadius()) {
-        wheels[i] = wheelForReplacement;
-        System.out.println("Wheel changed");
+    public void stop() {
+        isMove = false;
+    }
+
+    private void checkDetailsBeforeStart() throws StartCarFailedException {
+        StringBuilder failures = new StringBuilder();
+        if (fuelTank.getFuelLevel() <= 0) {
+            failures.append("FuelTank is empty");
+        }
+        if (!engine.isWork()) {
+            failures.append("Engine doesn't work");
+        }
+        if (!headLights.isWork()) {
+            failures.append("HeadLights doesn't work");
+        }
+        if (!electricalSystem.isWork()) {
+            failures.append("Electrical system doesn't work");
+        }
+        if (!failures.isEmpty()) {
+            throw new StartCarFailedException(failures.toString());
+        }
+    }
+
+    private boolean checkWheelsWork() {
+        for (Wheel wheel : wheels) {
+            if (!wheel.isWork()) {
+                return false;
+            }
+        }
         return true;
-      }
+    }
 
-    System.out.println("Radius is not correct");
-    return false;
-  }
-  public void getFlatTire() {
-    getRandomWheel().setFlat(true);
-  }
+    public Model getModel() {
+        return model;
+    }
 
-  private Wheel getRandomWheel() {
-    final var randomIndex = ThreadLocalRandom.current().nextInt(0, wheels.length);
-    return wheels[randomIndex];
-  }
+    public WheelRadius getWheelRadius() {
+        return wheelRadius;
+    }
 
+    public Country getCountryAssembly() {
+        return countryAssembly;
+    }
+
+    public void setFuelTank(FuelTank fuelTank) {
+        this.fuelTank = fuelTank;
+    }
+
+    public FuelTank getFuelTank() {
+        return fuelTank;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public Wheel[] getWheels() {
+        return wheels;
+    }
+
+    public void setWheels(Wheel[] wheels) {
+        checkWheels(wheels);
+        this.wheels = wheels;
+    }
+
+    public ElectricalSystem getElectricalSystem() {
+        return electricalSystem;
+    }
+
+    public HeadLights getHeadLights() {
+        return headLights;
+    }
+
+    public void setHeadLights(HeadLights headLights) {
+        this.headLights = headLights;
+    }
+
+    public void setElectricalSystem(ElectricalSystem electricalSystem) {
+        this.electricalSystem = electricalSystem;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public Transmission getTransmission() {
+        return transmission;
+    }
+
+    public boolean isMove() {
+        return isMove;
+    }
+
+    private void checkWheels(Wheel[] wheels) {
+        if (wheels == null || wheels.length != 4) {
+            throw new RuntimeException("Wheels array null or not size " + COUNT_WHEELS);
+        }
+        for (Wheel wheel : wheels) {
+            checkWheel(wheel);
+        }
+    }
+
+    private void checkWheel(Wheel wheel) {
+        if (wheel == null || wheel.getWheelRadius() != wheelRadius) {
+            throw new RuntimeException("Wheel is null or not same diameter");
+        }
+    }
 }
 
