@@ -1,5 +1,8 @@
-package hu.nero.toyota.abscar;
+package hu.nero.toyota.type;
 
+import hu.nero.toyota.detail.CarModel;
+import hu.nero.toyota.detail.Color;
+import hu.nero.toyota.exceptoin.StartCarFailedException;
 import hu.nero.toyota.detail.*;
 import hu.nero.toyota.factory.Country;
 
@@ -16,16 +19,16 @@ public abstract class AbstractCar {
     protected HeadLights headLights;
     protected WheelRadius wheelRadius;
     protected Country countryAssembly;
-    protected Model model;
+    protected CarModel carModel;
 
     protected AbstractCar(Color color, int maxSpeed, Transmission transmission, WheelRadius wheelRadius,
-                          Country countryAssembly, Model model) {
+                          Country countryAssembly, CarModel carModel) {
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transmission = transmission;
         this.wheelRadius = wheelRadius;
         this.countryAssembly = countryAssembly;
-        this.model = model;
+        this.carModel = carModel;
     }
 
     public void start() throws StartCarFailedException {
@@ -69,8 +72,8 @@ public abstract class AbstractCar {
         return true;
     }
 
-    public Model getModel() {
-        return model;
+    public CarModel getModel() {
+        return carModel;
     }
 
     public WheelRadius getWheelRadius() {
@@ -157,7 +160,7 @@ public abstract class AbstractCar {
 
     private void checkWheel(Wheel wheel) {
         if (wheel == null || wheel.getWheelRadius() != wheelRadius) {
-            throw new RuntimeException("Wheel is null or not same diameter");
+            throw new RuntimeException("Wheel is null or not same radius");
         }
     }
 }

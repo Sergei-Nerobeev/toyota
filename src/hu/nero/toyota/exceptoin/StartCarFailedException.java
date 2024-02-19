@@ -1,4 +1,4 @@
-package hu.nero.toyota.abscar;
+package hu.nero.toyota.exceptoin;
 
 public class StartCarFailedException extends Exception {
   public StartCarFailedException(String message){

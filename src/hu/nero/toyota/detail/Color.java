@@ -1,4 +1,4 @@
-package hu.nero.toyota.abscar;
+package hu.nero.toyota.detail;
 
 public enum Color {
   RED("RED"),
