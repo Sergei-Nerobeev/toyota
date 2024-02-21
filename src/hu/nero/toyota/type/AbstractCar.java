@@ -4,7 +4,7 @@ import hu.nero.toyota.detail.CarModel;
 import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.exceptoin.StartCarFailedException;
 import hu.nero.toyota.detail.*;
-import hu.nero.toyota.factory.Country;
+import hu.nero.toyota.detail.Country;
 
 public abstract class AbstractCar {
     public static final int COUNT_WHEELS = 4;
@@ -46,7 +46,7 @@ public abstract class AbstractCar {
 
     private void checkDetailsBeforeStart() throws StartCarFailedException {
         StringBuilder failures = new StringBuilder();
-        if (fuelTank.getFuelLevel() <= 0) {
+        if (fuelTank.getLevel() <= 0) {
             failures.append("FuelTank is empty");
         }
         if (!engine.isWork()) {

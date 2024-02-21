@@ -5,7 +5,7 @@ import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.Roof;
 import hu.nero.toyota.detail.Transmission;
 import hu.nero.toyota.detail.WheelRadius;
-import hu.nero.toyota.factory.Country;
+import hu.nero.toyota.detail.Country;
 
 public class Cabriolet extends LightCar {
     private Roof roof;

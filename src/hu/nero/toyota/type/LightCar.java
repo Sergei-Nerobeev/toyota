@@ -5,7 +5,7 @@ import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.CruiseControl;
 import hu.nero.toyota.detail.Transmission;
 import hu.nero.toyota.detail.WheelRadius;
-import hu.nero.toyota.factory.Country;
+import hu.nero.toyota.detail.Country;
 
 public class LightCar extends AbstractCar {
     private CruiseControl cruiseControl;

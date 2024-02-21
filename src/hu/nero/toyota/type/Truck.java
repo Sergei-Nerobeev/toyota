@@ -4,7 +4,7 @@ import hu.nero.toyota.detail.CarModel;
 import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.Transmission;
 import hu.nero.toyota.detail.WheelRadius;
-import hu.nero.toyota.factory.Country;
+import hu.nero.toyota.detail.Country;
 
 public class Truck extends AbstractCar{
     private final int maxCapacity;

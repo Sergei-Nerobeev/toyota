@@ -1,16 +1,16 @@
 package hu.nero.toyota.detail;
 
 public class FuelTank {
-    private double fuelLevel = 0;
+    private double level = 0;
 
-    public double getFuelLevel() {
-        return fuelLevel;
+    public double getLevel() {
+        return level;
     }
 
-    public void setFuelLevel(double fuelLevel) {
-        if (fuelLevel < 0) {
+    public void setLevel(double level) {
+        if (level < 0) {
             throw new RuntimeException("FueLevel is empty!");
         }
-        this.fuelLevel = fuelLevel;
+        this.level = level;
     }
 }
