@@ -10,9 +10,10 @@ public class Camry extends LightCar {
     public static final Transmission TRANSMISSION = Transmission.AUTOMATE;
     private Usb usb;
 
-    public Camry(Color color, Country countryAssembly) {
+    public Camry(Color color) {
 
-        super(color, MAX_SPEED, Transmission.AUTOMATE, WheelRadius.SEVENTEEN,countryAssembly, CarModel.CAMRY);
+        super(color, MAX_SPEED, Transmission.AUTOMATE, WheelRadius.SEVENTEEN, CarModel.CAMRY, new FuelTank(20D),
+                new Engine(), new HeadLights(), new ElectricalSystem());
     }
 
     public void connectedMusic() {

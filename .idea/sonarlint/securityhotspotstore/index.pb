@@ -10,10 +10,6 @@ S
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
 W
-'src/hu/nero/toyota/factory/Country.java,4/9/4921a6c1c3cd968712f343cb2b17c130793d6784
-n
->src/hu/nero/toyota/factory/CountyFactoryNotEqualException.java,f/6/f662264f7a6c671a66f61ef1e6078a0472267770
-W
 'src/hu/nero/toyota/storage/Storage.java,5/8/584835e5df14123e1539c7a44863034eb24bca77
 _
 /src/hu/nero/toyota/detail/ElectricalSystem.java,f/6/f6b8b53885ed1edf61fc42d2b2871d7c103773d2

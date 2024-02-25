@@ -1,7 +1,6 @@
 package hu.nero.toyota.model;
 
 import hu.nero.toyota.detail.*;
-import hu.nero.toyota.detail.Country;
 import hu.nero.toyota.type.Truck;
 
 public class Dyna extends Truck {
@@ -11,9 +10,10 @@ public class Dyna extends Truck {
     public static final int MAX_CAPACITY = 3_000;
     private Socket socket;
 
-    public Dyna(Color color, Country countryAssembly) {
+    public Dyna(Color color) {
 
-        super(color, MAX_SPEED, Transmission.MECHANICAL, WheelRadius.TWENTY, MAX_CAPACITY, countryAssembly, CarModel.DYNA);
+        super(color, MAX_SPEED, Transmission.MECHANICAL, WheelRadius.TWENTY, MAX_CAPACITY, CarModel.DYNA, new FuelTank(40),
+                new Engine(), new HeadLights(), new ElectricalSystem(), MAX_CAPACITY);
     }
 
     public Socket getSocket() {

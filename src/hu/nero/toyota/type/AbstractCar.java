@@ -22,13 +22,17 @@ public abstract class AbstractCar {
     protected CarModel carModel;
 
     protected AbstractCar(Color color, int maxSpeed, Transmission transmission, WheelRadius wheelRadius,
-                          Country countryAssembly, CarModel carModel) {
+        CarModel carModel, FuelTank fuelTank, Engine engine, HeadLights headLights, ElectricalSystem electricalSystem) {
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transmission = transmission;
         this.wheelRadius = wheelRadius;
-        this.countryAssembly = countryAssembly;
         this.carModel = carModel;
+        this.fuelTank = fuelTank;
+        this.engine = engine;
+        this.headLights = headLights;
+        this.electricalSystem = electricalSystem;
+
     }
 
     public void start() throws StartCarFailedException {
@@ -37,6 +41,7 @@ public abstract class AbstractCar {
         }
         checkDetailsBeforeStart();
         isMove = true;
+        System.out.println("Start");
 
     }
 
@@ -87,7 +92,6 @@ public abstract class AbstractCar {
     public void setFuelTank(FuelTank fuelTank) {
         this.fuelTank = fuelTank;
     }
-
     public FuelTank getFuelTank() {
         return fuelTank;
     }
