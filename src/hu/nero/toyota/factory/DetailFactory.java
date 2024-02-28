@@ -40,4 +40,6 @@ public class DetailFactory {
     public void setCountryAssembly(Country countryAssembly) {
         this.countryAssembly = countryAssembly;
     }
+
+
 }

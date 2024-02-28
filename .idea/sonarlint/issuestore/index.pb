@@ -71,3 +71,5 @@ V
 -src/hu/nero/toyota/factory/DetailFactory.java,4/4/441d0b5657d128a1c3884af10cdbbbd8fba84090
 Z
 *src/hu/nero/toyota/factory/CarFactory.java,e/e/ee10d834733da7575bb57aea593a9acdf7c2cb2b
+q
+Asrc/hu/nero/toyota/exceptoin/CountryFactoryNotEqualException.java,3/9/39dc2ffc1b1f9ae95931340125ecd5cc7c5e0032

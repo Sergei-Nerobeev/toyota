@@ -4,6 +4,8 @@ import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.FuelTank;
 import hu.nero.toyota.exceptoin.StartCarFailedException;
 import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.factory.CarFactory;
+import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
@@ -16,12 +18,17 @@ public class Runner {
         Hiance hiance = new Hiance(Color.GREEEN,Country.JAPAN);
         Solara solara = new Solara(Color.ORANGE,Country.CHINE);
         FuelTank fuelTank = new FuelTank();
+        CarFactory carFactory = new CarFactory();
+
         fuelTank.setLevel(20.0);
         camry.setFuelTank(fuelTank);
-        camry.start();
-        dyna.start();
-        hiance.start();
-        solara.start();
+        System.out.println(carFactory.createCamry().getMaxSpeed());
+//        camry.start();
+//        dyna.start();
+//        hiance.start();
+//        solara.start();
+
+
 
 
     }
