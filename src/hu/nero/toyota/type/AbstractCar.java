@@ -6,6 +6,8 @@ import hu.nero.toyota.exceptoin.StartCarFailedException;
 import hu.nero.toyota.detail.*;
 import hu.nero.toyota.detail.Country;
 
+import java.util.Arrays;
+
 public abstract class AbstractCar {
     public static final int COUNT_WHEELS = 4;
     protected Color color;
@@ -21,11 +23,18 @@ public abstract class AbstractCar {
     protected Country countryAssembly;
     protected CarModel carModel;
 
-    protected AbstractCar(Color color, int maxSpeed, Transmission transmission, WheelRadius wheelRadius,
-                          Country countryAssembly, CarModel carModel) {
+    protected AbstractCar(Color color, int maxSpeed, Transmission transmission, boolean isMove, FuelTank fuelTank,
+                          Engine engine, Wheel[] wheels, ElectricalSystem electricalSystem, HeadLights headLights,
+                          WheelRadius wheelRadius, Country countryAssembly, CarModel carModel) {
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transmission = transmission;
+        this.isMove = isMove;
+        this.fuelTank = fuelTank;
+        this.engine = engine;
+        this.wheels = wheels;
+        this.electricalSystem = electricalSystem;
+        this.headLights = headLights;
         this.wheelRadius = wheelRadius;
         this.countryAssembly = countryAssembly;
         this.carModel = carModel;
@@ -158,10 +167,30 @@ public abstract class AbstractCar {
         }
     }
 
+    @Override
+    public String toString() {
+        return "AbstractCar{" +
+                "color=" + color +
+                ", maxSpeed=" + maxSpeed +
+                ", transmission=" + transmission +
+                ", isMove=" + isMove +
+                ", fuelTank=" + fuelTank +
+                ", engine=" + engine +
+                ", wheels=" + Arrays.toString(wheels) +
+                ", electricalSystem=" + electricalSystem +
+                ", headLights=" + headLights +
+                ", wheelRadius=" + wheelRadius +
+                ", countryAssembly=" + countryAssembly +
+                ", carModel=" + carModel +
+                '}';
+    }
+
     private void checkWheel(Wheel wheel) {
         if (wheel == null || wheel.getWheelRadius() != wheelRadius) {
             throw new RuntimeException("Wheel is null or not same radius");
         }
+
     }
+
 }
 

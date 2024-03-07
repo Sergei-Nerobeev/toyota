@@ -13,4 +13,11 @@ public class FuelTank {
         }
         this.level = level;
     }
+
+    @Override
+    public String toString() {
+        return "FuelTank{" +
+                "level=" + level +
+                '}';
+    }
 }

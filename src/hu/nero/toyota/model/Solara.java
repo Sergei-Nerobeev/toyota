@@ -2,15 +2,20 @@ package hu.nero.toyota.model;
 
 import hu.nero.toyota.detail.*;
 import hu.nero.toyota.detail.Country;
-import hu.nero.toyota.type.Cabriolet;
+import hu.nero.toyota.type.AbstractCar;
 
-public class Solara extends Cabriolet {
+public class Solara extends AbstractCar {
     public static final WheelRadius SOLARA_RADIUS = WheelRadius.SIXTEEN;
     public static final Transmission TRANSMISSION = Transmission.ROBOT;
     public static final int MAX_SPEED = 300;
     private Fridge fridge;
-    public Solara(Color color, Country countryAssembly) {
-        super(color, MAX_SPEED, Transmission.ROBOT, WheelRadius.SIXTEEN, countryAssembly, CarModel.SOLARA);
+
+    public Solara(Color color, int maxSpeed, Transmission transmission, boolean isMove, FuelTank fuelTank,
+                  Engine engine, Wheel[] wheels, ElectricalSystem electricalSystem, HeadLights headLights,
+                  WheelRadius wheelRadius, Country countryAssembly, CarModel carModel, Roof roof, Fridge fridge) {
+        super(color, maxSpeed, transmission, isMove, fuelTank, engine, wheels, electricalSystem, headLights,
+                wheelRadius, countryAssembly, carModel);
+        this.fridge = fridge;
     }
 
     public void setFridge(Fridge fridge) {

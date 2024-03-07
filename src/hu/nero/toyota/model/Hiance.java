@@ -11,8 +11,12 @@ public class Hiance extends Truck {
     public static final int MAX_CAPACITY = 2_000;
     private Wheel safeWheel;
 
-    public Hiance(Color color, Country countryAssembly) {
-        super(color, MAX_SPEED, Transmission.MECHANICAL, WheelRadius.TWENTY, MAX_CAPACITY, countryAssembly, CarModel.HIANCE);
+    public Hiance(Color color, int maxSpeed, Transmission transmission, boolean isMove, FuelTank fuelTank,
+                  Engine engine, Wheel[] wheels, ElectricalSystem electricalSystem, HeadLights headLights,
+                  WheelRadius wheelRadius, Country countryAssembly, CarModel carModel, Wheel safeWheel) {
+        super(color, maxSpeed, transmission, isMove, fuelTank, engine, wheels, electricalSystem, headLights,
+                wheelRadius, countryAssembly, carModel);
+        this.safeWheel = safeWheel;
     }
 
     public Wheel getSafeWheel() {

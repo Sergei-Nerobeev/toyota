@@ -47,10 +47,6 @@ S
 #src/hu/nero/toyota/model/Camry.java,8/1/816efad274a82522af69d9c524a18fb60a986fd0
 X
 (src/hu/nero/toyota/type/AbstractCar.java,7/b/7b651c4a1d8ab9bd14b30831bfdcc6e956fa8b99
-U
-%src/hu/nero/toyota/type/LightCar.java,d/b/db31852d3b7db123ddd962eb0915a0496008caac
-V
-&src/hu/nero/toyota/type/Cabriolet.java,9/1/91c175c755b778605d52d3564753808eb1f1d5ab
 R
 "src/hu/nero/toyota/model/Dyna.java,6/e/6ebdcd0b6dd3c8bbae5e6c763144bd5703a7d8f8
 T
@@ -63,8 +59,6 @@ T
 $src/hu/nero/toyota/detail/Color.java,8/2/82a2cb68fde5c1074754d568156f978315a1133f
 i
 9src/hu/nero/toyota/exceptoin/StartCarFailedException.java,7/a/7aa831f61e992946b4aae902dda8f38df32173b5
-p
-@src/hu/nero/toyota/exceptoin/CountyFactoryNotEqualException.java,6/6/66868b2ed970bd4054ee21053a119bc70c11dc39
 V
 &src/hu/nero/toyota/detail/Country.java,d/e/de2747dd96f6035dacbe2ee556ce14c1159dd626
 ]

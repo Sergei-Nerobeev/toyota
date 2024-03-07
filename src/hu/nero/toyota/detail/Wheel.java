@@ -10,4 +10,11 @@ public class Wheel extends AbsCrushDetail {
   public WheelRadius getWheelRadius() {
     return wheelRadius;
   }
+
+  @Override
+  public String toString() {
+    return "Wheel{" +
+            "wheelRadius=" + wheelRadius +
+            '}';
+  }
 }
