@@ -4,6 +4,8 @@ import hu.nero.toyota.detail.*;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
 import hu.nero.toyota.model.Camry;
 
+import java.util.Objects;
+
 public class CarFactory {
     private final Country countryAssembly;
     private final DetailFactory detailFactory;
@@ -33,5 +35,16 @@ public class CarFactory {
 
     }
 
-
+//    @Override
+//    public boolean equals(Object object) {
+//        if (this == object) return true;
+//        if (object == null || getClass() != object.getClass()) return false;
+//        CarFactory that = (CarFactory) object;
+//        return countryAssembly == that.countryAssembly && Objects.equals(detailFactory, that.detailFactory);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(countryAssembly, detailFactory);
+//    }
 }

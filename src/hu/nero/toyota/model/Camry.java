@@ -38,10 +38,6 @@ public class Camry extends AbstractCar {
                 price);
     }
 
-    public Camry(Color color, double price) { //for test
-        super(color, price);
-    }
-
     public void connectedMusic() {
         usb.connectMusic();
     }

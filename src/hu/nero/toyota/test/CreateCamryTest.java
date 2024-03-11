@@ -16,6 +16,7 @@ public class CreateCamryTest {
     }
 
     public static void createCamryTest() throws CountryFactoryNotEqualException {
+        //Arrange
         Color color = Color.BLACK;
         double price = 20000;
         Country china = Country.CHINA;
@@ -23,26 +24,16 @@ public class CreateCamryTest {
         DetailFactory detailFactory = new DetailFactory(china);
         CarFactory carFactory = new CarFactory(detailFactory, china);
 
-        Camry testCamry = new Camry(
-                color,
-                Transmission.AUTOMATE,
-                detailFactory.createFuelTank(50),
-                detailFactory.createEngine(),
-                detailFactory.createFourWheels(Camry.CAMRY_RADIUS),
-                detailFactory.createElectricalSystem(),
-                detailFactory.createHeadLights(),
-                china,
-                CarModel.CAMRY,
-                price
-        );
+        //Act
         Camry camry = carFactory.createCamry(color, price);
+        Camry camry2 = carFactory.createCamry(color, price);
 
-        boolean resultTest = camry.equals(testCamry); // equals?
-        boolean resultTest2 = camry.equals(camry); // equals?
+        //Assert
+        boolean resultTest = camry.equals(camry2); // equals?
+
         System.out.println(resultTest);
-        System.out.println(resultTest2);
         System.out.println(camry);
-        System.out.println(testCamry);
+        System.out.println(camry2);
 
 
     }

@@ -51,10 +51,6 @@ public abstract class AbstractCar {
         this.price = price;
     }
 
-    public AbstractCar(Color color, double price) { //for test
-
-    }
-
     public void start() throws StartCarFailedException {
         if (isMove) {
             throw new StartCarFailedException("Car is already start");
@@ -189,31 +185,31 @@ public abstract class AbstractCar {
         }
 
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof AbstractCar that)) return false;
-        return maxSpeed == that.maxSpeed &&
-                Double.compare(price, that.price) == 0 &&
-                color == that.color &&
-                transmission == that.transmission &&
-                Objects.equals(fuelTank, that.fuelTank) &&
-                Objects.equals(engine, that.engine) &&
-                Arrays.equals(wheels, that.wheels) &&
-                Objects.equals(electricalSystem, that.electricalSystem) &&
-                Objects.equals(headLights, that.headLights) &&
-                wheelRadius == that.wheelRadius &&
-                countryAssembly == that.countryAssembly &&
-                carModel == that.carModel;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = Objects.hash(color, maxSpeed, transmission, fuelTank, engine, electricalSystem, headLights,
-                wheelRadius, countryAssembly, carModel, price);
-        result = 31 * result + Arrays.hashCode(wheels);
-        return result;
-    }
+//
+//    @Override
+//    public boolean equals(Object object) {
+//        if (this == object) return true;
+//        if (!(object instanceof AbstractCar that)) return false;
+//        return maxSpeed == that.maxSpeed &&
+//                Double.compare(price, that.price) == 0 &&
+//                color == that.color &&
+//                transmission == that.transmission &&
+//                Objects.equals(fuelTank, that.fuelTank) &&
+//                Objects.equals(engine, that.engine) &&
+//                Arrays.equals(wheels, that.wheels) &&
+//                Objects.equals(electricalSystem, that.electricalSystem) &&
+//                Objects.equals(headLights, that.headLights) &&
+//                wheelRadius == that.wheelRadius &&
+//                countryAssembly == that.countryAssembly &&
+//                carModel == that.carModel;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = Objects.hash(color, maxSpeed, transmission, fuelTank, engine, electricalSystem, headLights,
+//                wheelRadius, countryAssembly, carModel, price);
+//        result = 31 * result + Arrays.hashCode(wheels);
+//        return result;
+//    }
 }
 
