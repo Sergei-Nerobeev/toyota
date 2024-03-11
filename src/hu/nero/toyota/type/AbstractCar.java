@@ -185,31 +185,31 @@ public abstract class AbstractCar {
         }
 
     }
-//
-//    @Override
-//    public boolean equals(Object object) {
-//        if (this == object) return true;
-//        if (!(object instanceof AbstractCar that)) return false;
-//        return maxSpeed == that.maxSpeed &&
-//                Double.compare(price, that.price) == 0 &&
-//                color == that.color &&
-//                transmission == that.transmission &&
-//                Objects.equals(fuelTank, that.fuelTank) &&
-//                Objects.equals(engine, that.engine) &&
-//                Arrays.equals(wheels, that.wheels) &&
-//                Objects.equals(electricalSystem, that.electricalSystem) &&
-//                Objects.equals(headLights, that.headLights) &&
-//                wheelRadius == that.wheelRadius &&
-//                countryAssembly == that.countryAssembly &&
-//                carModel == that.carModel;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = Objects.hash(color, maxSpeed, transmission, fuelTank, engine, electricalSystem, headLights,
-//                wheelRadius, countryAssembly, carModel, price);
-//        result = 31 * result + Arrays.hashCode(wheels);
-//        return result;
-//    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (!(object instanceof AbstractCar car)) return false;
+        return maxSpeed == car.maxSpeed &&
+                Double.compare(price, car.price) == 0 &&
+                color == car.color &&
+                transmission == car.transmission &&
+                Objects.equals(fuelTank, car.fuelTank) &&
+                Objects.equals(engine, car.engine) &&
+                Arrays.equals(wheels, car.wheels) &&
+                Objects.equals(electricalSystem, car.electricalSystem) &&
+                Objects.equals(headLights, car.headLights) &&
+                wheelRadius == car.wheelRadius &&
+                countryAssembly == car.countryAssembly &&
+                carModel == car.carModel;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(color, maxSpeed, transmission, fuelTank, engine, electricalSystem, headLights,
+                wheelRadius, countryAssembly, carModel, price);
+        result = 31 * result + Arrays.hashCode(wheels);
+        return result;
+    }
 }
 

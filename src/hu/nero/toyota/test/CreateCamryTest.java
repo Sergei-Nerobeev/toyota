@@ -1,9 +1,8 @@
 package hu.nero.toyota.test;
 
-import hu.nero.toyota.detail.CarModel;
+
 import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.Country;
-import hu.nero.toyota.detail.Transmission;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;

@@ -35,16 +35,16 @@ public class CarFactory {
 
     }
 
-//    @Override
-//    public boolean equals(Object object) {
-//        if (this == object) return true;
-//        if (object == null || getClass() != object.getClass()) return false;
-//        CarFactory that = (CarFactory) object;
-//        return countryAssembly == that.countryAssembly && Objects.equals(detailFactory, that.detailFactory);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(countryAssembly, detailFactory);
-//    }
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        CarFactory that = (CarFactory) object;
+        return countryAssembly == that.countryAssembly && Objects.equals(detailFactory, that.detailFactory);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(countryAssembly, detailFactory);
+    }
 }
