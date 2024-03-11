@@ -10,11 +10,12 @@ public class Solara extends AbstractCar {
     public static final int MAX_SPEED = 300;
     private Fridge fridge;
 
-    public Solara(Color color, int maxSpeed, Transmission transmission, boolean isMove, FuelTank fuelTank,
+    public Solara(Color color, int maxSpeed, Transmission transmission, FuelTank fuelTank,
                   Engine engine, Wheel[] wheels, ElectricalSystem electricalSystem, HeadLights headLights,
-                  WheelRadius wheelRadius, Country countryAssembly, CarModel carModel, Roof roof, Fridge fridge) {
-        super(color, maxSpeed, transmission, isMove, fuelTank, engine, wheels, electricalSystem, headLights,
-                wheelRadius, countryAssembly, carModel);
+                  WheelRadius wheelRadius, Country countryAssembly, CarModel carModel, double price,
+                  Roof roof, Fridge fridge) {
+        super(color, MAX_SPEED, Transmission.ROBOT, fuelTank, engine, wheels, electricalSystem, headLights,
+                wheelRadius, countryAssembly, carModel, price);
         this.fridge = fridge;
     }
 

@@ -11,7 +11,7 @@ import hu.nero.toyota.model.Camry;
 
 public class Runner {
     public static void main(String[] args) throws StartCarFailedException, CountryFactoryNotEqualException {
-        CarFactory carFactory = new CarFactory(new DetailFactory(Country.CHINE),Country.CHINE);
+        CarFactory carFactory = new CarFactory(new DetailFactory(Country.CHINA),Country.CHINA);
         Camry camry = carFactory.createCamry(Color.GREEEN, 20000D);
         System.out.println(camry);
 

@@ -7,6 +7,7 @@ import hu.nero.toyota.detail.*;
 import hu.nero.toyota.detail.Country;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public abstract class AbstractCar {
     public static final int COUNT_WHEELS = 4;
@@ -22,14 +23,23 @@ public abstract class AbstractCar {
     protected WheelRadius wheelRadius;
     protected Country countryAssembly;
     protected CarModel carModel;
+    protected double price;
 
-    protected AbstractCar(Color color, int maxSpeed, Transmission transmission, boolean isMove, FuelTank fuelTank,
-                          Engine engine, Wheel[] wheels, ElectricalSystem electricalSystem, HeadLights headLights,
-                          WheelRadius wheelRadius, Country countryAssembly, CarModel carModel) {
+    protected AbstractCar(Color color,
+                          int maxSpeed,
+                          Transmission transmission,
+                          FuelTank fuelTank,
+                          Engine engine,
+                          Wheel[] wheels,
+                          ElectricalSystem electricalSystem,
+                          HeadLights headLights,
+                          WheelRadius wheelRadius,
+                          Country countryAssembly,
+                          CarModel carModel,
+                          double price) {
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transmission = transmission;
-        this.isMove = isMove;
         this.fuelTank = fuelTank;
         this.engine = engine;
         this.wheels = wheels;
@@ -38,6 +48,11 @@ public abstract class AbstractCar {
         this.wheelRadius = wheelRadius;
         this.countryAssembly = countryAssembly;
         this.carModel = carModel;
+        this.price = price;
+    }
+
+    public AbstractCar(Color color, double price) { //for test
+
     }
 
     public void start() throws StartCarFailedException {
@@ -55,17 +70,18 @@ public abstract class AbstractCar {
 
     private void checkDetailsBeforeStart() throws StartCarFailedException {
         StringBuilder failures = new StringBuilder();
+
         if (fuelTank.getLevel() <= 0) {
-            failures.append("FuelTank is empty");
+            failures.append("FuelTank is empty\n");
         }
         if (!engine.isWork()) {
-            failures.append("Engine doesn't work");
+            failures.append("Engine doesn't work\n");
         }
         if (!headLights.isWork()) {
-            failures.append("HeadLights doesn't work");
+            failures.append("HeadLights doesn't work\n");
         }
         if (!electricalSystem.isWork()) {
-            failures.append("Electrical system doesn't work");
+            failures.append("Electrical system doesn't work\n");
         }
         if (!failures.isEmpty()) {
             throw new StartCarFailedException(failures.toString());
@@ -167,24 +183,6 @@ public abstract class AbstractCar {
         }
     }
 
-    @Override
-    public String toString() {
-        return "AbstractCar{" +
-                "color=" + color +
-                ", maxSpeed=" + maxSpeed +
-                ", transmission=" + transmission +
-                ", isMove=" + isMove +
-                ", fuelTank=" + fuelTank +
-                ", engine=" + engine +
-                ", wheels=" + Arrays.toString(wheels) +
-                ", electricalSystem=" + electricalSystem +
-                ", headLights=" + headLights +
-                ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryAssembly +
-                ", carModel=" + carModel +
-                '}';
-    }
-
     private void checkWheel(Wheel wheel) {
         if (wheel == null || wheel.getWheelRadius() != wheelRadius) {
             throw new RuntimeException("Wheel is null or not same radius");
@@ -192,5 +190,30 @@ public abstract class AbstractCar {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AbstractCar that)) return false;
+        return maxSpeed == that.maxSpeed &&
+                Double.compare(price, that.price) == 0 &&
+                color == that.color &&
+                transmission == that.transmission &&
+                Objects.equals(fuelTank, that.fuelTank) &&
+                Objects.equals(engine, that.engine) &&
+                Arrays.equals(wheels, that.wheels) &&
+                Objects.equals(electricalSystem, that.electricalSystem) &&
+                Objects.equals(headLights, that.headLights) &&
+                wheelRadius == that.wheelRadius &&
+                countryAssembly == that.countryAssembly &&
+                carModel == that.carModel;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(color, maxSpeed, transmission, fuelTank, engine, electricalSystem, headLights,
+                wheelRadius, countryAssembly, carModel, price);
+        result = 31 * result + Arrays.hashCode(wheels);
+        return result;
+    }
 }
 

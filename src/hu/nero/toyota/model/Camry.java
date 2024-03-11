@@ -12,16 +12,35 @@ import static hu.nero.toyota.detail.WheelRadius.SEVENTEEN;
 public class Camry extends AbstractCar {
     public static final WheelRadius CAMRY_RADIUS = SEVENTEEN;
     public static final int MAX_SPEED = 225;
-    public static final Transmission TRANSMISSION = AUTOMATE;
     private Usb usb;
 
-    public Camry(Color color, int maxSpeed, Transmission transmission, boolean isMove, FuelTank fuelTank, Engine engine,
-                 Wheel[] wheels, ElectricalSystem electricalSystem, HeadLights headLights, WheelRadius wheelRadius,
-                 Country countryAssembly, CarModel carModel) {
-        super(color, maxSpeed, transmission, isMove, fuelTank, engine, wheels, electricalSystem, headLights,
-                wheelRadius, countryAssembly, carModel);
+    public Camry(Color color,
+                 Transmission transmission,
+                 FuelTank fuelTank,
+                 Engine engine,
+                 Wheel[] wheels,
+                 ElectricalSystem electricalSystem,
+                 HeadLights headLights,
+                 Country countryAssembly,
+                 CarModel carModel,
+                 double price) {
+        super(color,
+                MAX_SPEED,
+                transmission,
+                fuelTank,
+                engine,
+                wheels,
+                electricalSystem,
+                headLights,
+                CAMRY_RADIUS,
+                countryAssembly,
+                carModel,
+                price);
     }
 
+    public Camry(Color color, double price) { //for test
+        super(color, price);
+    }
 
     public void connectedMusic() {
         usb.connectMusic();
@@ -41,7 +60,6 @@ public class Camry extends AbstractCar {
                 "color=" + color +
                 ", maxSpeed=" + maxSpeed +
                 ", transmission=" + transmission +
-                ", isMove=" + isMove +
                 ", fuelTank=" + fuelTank +
                 ", engine=" + engine +
                 ", wheels=" + Arrays.toString(wheels) +
@@ -52,4 +70,5 @@ public class Camry extends AbstractCar {
                 ", carModel=" + carModel +
                 '}';
     }
+
 }

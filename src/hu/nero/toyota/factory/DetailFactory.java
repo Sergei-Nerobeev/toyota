@@ -13,6 +13,14 @@ public class DetailFactory {
         return new Wheel(wheelRadius);
     }
 
+    public Wheel[] createFourWheels(WheelRadius wheelRadius) {
+        Wheel[] wheels = new Wheel[4];
+        for (int i = 0; i < 4; i++) {
+            wheels[i] = new Wheel(wheelRadius);
+        }
+        return wheels;
+    }
+
     public Transmission createTransmission() {
         return Transmission.SOME_VOLUME;
     }
@@ -21,8 +29,8 @@ public class DetailFactory {
         return new Engine();
     }
 
-    public FuelTank createFuelTank() {
-        return new FuelTank();
+    public FuelTank createFuelTank(double volume) {
+        return new FuelTank(volume);
     }
 
     public HeadLights createHeadLights() {
