@@ -21,10 +21,6 @@ public class DetailFactory {
         return wheels;
     }
 
-    public Transmission createTransmission() {
-        return Transmission.SOME_VOLUME;
-    }
-
     public Engine createEngine() {
         return new Engine();
     }
@@ -49,5 +45,10 @@ public class DetailFactory {
         this.countryAssembly = countryAssembly;
     }
 
-
+    @Override
+    public String toString() {
+        return "DetailFactory{" +
+                "countryAssembly=" + countryAssembly +
+                '}';
+    }
 }

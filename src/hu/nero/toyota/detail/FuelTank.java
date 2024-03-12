@@ -1,5 +1,7 @@
 package hu.nero.toyota.detail;
 
+import java.util.Objects;
+
 public class FuelTank {
     private double level = 0;
     private double volume;
@@ -23,7 +25,21 @@ public class FuelTank {
     @Override
     public String toString() {
         return "FuelTank{" +
-                "level=" + level +
+                level +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        FuelTank fuelTank = (FuelTank) object;
+        return Double.compare(level, fuelTank.level) == 0 &&
+               Double.compare(volume, fuelTank.volume) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(level, volume);
     }
 }

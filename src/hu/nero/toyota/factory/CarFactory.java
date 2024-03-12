@@ -1,10 +1,11 @@
 package hu.nero.toyota.factory;
 
-import hu.nero.toyota.detail.*;
+import hu.nero.toyota.detail.CarModel;
+import hu.nero.toyota.detail.Color;
+import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.detail.Transmission;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
 import hu.nero.toyota.model.Camry;
-
-import java.util.Objects;
 
 public class CarFactory {
     private final Country countryAssembly;
@@ -32,19 +33,13 @@ public class CarFactory {
                 CarModel.CAMRY,
                 price
         );
-
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        CarFactory that = (CarFactory) object;
-        return countryAssembly == that.countryAssembly && Objects.equals(detailFactory, that.detailFactory);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(countryAssembly, detailFactory);
+    public String toString() {
+        return "CarFactory{" +
+                countryAssembly +
+                detailFactory +
+                '}';
     }
 }

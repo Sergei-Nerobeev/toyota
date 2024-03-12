@@ -179,17 +179,17 @@ public abstract class AbstractCar {
         }
     }
 
-    private void checkWheel(Wheel wheel) {
+    private void checkWheel(Wheel wheel) throws RuntimeException {
         if (wheel == null || wheel.getWheelRadius() != wheelRadius) {
             throw new RuntimeException("Wheel is null or not same radius");
         }
-
     }
 
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
-        if (!(object instanceof AbstractCar car)) return false;
+        if (object == null || getClass() != object.getClass()) return false;
+        AbstractCar car = (AbstractCar) object;
         return maxSpeed == car.maxSpeed &&
                 Double.compare(price, car.price) == 0 &&
                 color == car.color &&
@@ -206,8 +206,7 @@ public abstract class AbstractCar {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(color, maxSpeed, transmission, fuelTank, engine, electricalSystem, headLights,
-                wheelRadius, countryAssembly, carModel, price);
+        int result = Objects.hash(color, maxSpeed, transmission, isMove, fuelTank, engine, electricalSystem, headLights, wheelRadius, countryAssembly, carModel, price);
         result = 31 * result + Arrays.hashCode(wheels);
         return result;
     }
