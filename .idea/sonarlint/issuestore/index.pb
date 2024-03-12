@@ -67,3 +67,7 @@ p
 @src/hu/nero/toyota/exceptoin/CountyFactoryNotEqualException.java,6/6/66868b2ed970bd4054ee21053a119bc70c11dc39
 V
 &src/hu/nero/toyota/detail/Country.java,d/e/de2747dd96f6035dacbe2ee556ce14c1159dd626
+]
+-src/hu/nero/toyota/factory/DetailFactory.java,4/4/441d0b5657d128a1c3884af10cdbbbd8fba84090
+Z
+*src/hu/nero/toyota/factory/CarFactory.java,e/e/ee10d834733da7575bb57aea593a9acdf7c2cb2b
