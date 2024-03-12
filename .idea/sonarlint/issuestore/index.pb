@@ -69,3 +69,7 @@ Asrc/hu/nero/toyota/exceptoin/CountryFactoryNotEqualException.java,3/9/39dc2ffc
 ,src/hu/nero/toyota/test/CreateCamryTest.java,c/6/c6431317f086170655cd00095df688a8d1fa66fe
 W
 'src/hu/nero/toyota/detail/Capacity.java,c/9/c99babb760a1529bc1973ca5ffd7785a0d5c387a
+\
+,src/hu/nero/toyota/test/CreateWheelTest.java,7/d/7dcbe1747b1350af74ad8aa5f651ea6d78319bb4
+a
+1src/hu/nero/toyota/test/CreateFourWheelsTest.java,d/a/dad2dc9a48ab70f48651531375ee4cf1657c50f9

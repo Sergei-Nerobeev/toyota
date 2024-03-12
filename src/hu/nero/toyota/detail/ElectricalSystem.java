@@ -3,15 +3,7 @@ package hu.nero.toyota.detail;
 import java.util.Objects;
 
 public class ElectricalSystem extends AbsCrushDetail{
-    private String name;
-
-    public ElectricalSystem(String name) {
-        this.name = name;
-    }
-
-    public ElectricalSystem() {
-    }
-
+    private String countryOfProduction;
     @Override
     public String toString() {
         return "ElectricalSystem{}";
@@ -21,12 +13,12 @@ public class ElectricalSystem extends AbsCrushDetail{
     public boolean equals(Object object) {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
-        ElectricalSystem that = (ElectricalSystem) object;
-        return Objects.equals(name, that.name);
+        ElectricalSystem electricalSystem = (ElectricalSystem) object;
+        return Objects.equals(countryOfProduction, electricalSystem.countryOfProduction);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(countryOfProduction);
     }
 }

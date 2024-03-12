@@ -3,7 +3,7 @@ package hu.nero.toyota.detail;
 import java.util.Objects;
 
 public class Engine extends AbsCrushDetail {
-    private String name;
+    private String countryOfProduction;
     @Override
     public String toString() {
         return "Engine{}";
@@ -14,11 +14,11 @@ public class Engine extends AbsCrushDetail {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         Engine engine = (Engine) object;
-        return Objects.equals(name, engine.name);
+        return Objects.equals(countryOfProduction, engine.countryOfProduction);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(countryOfProduction);
     }
 }

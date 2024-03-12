@@ -6,7 +6,7 @@ import java.util.Objects;
 * Фары
 * */
 public class HeadLights extends AbsCrushDetail {
-    private String name;
+    private Country countryOfProduction;
     @Override
     public String toString() {
         return "HeadLights{}";
@@ -17,11 +17,11 @@ public class HeadLights extends AbsCrushDetail {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         HeadLights headLights = (HeadLights) object;
-        return Objects.equals(name, headLights.name);
+        return Objects.equals(countryOfProduction, headLights.countryOfProduction);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(countryOfProduction);
     }
 }
