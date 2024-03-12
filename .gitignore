@@ -27,3 +27,5 @@ modules.xml
 # Ruby plugin and RubyMine
 /.rakeTasks
 /.project
+# Ignore SonarLint files
+sonarlint/
