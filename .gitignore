@@ -28,4 +28,4 @@ modules.xml
 /.rakeTasks
 /.project
 # Ignore SonarLint files
-.sonarlint
+.sonar
