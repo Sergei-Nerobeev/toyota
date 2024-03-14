@@ -44,6 +44,16 @@ public class DetailFactory {
     public void setCountryAssembly(Country countryAssembly) {
         this.countryAssembly = countryAssembly;
     }
+    public Fridge createFridge(){
+        return new Fridge();
+    }
+    public Roof createRoof(){
+        return new Roof();
+    }
+    public Socket createSocket(){
+        return new Socket();
+    }
+
 
     @Override
     public String toString() {

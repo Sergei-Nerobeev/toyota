@@ -63,6 +63,7 @@ public class Camry extends AbstractCar {
                 ", wheelRadius=" + wheelRadius +
                 ", countryAssembly=" + countryAssembly +
                 ", carModel=" + carModel +
+                ", price=" + price +
                 '}';
     }
 

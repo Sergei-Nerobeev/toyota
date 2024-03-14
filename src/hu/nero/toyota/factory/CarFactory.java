@@ -1,11 +1,11 @@
 package hu.nero.toyota.factory;
 
-import hu.nero.toyota.detail.CarModel;
-import hu.nero.toyota.detail.Color;
-import hu.nero.toyota.detail.Country;
-import hu.nero.toyota.detail.Transmission;
+import hu.nero.toyota.detail.*;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
 import hu.nero.toyota.model.Camry;
+import hu.nero.toyota.model.Dyna;
+import hu.nero.toyota.model.Hiance;
+import hu.nero.toyota.model.Solara;
 
 public class CarFactory {
     private final Country countryAssembly;
@@ -35,6 +35,57 @@ public class CarFactory {
         );
     }
 
+    public Solara createSolara(Color color, double price) {
+        return new Solara(
+                color,
+                Transmission.ROBOT,
+                detailFactory.createFuelTank(40),
+                detailFactory.createEngine(),
+                detailFactory.createFourWheels(Solara.SOLARA_RADIUS),
+                detailFactory.createElectricalSystem(),
+                detailFactory.createHeadLights(),
+                Solara.SOLARA_RADIUS,
+                countryAssembly,
+                CarModel.SOLARA,
+                price,
+                detailFactory.createRoof(),
+                detailFactory.createFridge()
+        );
+    }
+    public Dyna createDyna(Color color, double price) {
+        return new Dyna(
+                color,
+                Transmission.AUTOMATE,
+                detailFactory.createFuelTank(50),
+                detailFactory.createEngine(),
+                detailFactory.createFourWheels(Dyna.DYNA_RADIUS),
+                detailFactory.createElectricalSystem(),
+                detailFactory.createHeadLights(),
+                Dyna.DYNA_RADIUS,
+                countryAssembly,
+                CarModel.DYNA,
+                price,
+                detailFactory.createSocket()
+        );
+    }
+    public Hiance createHiance(Color color, double price) {
+        return new Hiance(
+                color,
+                Transmission.MECHANICAL,
+                detailFactory.createFuelTank(50),
+                detailFactory.createEngine(),
+                detailFactory.createFourWheels(Hiance.HIANCE_RADIUS),
+                detailFactory.createElectricalSystem(),
+                detailFactory.createHeadLights(),
+                Hiance.HIANCE_RADIUS,
+                countryAssembly,
+                CarModel.HIANCE,
+                price,
+                new Wheel(WheelRadius.TWENTY),
+                Hiance.MAX_CAPACITY
+        );
+    }
+
     @Override
     public String toString() {
         return "CarFactory{" +
@@ -42,4 +93,5 @@ public class CarFactory {
                 detailFactory +
                 '}';
     }
+
 }

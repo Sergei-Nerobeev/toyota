@@ -28,12 +28,11 @@ public class CreateCamryTest {
         Camry camry2 = carFactory.createCamry(color, price);
 
         //Assert
-        boolean resultTest = camry.equals(camry2); // equals?
+        boolean resultTest = camry.equals(camry2);
 
         System.out.println(resultTest);
         System.out.println(camry);
         System.out.println(camry2);
-
-
     }
+
 }
