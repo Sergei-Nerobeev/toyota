@@ -24,7 +24,7 @@ public class CarFactory {
         return new Camry(
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(50),
+                detailFactory.createFuelTank(),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Camry.CAMRY_RADIUS),
                 detailFactory.createElectricalSystem(),
@@ -39,7 +39,7 @@ public class CarFactory {
         return new Solara(
                 color,
                 Transmission.ROBOT,
-                detailFactory.createFuelTank(40),
+                detailFactory.createFuelTank(),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Solara.SOLARA_RADIUS),
                 detailFactory.createElectricalSystem(),
@@ -48,7 +48,7 @@ public class CarFactory {
                 countryAssembly,
                 CarModel.SOLARA,
                 price,
-                detailFactory.createRoof(),
+                detailFactory.createRoof().getRoof(),
                 detailFactory.createFridge()
         );
     }
@@ -56,7 +56,7 @@ public class CarFactory {
         return new Dyna(
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(50),
+                detailFactory.createFuelTank(),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Dyna.DYNA_RADIUS),
                 detailFactory.createElectricalSystem(),
@@ -65,14 +65,15 @@ public class CarFactory {
                 countryAssembly,
                 CarModel.DYNA,
                 price,
-                detailFactory.createSocket()
+                detailFactory.createSocket(),
+                detailFactory.createUsb()
         );
     }
     public Hiance createHiance(Color color, double price) {
         return new Hiance(
                 color,
                 Transmission.MECHANICAL,
-                detailFactory.createFuelTank(50),
+                detailFactory.createFuelTank(),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Hiance.HIANCE_RADIUS),
                 detailFactory.createElectricalSystem(),

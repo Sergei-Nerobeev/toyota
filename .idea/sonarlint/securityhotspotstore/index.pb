@@ -71,5 +71,3 @@ W
 'src/hu/nero/toyota/detail/Capacity.java,c/9/c99babb760a1529bc1973ca5ffd7785a0d5c387a
 a
 1src/hu/nero/toyota/test/CreateFourWheelsTest.java,d/a/dad2dc9a48ab70f48651531375ee4cf1657c50f9
-_
-/src/hu/nero/toyota/test/VolumeFuelTankTest.java,c/0/c0cc34f9f4ac2991d45aadafe705188960def59b

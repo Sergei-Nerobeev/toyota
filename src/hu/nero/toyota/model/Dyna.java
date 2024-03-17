@@ -15,6 +15,7 @@ public class Dyna extends AbstractCar {
     public static final int MAX_SPEED = 150;
     public static final int MAX_CAPACITY = 3_000;
     private Socket socket;
+    private Usb usb; // todo
 
     public Dyna(Color color,
                 Transmission transmission,
@@ -27,7 +28,8 @@ public class Dyna extends AbstractCar {
                 Country countryAssembly,
                 CarModel carModel,
                 double price,
-                Socket socket
+                Socket socket,
+                Usb usb
     ) {
         super(color,
                 MAX_SPEED,
@@ -41,6 +43,7 @@ public class Dyna extends AbstractCar {
                 countryAssembly,
                 carModel,price);
         this.socket = socket;
+
     }
 
     public Socket getSocket() {
@@ -57,7 +60,7 @@ public class Dyna extends AbstractCar {
                 "color=" + color +
                 ", maxSpeed=" + maxSpeed +
                 ", transmission=" + transmission +
-                ", fuelTank=" + fuelTank +
+                ", fuelTank=" + fuelTank.getLevel() +
                 ", engine=" + engine +
                 ", wheels=" + Arrays.toString(wheels) +
                 ", electricalSystem=" + electricalSystem +

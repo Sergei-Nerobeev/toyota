@@ -55,7 +55,7 @@ public class Camry extends AbstractCar {
                 "color=" + color +
                 ", maxSpeed=" + maxSpeed +
                 ", transmission=" + transmission +
-                ", fuelTank=" + fuelTank +
+                ", fuelTank=" + fuelTank.getLevel() +
                 ", engine=" + engine +
                 ", wheels=" + Arrays.toString(wheels) +
                 ", electricalSystem=" + electricalSystem +

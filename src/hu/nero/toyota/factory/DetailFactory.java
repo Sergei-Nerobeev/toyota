@@ -25,8 +25,10 @@ public class DetailFactory {
         return new Engine();
     }
 
-    public FuelTank createFuelTank(double volume) {
-        return new FuelTank(volume);
+    public FuelTank createFuelTank() {
+        FuelTank fuelTank = new FuelTank(0);
+        fuelTank.setLevel(0);
+        return fuelTank;
     }
 
     public HeadLights createHeadLights() {
@@ -45,15 +47,27 @@ public class DetailFactory {
         this.countryAssembly = countryAssembly;
     }
     public Fridge createFridge(){
-        return new Fridge();
+        Fridge fridge = new Fridge();
+        fridge.setTitle("ХОЛОДИЛЬНИК");
+        return fridge;
     }
     public Roof createRoof(){
-        return new Roof();
+        Roof roof = new Roof();
+        roof.setOn(true);
+        roof.roofUp();
+        return roof;
     }
     public Socket createSocket(){
-        return new Socket();
+        Socket socket = new Socket();
+        socket.chargePhone();
+        return socket;
     }
-
+    public Usb createUsb(){
+        Usb usb = new Usb();
+        System.out.println("Usb mounted");
+        usb.connectMusic();
+       return usb;
+    }
 
     @Override
     public String toString() {
