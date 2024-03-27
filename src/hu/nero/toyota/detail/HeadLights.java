@@ -6,7 +6,7 @@ import java.util.Objects;
 * Фары
 * */
 public class HeadLights extends AbsCrushDetail {
-    private Country countryOfProduction;
+    private CountryOfProduction countryOfProduction;
     @Override
     public String toString() {
         return "HeadLights{}";

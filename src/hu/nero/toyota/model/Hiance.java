@@ -1,7 +1,7 @@
 package hu.nero.toyota.model;
 
 import hu.nero.toyota.detail.*;
-import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.type.AbstractCar;
 
 import java.util.Arrays;
@@ -21,7 +21,7 @@ public class Hiance extends AbstractCar {
                   ElectricalSystem electricalSystem,
                   HeadLights headLights,
                   WheelRadius wheelRadius,
-                  Country countryAssembly,
+                  CountryOfProduction countryOfProductionAssembly,
                   CarModel carModel,
                   double price,
                   Wheel safeWheel,
@@ -36,7 +36,7 @@ public class Hiance extends AbstractCar {
                 electricalSystem,
                 headLights,
                 HIANCE_RADIUS,
-                countryAssembly,
+                countryOfProductionAssembly,
                 carModel,
                 price
         );
@@ -54,7 +54,7 @@ public class Hiance extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryAssembly +
+                ", countryAssembly=" + countryOfProductionAssembly +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';

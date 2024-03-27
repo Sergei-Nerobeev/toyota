@@ -1,7 +1,7 @@
 package hu.nero.toyota;
 
 import hu.nero.toyota.detail.Color;
-import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
 import hu.nero.toyota.exceptoin.StartCarFailedException;
 import hu.nero.toyota.factory.CarFactory;
@@ -14,7 +14,7 @@ import hu.nero.toyota.model.Solara;
 
 public class Runner {
     public static void main(String[] args) throws StartCarFailedException, CountryFactoryNotEqualException {
-        CarFactory carFactory = new CarFactory(new DetailFactory(Country.CHINA), Country.CHINA);
+        CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.CHINA), CountryOfProduction.CHINA);
         Camry camry = carFactory.createCamry(Color.GREEEN, 20000D);
         System.out.println(camry);
         Solara solara = carFactory.createSolara(Color.ORANGE, 40000);

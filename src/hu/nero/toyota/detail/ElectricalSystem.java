@@ -2,11 +2,16 @@ package hu.nero.toyota.detail;
 
 import java.util.Objects;
 
-public class ElectricalSystem extends AbsCrushDetail{
-    private String countryOfProduction;
+public class ElectricalSystem extends AbsCrushDetail {
+    private CountryOfProduction countryOfProduction;
+
+    public ElectricalSystem(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
+    }
+
     @Override
     public String toString() {
-        return "ElectricalSystem{}";
+        return "ElectricalSystem made in: " + countryOfProduction.toString();
     }
 
     @Override

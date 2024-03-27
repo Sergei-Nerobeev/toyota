@@ -4,7 +4,7 @@ import hu.nero.toyota.detail.CarModel;
 import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.exceptoin.StartCarFailedException;
 import hu.nero.toyota.detail.*;
-import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.detail.CountryOfProduction;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -17,11 +17,11 @@ public abstract class AbstractCar {
     protected boolean isMove = false;
     protected FuelTank fuelTank;
     protected Engine engine;
-    protected Wheel[] wheels = new Wheel[COUNT_WHEELS];
+    protected Wheel[] wheels;
     protected ElectricalSystem electricalSystem;
     protected HeadLights headLights;
     protected WheelRadius wheelRadius;
-    protected Country countryAssembly;
+    protected CountryOfProduction countryOfProductionAssembly;
     protected CarModel carModel;
     protected double price;
 
@@ -34,7 +34,7 @@ public abstract class AbstractCar {
                           ElectricalSystem electricalSystem,
                           HeadLights headLights,
                           WheelRadius wheelRadius,
-                          Country countryAssembly,
+                          CountryOfProduction countryOfProductionAssembly,
                           CarModel carModel,
                           double price) {
         this.color = color;
@@ -46,7 +46,7 @@ public abstract class AbstractCar {
         this.electricalSystem = electricalSystem;
         this.headLights = headLights;
         this.wheelRadius = wheelRadius;
-        this.countryAssembly = countryAssembly;
+        this.countryOfProductionAssembly = countryOfProductionAssembly;
         this.carModel = carModel;
         this.price = price;
     }
@@ -101,8 +101,8 @@ public abstract class AbstractCar {
         return wheelRadius;
     }
 
-    public Country getCountryAssembly() {
-        return countryAssembly;
+    public CountryOfProduction getCountryAssembly() {
+        return countryOfProductionAssembly;
     }
 
     public void setFuelTank(FuelTank fuelTank) {
@@ -186,7 +186,7 @@ public abstract class AbstractCar {
     }
 
     @Override
-    public boolean equals(Object object) {
+    public boolean equals(Object object) { //todo
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         AbstractCar car = (AbstractCar) object;
@@ -200,13 +200,25 @@ public abstract class AbstractCar {
                 Objects.equals(electricalSystem, car.electricalSystem) &&
                 Objects.equals(headLights, car.headLights) &&
                 wheelRadius == car.wheelRadius &&
-                countryAssembly == car.countryAssembly &&
+                countryOfProductionAssembly == car.countryOfProductionAssembly &&
                 carModel == car.carModel;
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(color, maxSpeed, transmission, isMove, fuelTank, engine, electricalSystem, headLights, wheelRadius, countryAssembly, carModel, price);
+        int result = Objects.hash(
+                color,
+                maxSpeed,
+                transmission,
+                isMove,
+                fuelTank,
+                engine,
+                electricalSystem,
+                headLights,
+                wheelRadius,
+                countryOfProductionAssembly,
+                carModel,
+                price);
         result = 31 * result + Arrays.hashCode(wheels);
         return result;
     }

@@ -20,7 +20,7 @@ public class Camry extends AbstractCar {
                  Wheel[] wheels,
                  ElectricalSystem electricalSystem,
                  HeadLights headLights,
-                 Country countryAssembly,
+                 CountryOfProduction countryOfProductionAssembly,
                  CarModel carModel,
                  double price) {
         super(color,
@@ -32,7 +32,7 @@ public class Camry extends AbstractCar {
                 electricalSystem,
                 headLights,
                 CAMRY_RADIUS,
-                countryAssembly,
+                countryOfProductionAssembly,
                 carModel,
                 price);
     }
@@ -61,12 +61,11 @@ public class Camry extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryAssembly +
+                ", countryAssembly=" + countryOfProductionAssembly +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';
     }
-
 
     @Override
     public int hashCode() {

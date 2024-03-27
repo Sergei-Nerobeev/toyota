@@ -1,6 +1,6 @@
 package hu.nero.toyota.test;
 
-import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.detail.Wheel;
 import hu.nero.toyota.detail.WheelRadius;
 import hu.nero.toyota.factory.DetailFactory;
@@ -14,8 +14,8 @@ public class CreateFourWheelsTest {
     }
     public static void createFourWheelsTest() {
         //Arrange
-        Country country = Country.USA;
-        DetailFactory detailFactory = new DetailFactory(country);
+        CountryOfProduction countryOfProduction = CountryOfProduction.USA;
+        DetailFactory detailFactory = new DetailFactory(countryOfProduction);
         WheelRadius wheelRadius = WheelRadius.SEVENTEEN;
         WheelRadius testWheelRadius = WheelRadius.SIXTEEN;
         //Act

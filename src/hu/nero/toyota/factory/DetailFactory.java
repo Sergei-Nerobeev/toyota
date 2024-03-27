@@ -3,10 +3,10 @@ package hu.nero.toyota.factory;
 import hu.nero.toyota.detail.*;
 
 public class DetailFactory {
-    private Country countryAssembly;
+    private CountryOfProduction countryOfProduction;
 
-    public DetailFactory(Country countryAssembly) {
-        this.countryAssembly = countryAssembly;
+    public DetailFactory(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
     }
 
     public Wheel createWheel(WheelRadius wheelRadius) {
@@ -36,43 +36,47 @@ public class DetailFactory {
     }
 
     public ElectricalSystem createElectricalSystem() {
-        return new ElectricalSystem();
+        return new ElectricalSystem(CountryOfProduction.CHINA);
     }
 
-    public Country getCountryAssembly() {
-        return countryAssembly;
+    public CountryOfProduction getCountryOfProduction() {
+        return countryOfProduction;
     }
 
-    public void setCountryAssembly(Country countryAssembly) {
-        this.countryAssembly = countryAssembly;
+    public void setCountryOfProduction(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
     }
-    public Fridge createFridge(){
+
+    public Fridge createFridge() {
         Fridge fridge = new Fridge();
         fridge.setTitle("ХОЛОДИЛЬНИК");
         return fridge;
     }
-    public Roof createRoof(){
+
+    public Roof createRoof() {
         Roof roof = new Roof();
         roof.setOn(true);
         roof.roofUp();
         return roof;
     }
-    public Socket createSocket(){
+
+    public Socket createSocket() {
         Socket socket = new Socket();
         socket.chargePhone();
         return socket;
     }
-    public Usb createUsb(){
+
+    public Usb createUsb() {
         Usb usb = new Usb();
         System.out.println("Usb mounted");
         usb.connectMusic();
-       return usb;
+        return usb;
     }
 
     @Override
     public String toString() {
         return "DetailFactory{" +
-                "countryAssembly=" + countryAssembly +
+                countryOfProduction +
                 '}';
     }
 }

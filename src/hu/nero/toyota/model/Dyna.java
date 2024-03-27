@@ -1,7 +1,7 @@
 package hu.nero.toyota.model;
 
 import hu.nero.toyota.detail.*;
-import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.type.AbstractCar;
 
 import java.util.Arrays;
@@ -25,7 +25,7 @@ public class Dyna extends AbstractCar {
                 ElectricalSystem electricalSystem,
                 HeadLights headLights,
                 WheelRadius wheelRadius,
-                Country countryAssembly,
+                CountryOfProduction countryOfProductionAssembly,
                 CarModel carModel,
                 double price,
                 Socket socket,
@@ -40,7 +40,7 @@ public class Dyna extends AbstractCar {
                 electricalSystem,
                 headLights,
                 DYNA_RADIUS,
-                countryAssembly,
+                countryOfProductionAssembly,
                 carModel,price);
         this.socket = socket;
 
@@ -66,7 +66,7 @@ public class Dyna extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryAssembly +
+                ", countryAssembly=" + countryOfProductionAssembly +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';

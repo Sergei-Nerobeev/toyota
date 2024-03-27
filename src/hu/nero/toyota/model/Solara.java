@@ -1,7 +1,7 @@
 package hu.nero.toyota.model;
 
 import hu.nero.toyota.detail.*;
-import hu.nero.toyota.detail.Country;
+import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.type.AbstractCar;
 
 import java.util.Arrays;
@@ -21,7 +21,7 @@ public class Solara extends AbstractCar {
                   ElectricalSystem electricalSystem,
                   HeadLights headLights,
                   WheelRadius wheelRadius,
-                  Country countryAssembly,
+                  CountryOfProduction countryOfProductionAssembly,
                   CarModel carModel,
                   double price,
                   Roof roof,
@@ -35,7 +35,7 @@ public class Solara extends AbstractCar {
                 electricalSystem,
                 headLights,
                 SOLARA_RADIUS,
-                countryAssembly,
+                countryOfProductionAssembly,
                 carModel,
                 price
         );
@@ -68,7 +68,7 @@ public class Solara extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryAssembly +
+                ", countryAssembly=" + countryOfProductionAssembly +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';

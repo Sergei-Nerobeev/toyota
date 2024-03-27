@@ -8,15 +8,15 @@ import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
 
 public class CarFactory {
-    private final Country countryAssembly;
+    private final CountryOfProduction countryOfProduction;
     private final DetailFactory detailFactory;
 
-    public CarFactory(DetailFactory detailFactory, Country countryAssembly) throws CountryFactoryNotEqualException {
-        if (detailFactory.getCountryAssembly() != countryAssembly) {
-            throw new CountryFactoryNotEqualException("Country of detail factory: " + detailFactory.getCountryAssembly() +
-                    "It is not country of car factory. Car factory is: " + countryAssembly);
+    public CarFactory(DetailFactory detailFactory, CountryOfProduction countryOfProduction) throws CountryFactoryNotEqualException {
+        if (detailFactory.getCountryOfProduction() != countryOfProduction) {
+            throw new CountryFactoryNotEqualException("Country of detail factory: " + detailFactory.getCountryOfProduction() +
+                    "It is not country of car factory. Car factory is: " + countryOfProduction);
         }
-        this.countryAssembly = countryAssembly;
+        this.countryOfProduction = countryOfProduction;
         this.detailFactory = detailFactory;
     }
 
@@ -29,7 +29,7 @@ public class CarFactory {
                 detailFactory.createFourWheels(Camry.CAMRY_RADIUS),
                 detailFactory.createElectricalSystem(),
                 detailFactory.createHeadLights(),
-                countryAssembly,
+                countryOfProduction,
                 CarModel.CAMRY,
                 price
         );
@@ -45,7 +45,7 @@ public class CarFactory {
                 detailFactory.createElectricalSystem(),
                 detailFactory.createHeadLights(),
                 Solara.SOLARA_RADIUS,
-                countryAssembly,
+                countryOfProduction,
                 CarModel.SOLARA,
                 price,
                 detailFactory.createRoof().getRoof(),
@@ -62,7 +62,7 @@ public class CarFactory {
                 detailFactory.createElectricalSystem(),
                 detailFactory.createHeadLights(),
                 Dyna.DYNA_RADIUS,
-                countryAssembly,
+                countryOfProduction,
                 CarModel.DYNA,
                 price,
                 detailFactory.createSocket(),
@@ -79,7 +79,7 @@ public class CarFactory {
                 detailFactory.createElectricalSystem(),
                 detailFactory.createHeadLights(),
                 Hiance.HIANCE_RADIUS,
-                countryAssembly,
+                countryOfProduction,
                 CarModel.HIANCE,
                 price,
                 new Wheel(WheelRadius.TWENTY),
@@ -90,7 +90,7 @@ public class CarFactory {
     @Override
     public String toString() {
         return "CarFactory{" +
-                countryAssembly +
+                countryOfProduction +
                 detailFactory +
                 '}';
     }

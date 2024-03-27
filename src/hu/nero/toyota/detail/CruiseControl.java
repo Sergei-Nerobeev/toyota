@@ -10,6 +10,6 @@ public class CruiseControl extends AbsTurnDetail {
     }
 
     public void cruiseControlOff() {
-        System.out.println("Cruise control is on");
+        System.out.println("Cruise control is off");
     }
 }

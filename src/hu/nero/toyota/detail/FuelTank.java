@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class FuelTank {
     private double level = 0;
-    private double volume;
+    private final double volume;
 
     public FuelTank(double volume) {
         this.volume = volume;
