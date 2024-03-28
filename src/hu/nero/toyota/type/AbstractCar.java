@@ -21,7 +21,7 @@ public abstract class AbstractCar {
     protected ElectricalSystem electricalSystem;
     protected HeadLights headLights;
     protected WheelRadius wheelRadius;
-    protected CountryOfProduction countryOfProductionAssembly;
+    protected CountryOfProduction countryOfProduction;
     protected CarModel carModel;
     protected double price;
 
@@ -46,7 +46,7 @@ public abstract class AbstractCar {
         this.electricalSystem = electricalSystem;
         this.headLights = headLights;
         this.wheelRadius = wheelRadius;
-        this.countryOfProductionAssembly = countryOfProductionAssembly;
+        this.countryOfProduction= countryOfProduction;
         this.carModel = carModel;
         this.price = price;
     }
@@ -102,7 +102,7 @@ public abstract class AbstractCar {
     }
 
     public CountryOfProduction getCountryAssembly() {
-        return countryOfProductionAssembly;
+        return countryOfProduction;
     }
 
     public void setFuelTank(FuelTank fuelTank) {
@@ -185,24 +185,24 @@ public abstract class AbstractCar {
         }
     }
 
-    @Override
-    public boolean equals(Object object) { //todo
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        AbstractCar car = (AbstractCar) object;
-        return maxSpeed == car.maxSpeed &&
-                Double.compare(price, car.price) == 0 &&
-                color == car.color &&
-                transmission == car.transmission &&
-                Objects.equals(fuelTank, car.fuelTank) &&
-                Objects.equals(engine, car.engine) &&
-                Arrays.equals(wheels, car.wheels) &&
-                Objects.equals(electricalSystem, car.electricalSystem) &&
-                Objects.equals(headLights, car.headLights) &&
-                wheelRadius == car.wheelRadius &&
-                countryOfProductionAssembly == car.countryOfProductionAssembly &&
-                carModel == car.carModel;
-    }
+//    @Override
+//    public boolean equals(Object object) { //todo
+//        if (this == object) return true;
+//        if (object == null || getClass() != object.getClass()) return false;
+//        AbstractCar car = (AbstractCar) object;
+//        return maxSpeed == car.maxSpeed &&
+//                Double.compare(price, car.price) == 0 &&
+//                color == car.color &&
+//                transmission == car.transmission &&
+//                Objects.equals(fuelTank, car.fuelTank) &&
+//                Objects.equals(engine, car.engine) &&
+//                Arrays.equals(wheels, car.wheels) &&
+//                Objects.equals(electricalSystem, car.electricalSystem) &&
+//                Objects.equals(headLights, car.headLights) &&
+//                wheelRadius == car.wheelRadius &&
+//                countryOfProduction == car.countryOfProduction &&
+//                carModel == car.carModel;
+//    }
 
     @Override
     public int hashCode() {
@@ -216,7 +216,7 @@ public abstract class AbstractCar {
                 electricalSystem,
                 headLights,
                 wheelRadius,
-                countryOfProductionAssembly,
+                countryOfProduction,
                 carModel,
                 price);
         result = 31 * result + Arrays.hashCode(wheels);

@@ -20,7 +20,7 @@ public class Camry extends AbstractCar {
                  Wheel[] wheels,
                  ElectricalSystem electricalSystem,
                  HeadLights headLights,
-                 CountryOfProduction countryOfProductionAssembly,
+                 CountryOfProduction countryOfProduction,
                  CarModel carModel,
                  double price) {
         super(color,
@@ -32,7 +32,7 @@ public class Camry extends AbstractCar {
                 electricalSystem,
                 headLights,
                 CAMRY_RADIUS,
-                countryOfProductionAssembly,
+                countryOfProduction,
                 carModel,
                 price);
     }
@@ -61,12 +61,27 @@ public class Camry extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryOfProductionAssembly +
+                ", countryOfProduction=" + countryOfProduction +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';
     }
-
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Camry car = (Camry) object;
+        return Double.compare(car.price, price) == 0 &&
+                color == car.color &&
+                transmission == car.transmission &&
+                Objects.equals(fuelTank, car.fuelTank) &&
+                Objects.equals(engine, car.engine) &&
+                Arrays.equals(wheels, car.wheels) &&
+                Objects.equals(electricalSystem, car.electricalSystem) &&
+                Objects.equals(headLights, car.headLights) &&
+                countryOfProduction == car.countryOfProduction &&
+                carModel == car.carModel;
+    }
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), usb);
