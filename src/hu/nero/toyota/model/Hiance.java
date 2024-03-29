@@ -36,7 +36,6 @@ public class Hiance extends AbstractCar {
                 electricalSystem,
                 headLights,
                 HIANCE_RADIUS,
-                countryOfProductionAssembly,
                 carModel,
                 price
         );
@@ -54,7 +53,6 @@ public class Hiance extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryOfProduction+
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';

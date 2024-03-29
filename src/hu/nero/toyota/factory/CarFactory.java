@@ -24,14 +24,14 @@ public class CarFactory {
         return new Camry(
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(),
+                detailFactory.createFuelTank(20D),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Camry.CAMRY_RADIUS),
                 detailFactory.createElectricalSystem(),
                 detailFactory.createHeadLights(),
-                countryOfProduction,
                 CarModel.CAMRY,
-                price
+                price,
+                new Usb()
         );
     }
 
@@ -39,7 +39,7 @@ public class CarFactory {
         return new Solara(
                 color,
                 Transmission.ROBOT,
-                detailFactory.createFuelTank(),
+                detailFactory.createFuelTank(20D),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Solara.SOLARA_RADIUS),
                 detailFactory.createElectricalSystem(),
@@ -56,7 +56,7 @@ public class CarFactory {
         return new Dyna(
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(),
+                detailFactory.createFuelTank(20.0),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Dyna.DYNA_RADIUS),
                 detailFactory.createElectricalSystem(),
@@ -73,7 +73,7 @@ public class CarFactory {
         return new Hiance(
                 color,
                 Transmission.MECHANICAL,
-                detailFactory.createFuelTank(),
+                detailFactory.createFuelTank(20.0),
                 detailFactory.createEngine(),
                 detailFactory.createFourWheels(Hiance.HIANCE_RADIUS),
                 detailFactory.createElectricalSystem(),

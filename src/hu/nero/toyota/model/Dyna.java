@@ -40,8 +40,8 @@ public class Dyna extends AbstractCar {
                 electricalSystem,
                 headLights,
                 DYNA_RADIUS,
-                countryOfProductionAssembly,
-                carModel,price);
+                carModel,
+                price);
         this.socket = socket;
 
     }
@@ -66,7 +66,6 @@ public class Dyna extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryOfProduction +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';

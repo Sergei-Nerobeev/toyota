@@ -20,9 +20,9 @@ public class Camry extends AbstractCar {
                  Wheel[] wheels,
                  ElectricalSystem electricalSystem,
                  HeadLights headLights,
-                 CountryOfProduction countryOfProduction,
                  CarModel carModel,
-                 double price) {
+                 double price,
+                 Usb usb) {
         super(color,
                 MAX_SPEED,
                 transmission,
@@ -32,9 +32,9 @@ public class Camry extends AbstractCar {
                 electricalSystem,
                 headLights,
                 CAMRY_RADIUS,
-                countryOfProduction,
                 carModel,
-                price);
+                price) ;
+                this.usb = usb;
     }
 
     public void connectedMusic() {
@@ -61,7 +61,6 @@ public class Camry extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryOfProduction=" + countryOfProduction +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';
@@ -79,7 +78,6 @@ public class Camry extends AbstractCar {
                 Arrays.equals(wheels, car.wheels) &&
                 Objects.equals(electricalSystem, car.electricalSystem) &&
                 Objects.equals(headLights, car.headLights) &&
-                countryOfProduction == car.countryOfProduction &&
                 carModel == car.carModel;
     }
     @Override

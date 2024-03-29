@@ -22,17 +22,17 @@ public class DetailFactory {
     }
 
     public Engine createEngine() {
-        return new Engine();
+        return new Engine(CountryOfProduction.CHINA);
     }
 
-    public FuelTank createFuelTank() {
+    public FuelTank createFuelTank(Double levelFuel) {
         FuelTank fuelTank = new FuelTank(0);
-        fuelTank.setLevel(0);
+        fuelTank.setLevel(20);
         return fuelTank;
     }
 
     public HeadLights createHeadLights() {
-        return new HeadLights();
+        return new HeadLights(CountryOfProduction.CHINA);
     }
 
     public ElectricalSystem createElectricalSystem() {

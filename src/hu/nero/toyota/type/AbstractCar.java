@@ -14,14 +14,13 @@ public abstract class AbstractCar {
     protected Color color;
     protected int maxSpeed;
     protected Transmission transmission;
-    protected boolean isMove = false;
+    protected boolean isMove = true;
     protected FuelTank fuelTank;
     protected Engine engine;
     protected Wheel[] wheels;
     protected ElectricalSystem electricalSystem;
     protected HeadLights headLights;
     protected WheelRadius wheelRadius;
-    protected CountryOfProduction countryOfProduction;
     protected CarModel carModel;
     protected double price;
 
@@ -34,7 +33,6 @@ public abstract class AbstractCar {
                           ElectricalSystem electricalSystem,
                           HeadLights headLights,
                           WheelRadius wheelRadius,
-                          CountryOfProduction countryOfProductionAssembly,
                           CarModel carModel,
                           double price) {
         this.color = color;
@@ -46,7 +44,6 @@ public abstract class AbstractCar {
         this.electricalSystem = electricalSystem;
         this.headLights = headLights;
         this.wheelRadius = wheelRadius;
-        this.countryOfProduction= countryOfProduction;
         this.carModel = carModel;
         this.price = price;
     }
@@ -99,10 +96,6 @@ public abstract class AbstractCar {
 
     public WheelRadius getWheelRadius() {
         return wheelRadius;
-    }
-
-    public CountryOfProduction getCountryAssembly() {
-        return countryOfProduction;
     }
 
     public void setFuelTank(FuelTank fuelTank) {
@@ -200,7 +193,6 @@ public abstract class AbstractCar {
                 Objects.equals(electricalSystem, car.electricalSystem) &&
                 Objects.equals(headLights, car.headLights) &&
                 wheelRadius == car.wheelRadius &&
-                countryOfProduction == car.countryOfProduction &&
                 carModel == car.carModel;
     }
 
@@ -216,7 +208,6 @@ public abstract class AbstractCar {
                 electricalSystem,
                 headLights,
                 wheelRadius,
-                countryOfProduction,
                 carModel,
                 price);
         result = 31 * result + Arrays.hashCode(wheels);

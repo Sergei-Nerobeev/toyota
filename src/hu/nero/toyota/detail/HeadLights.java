@@ -6,10 +6,15 @@ import java.util.Objects;
 * Фары
 * */
 public class HeadLights extends AbsCrushDetail {
-    private CountryOfProduction countryOfProduction;
+    private final CountryOfProduction countryOfProduction;
+
+    public HeadLights(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
+    }
+
     @Override
     public String toString() {
-        return "HeadLights{}";
+        return "HeadLights made in: " + countryOfProduction;
     }
 
     @Override

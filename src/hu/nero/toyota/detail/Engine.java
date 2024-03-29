@@ -3,10 +3,15 @@ package hu.nero.toyota.detail;
 import java.util.Objects;
 
 public class Engine extends AbsCrushDetail {
-    private String countryOfProduction;
+    private final CountryOfProduction countryOfProduction;
+
+    public Engine(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
+    }
+
     @Override
     public String toString() {
-        return "Engine{}";
+        return "Engine made in: " + countryOfProduction;
     }
 
     @Override

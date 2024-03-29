@@ -10,7 +10,6 @@ public class FuelTank {
         this.volume = volume;
     }
 
-
     public double getLevel() {
         return level;
     }

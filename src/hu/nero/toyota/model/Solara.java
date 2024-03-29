@@ -35,7 +35,6 @@ public class Solara extends AbstractCar {
                 electricalSystem,
                 headLights,
                 SOLARA_RADIUS,
-                countryOfProductionAssembly,
                 carModel,
                 price
         );
@@ -68,7 +67,6 @@ public class Solara extends AbstractCar {
                 ", electricalSystem=" + electricalSystem +
                 ", headLights=" + headLights +
                 ", wheelRadius=" + wheelRadius +
-                ", countryAssembly=" + countryOfProduction +
                 ", carModel=" + carModel +
                 ", price=" + price +
                 '}';

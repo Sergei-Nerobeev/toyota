@@ -3,7 +3,7 @@ package hu.nero.toyota.detail;
 import java.util.Objects;
 
 public class ElectricalSystem extends AbsCrushDetail {
-    private CountryOfProduction countryOfProduction;
+    private final CountryOfProduction countryOfProduction;
 
     public ElectricalSystem(CountryOfProduction countryOfProduction) {
         this.countryOfProduction = countryOfProduction;
