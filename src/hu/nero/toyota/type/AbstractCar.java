@@ -14,7 +14,7 @@ public abstract class AbstractCar {
     protected Color color;
     protected int maxSpeed;
     protected Transmission transmission;
-    protected boolean isMove = true;
+    protected boolean isMove = false;
     protected FuelTank fuelTank;
     protected Engine engine;
     protected Wheel[] wheels;
@@ -80,16 +80,6 @@ public abstract class AbstractCar {
             throw new StartCarFailedException(failures.toString());
         }
     }
-
-    private boolean checkWheelsWork() {
-        for (Wheel wheel : wheels) {
-            if (!wheel.isWork()) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public CarModel getModel() {
         return carModel;
     }
