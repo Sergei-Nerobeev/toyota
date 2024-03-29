@@ -185,24 +185,24 @@ public abstract class AbstractCar {
         }
     }
 
-//    @Override
-//    public boolean equals(Object object) { //todo
-//        if (this == object) return true;
-//        if (object == null || getClass() != object.getClass()) return false;
-//        AbstractCar car = (AbstractCar) object;
-//        return maxSpeed == car.maxSpeed &&
-//                Double.compare(price, car.price) == 0 &&
-//                color == car.color &&
-//                transmission == car.transmission &&
-//                Objects.equals(fuelTank, car.fuelTank) &&
-//                Objects.equals(engine, car.engine) &&
-//                Arrays.equals(wheels, car.wheels) &&
-//                Objects.equals(electricalSystem, car.electricalSystem) &&
-//                Objects.equals(headLights, car.headLights) &&
-//                wheelRadius == car.wheelRadius &&
-//                countryOfProduction == car.countryOfProduction &&
-//                carModel == car.carModel;
-//    }
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        AbstractCar car = (AbstractCar) object;
+        return maxSpeed == car.maxSpeed &&
+                Double.compare(price, car.price) == 0 &&
+                color == car.color &&
+                transmission == car.transmission &&
+                Objects.equals(fuelTank, car.fuelTank) &&
+                Objects.equals(engine, car.engine) &&
+                Arrays.equals(wheels, car.wheels) &&
+                Objects.equals(electricalSystem, car.electricalSystem) &&
+                Objects.equals(headLights, car.headLights) &&
+                wheelRadius == car.wheelRadius &&
+                countryOfProduction == car.countryOfProduction &&
+                carModel == car.carModel;
+    }
 
     @Override
     public int hashCode() {

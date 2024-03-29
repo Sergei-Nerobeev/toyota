@@ -7,9 +7,12 @@ import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.model.Camry;
 
+import java.util.Arrays;
+
 public class CreateCamryTest {
     public static void main(String[] args) throws CountryFactoryNotEqualException {
         createCamryTest();
+        checkArrayOfWheels();
     }
 
     public static void createCamryTest() throws CountryFactoryNotEqualException {
@@ -44,6 +47,22 @@ public class CreateCamryTest {
         System.out.println(resultTest);
         System.out.println("Actual: " + actualCamry);
         System.out.println("Expect: " + expectedCamry);
+
+
     }
+    public static void checkArrayOfWheels() {
+
+
+        Wheel wheel = new Wheel(WheelRadius.SEVENTEEN);
+        Wheel [] expWheels = {wheel,wheel,wheel,wheel};
+        CountryOfProduction china = CountryOfProduction.CHINA;
+        DetailFactory detailFactory = new DetailFactory(china);
+
+        Wheel [] actWheels = detailFactory.createFourWheels(Camry.CAMRY_RADIUS);
+
+        boolean resultTest = Arrays.equals(expWheels,actWheels);
+        System.out.println(resultTest);
+    }
+
 
 }
