@@ -3,8 +3,14 @@ package hu.nero.toyota.detail;
 import java.util.Objects;
 
 public class FuelTank {
+    private CountryOfProduction countryOfProduction;
     private double level = 0;
     private final double volume;
+
+    public FuelTank(CountryOfProduction countryOfProduction, double volume) {
+        this.countryOfProduction = countryOfProduction;
+        this.volume = volume;
+    }
 
     public FuelTank(double volume) {
         this.volume = volume;
@@ -29,12 +35,13 @@ public class FuelTank {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        FuelTank fuelTank = (FuelTank) object;
-        return Double.compare(level, fuelTank.level) == 0 &&
-               Double.compare(volume, fuelTank.volume) == 0;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FuelTank fuelTank = (FuelTank) o;
+        return Double.compare(level, fuelTank.level) == 0
+                && Double.compare(volume, fuelTank.volume) == 0
+                && countryOfProduction == fuelTank.countryOfProduction;
     }
 
     @Override

@@ -54,14 +54,14 @@ public class DetailFactory {
     }
 
     public Roof createRoof() {
-        Roof roof = new Roof();
+        Roof roof = new Roof(CountryOfProduction.CHINA);
         roof.setOn(true);
         roof.roofUp();
         return roof;
     }
 
     public Socket createSocket() {
-        Socket socket = new Socket();
+        Socket socket = new Socket(CountryOfProduction.CHINA);
         socket.chargePhone();
         return socket;
     }
