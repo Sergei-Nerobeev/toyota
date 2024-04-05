@@ -13,7 +13,8 @@ public class Hiance extends AbstractCar {
     public static final int MAX_CAPACITY = 2_000;
     private Wheel safeWheel;
 
-    public Hiance(Color color,
+    public Hiance(CountryOfProduction countryOfProduction,
+                  Color color,
                   Transmission transmission,
                   FuelTank fuelTank,
                   Engine engine,
@@ -27,7 +28,8 @@ public class Hiance extends AbstractCar {
                   Wheel safeWheel,
                   int max_Capacity
    ) {
-        super(color,
+        super(countryOfProduction,
+                color,
                 MAX_SPEED,
                 Transmission.MECHANICAL,
                 fuelTank,

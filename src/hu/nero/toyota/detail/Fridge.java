@@ -18,6 +18,10 @@ public class Fridge {
         this.title = title;
     }
 
+    public void setCountryOfProduction(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

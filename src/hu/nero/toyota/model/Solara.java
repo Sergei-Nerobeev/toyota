@@ -13,7 +13,8 @@ public class Solara extends AbstractCar {
     private Fridge fridge;
     private Roof roof;
 
-    public Solara(Color color,
+    public Solara(CountryOfProduction countryOfProduction,
+                  Color color,
                   Transmission transmission,
                   FuelTank fuelTank,
                   Engine engine,
@@ -26,7 +27,8 @@ public class Solara extends AbstractCar {
                   double price,
                   Roof roof,
                   Fridge fridge) {
-        super(color,
+        super(countryOfProduction,
+                color,
                 MAX_SPEED,
                 Transmission.ROBOT,
                 fuelTank,

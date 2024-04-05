@@ -22,62 +22,66 @@ public class CarFactory {
 
     public Camry createCamry(Color color, double price) {
         return new Camry(
+                CountryOfProduction.CHINA,
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(20D),
-                detailFactory.createEngine(),
+                detailFactory.createFuelTank(CountryOfProduction.CHINA),
+                detailFactory.createEngine(CountryOfProduction.CHINA),
                 detailFactory.createFourWheels(Camry.CAMRY_RADIUS),
-                detailFactory.createElectricalSystem(),
-                detailFactory.createHeadLights(),
+                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
+                detailFactory.createHeadLights(CountryOfProduction.CHINA),
                 CarModel.CAMRY,
                 price,
-                new Usb()
+                detailFactory.createUsb(CountryOfProduction.CHINA)
         );
     }
 
     public Solara createSolara(Color color, double price) {
         return new Solara(
+                CountryOfProduction.CHINA,
                 color,
                 Transmission.ROBOT,
-                detailFactory.createFuelTank(20D),
-                detailFactory.createEngine(),
+                detailFactory.createFuelTank(CountryOfProduction.CHINA),
+                detailFactory.createEngine(CountryOfProduction.CHINA),
                 detailFactory.createFourWheels(Solara.SOLARA_RADIUS),
-                detailFactory.createElectricalSystem(),
-                detailFactory.createHeadLights(),
+                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
+                detailFactory.createHeadLights(CountryOfProduction.CHINA),
                 Solara.SOLARA_RADIUS,
                 countryOfProduction,
                 CarModel.SOLARA,
                 price,
-                detailFactory.createRoof().getRoof(),
-                detailFactory.createFridge()
+                detailFactory.createRoof(CountryOfProduction.CHINA),
+                detailFactory.createFridge(CountryOfProduction.CHINA)
         );
     }
     public Dyna createDyna(Color color, double price) {
         return new Dyna(
+                CountryOfProduction.CHINA,
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(20.0),
-                detailFactory.createEngine(),
+                detailFactory.createFuelTank(CountryOfProduction.CHINA),
+                detailFactory.createEngine(CountryOfProduction.CHINA),
                 detailFactory.createFourWheels(Dyna.DYNA_RADIUS),
-                detailFactory.createElectricalSystem(),
-                detailFactory.createHeadLights(),
+                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
+                detailFactory.createHeadLights(CountryOfProduction.CHINA),
                 Dyna.DYNA_RADIUS,
                 countryOfProduction,
                 CarModel.DYNA,
                 price,
-                detailFactory.createSocket(),
-                detailFactory.createUsb()
+                detailFactory.createSocket(CountryOfProduction.CHINA),
+                detailFactory.createUsb(CountryOfProduction.CHINA)
         );
     }
     public Hiance createHiance(Color color, double price) {
         return new Hiance(
+                CountryOfProduction.CHINA,
                 color,
                 Transmission.MECHANICAL,
-                detailFactory.createFuelTank(20.0),
-                detailFactory.createEngine(),
+                detailFactory.createFuelTank(CountryOfProduction.CHINA),
+                detailFactory.createEngine(CountryOfProduction.CHINA),
                 detailFactory.createFourWheels(Hiance.HIANCE_RADIUS),
-                detailFactory.createElectricalSystem(),
-                detailFactory.createHeadLights(),
+                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
+                detailFactory.createHeadLights(CountryOfProduction.CHINA),
                 Hiance.HIANCE_RADIUS,
                 countryOfProduction,
                 CarModel.HIANCE,

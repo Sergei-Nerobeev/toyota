@@ -11,6 +11,7 @@ import java.util.Objects;
 
 public abstract class AbstractCar {
     public static final int COUNT_WHEELS = 4;
+    protected CountryOfProduction countryOfProduction;
     protected Color color;
     protected int maxSpeed;
     protected Transmission transmission;
@@ -24,7 +25,8 @@ public abstract class AbstractCar {
     protected CarModel carModel;
     protected double price;
 
-    protected AbstractCar(Color color,
+    protected AbstractCar(CountryOfProduction countryOfProduction,
+                          Color color,
                           int maxSpeed,
                           Transmission transmission,
                           FuelTank fuelTank,
@@ -35,6 +37,7 @@ public abstract class AbstractCar {
                           WheelRadius wheelRadius,
                           CarModel carModel,
                           double price) {
+        this.countryOfProduction = countryOfProduction;
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transmission = transmission;

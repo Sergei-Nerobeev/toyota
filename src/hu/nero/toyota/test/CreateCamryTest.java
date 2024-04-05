@@ -28,6 +28,7 @@ public class CreateCamryTest {
         Wheel[] wheels = {wheel, wheel, wheel, wheel};
 
         Camry expectedCamry = new Camry(
+                CountryOfProduction.CHINA,
                 Color.BLACK,
                 Transmission.AUTOMATE,
                 fuelTank,
@@ -72,7 +73,7 @@ public class CreateCamryTest {
         DetailFactory detailFactory = new DetailFactory(china);
         HeadLights expHeadlights = new HeadLights(china);
 
-        HeadLights actHeadLights = detailFactory.createHeadLights();
+        HeadLights actHeadLights = detailFactory.createHeadLights(CountryOfProduction.CHINA);
 
         boolean resultTest = expHeadlights.equals(actHeadLights);
         System.out.println(resultTest);

@@ -17,7 +17,8 @@ public class Dyna extends AbstractCar {
     private Socket socket;
     private Usb usb; // todo
 
-    public Dyna(Color color,
+    public Dyna(CountryOfProduction countryOfProduction,
+                Color color,
                 Transmission transmission,
                 FuelTank fuelTank,
                 Engine engine,
@@ -31,7 +32,8 @@ public class Dyna extends AbstractCar {
                 Socket socket,
                 Usb usb
     ) {
-        super(color,
+        super(countryOfProduction,
+                color,
                 MAX_SPEED,
                 DYNA_TRANSMISSION,
                 fuelTank,

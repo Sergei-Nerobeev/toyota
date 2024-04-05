@@ -21,22 +21,23 @@ public class DetailFactory {
         return wheels;
     }
 
-    public Engine createEngine() {
-        return new Engine(CountryOfProduction.CHINA);
+    public Engine createEngine(CountryOfProduction countryOfProduction) {
+        return new Engine(countryOfProduction);
     }
 
-    public FuelTank createFuelTank(Double levelFuel) {
+    public FuelTank createFuelTank(CountryOfProduction countryOfProduction) {
         FuelTank fuelTank = new FuelTank(0);
-        fuelTank.setLevel(20);
+        fuelTank.setLevel(20D);
+        setCountryOfProduction(countryOfProduction);
         return fuelTank;
     }
 
-    public HeadLights createHeadLights() {
-        return new HeadLights(CountryOfProduction.CHINA);
+    public HeadLights createHeadLights(CountryOfProduction countryOfProduction) {
+        return new HeadLights(countryOfProduction);
     }
 
-    public ElectricalSystem createElectricalSystem() {
-        return new ElectricalSystem(CountryOfProduction.CHINA);
+    public ElectricalSystem createElectricalSystem(CountryOfProduction countryOfProduction) {
+        return new ElectricalSystem(countryOfProduction);
     }
 
     public CountryOfProduction getCountryOfProduction() {
@@ -47,29 +48,33 @@ public class DetailFactory {
         this.countryOfProduction = countryOfProduction;
     }
 
-    public Fridge createFridge() {
+    public Fridge createFridge(CountryOfProduction countryOfProduction) {
         Fridge fridge = new Fridge();
         fridge.setTitle("ХОЛОДИЛЬНИК");
+        setCountryOfProduction(countryOfProduction);
         return fridge;
     }
 
-    public Roof createRoof() {
-        Roof roof = new Roof(CountryOfProduction.CHINA);
+    public Roof createRoof(CountryOfProduction countryOfProduction) {
+        Roof roof = new Roof(countryOfProduction);
         roof.setOn(true);
         roof.roofUp();
+        setCountryOfProduction(countryOfProduction);
         return roof;
     }
 
-    public Socket createSocket() {
-        Socket socket = new Socket(CountryOfProduction.CHINA);
+    public Socket createSocket(CountryOfProduction countryOfProduction) {
+        Socket socket = new Socket(countryOfProduction);
         socket.chargePhone();
+        setCountryOfProduction(countryOfProduction);
         return socket;
     }
 
-    public Usb createUsb() {
+    public Usb createUsb(CountryOfProduction countryOfProduction) {
         Usb usb = new Usb();
         System.out.println("Usb mounted");
         usb.connectMusic();
+        setCountryOfProduction(countryOfProduction);
         return usb;
     }
 
