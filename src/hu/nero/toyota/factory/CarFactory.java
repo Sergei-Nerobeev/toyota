@@ -22,7 +22,7 @@ public class CarFactory {
 
     public Camry createCamry(Color color, double price) {
         return new Camry(
-                CountryOfProduction.CHINA,
+                countryOfProduction,
                 color,
                 Transmission.AUTOMATE,
                 detailFactory.createFuelTank(CountryOfProduction.CHINA),
