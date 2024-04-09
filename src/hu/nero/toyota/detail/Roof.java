@@ -17,7 +17,7 @@ public class Roof extends AbsTurnDetail {
 
     public void roofDown() {
         System.out.println("Roof down");
-
+        setOn(false);
     }
 
     @Override

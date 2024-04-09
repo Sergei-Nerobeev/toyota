@@ -6,9 +6,9 @@
 
 toyota.iml,1\7\17d99a84a203438effef318489242a4a371406d5
 S
-#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
--.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 W
 'src/hu/nero/toyota/storage/Storage.java,5/8/584835e5df14123e1539c7a44863034eb24bca77
 _
@@ -26,9 +26,9 @@ U
 U
 %src/hu/nero/toyota/detail/Fridge.java,3/c/3ccb2c9c06a74154537e44d4302f76e771078078
 S
-#src/hu/nero/toyota/detail/Roof.java,1/7/17ab251250f4bf0845beefe206f51cf06e9d458f
+#src/hu/nero/toyota/detail/Roof.java,1\7\17ab251250f4bf0845beefe206f51cf06e9d458f
 W
-'src/hu/nero/toyota/detail/FuelTank.java,8/2/82d379d867e5bca4c1f8d3bcc0bfe62d982d4061
+'src/hu/nero/toyota/detail/FuelTank.java,8\2\82d379d867e5bca4c1f8d3bcc0bfe62d982d4061
 U
 %src/hu/nero/toyota/detail/Socket.java,7\4\7413d6d4277c5978bd1328ab7f9c87b8f4929102
 [
@@ -36,7 +36,7 @@ U
 R
 "src/hu/nero/toyota/detail/Usb.java,2\b\2b3d8aa2882cbb3d0877764e9e3f75c0a3263a00
 T
-$src/hu/nero/toyota/detail/Wheel.java,e/f/ef1c5abffd3590564815c7292a6f88c8a522c422
+$src/hu/nero/toyota/detail/Wheel.java,e\f\ef1c5abffd3590564815c7292a6f88c8a522c422
 Z
 *src/hu/nero/toyota/detail/WheelRadius.java,5\f\5f72efb56c4252d78e6476b2c88a1e3262b4b2da
 N
@@ -58,13 +58,13 @@ $src/hu/nero/toyota/detail/Color.java,8/2/82a2cb68fde5c1074754d568156f978315a11
 i
 9src/hu/nero/toyota/exceptoin/StartCarFailedException.java,7/a/7aa831f61e992946b4aae902dda8f38df32173b5
 ]
--src/hu/nero/toyota/factory/DetailFactory.java,4/4/441d0b5657d128a1c3884af10cdbbbd8fba84090
+-src/hu/nero/toyota/factory/DetailFactory.java,4\4\441d0b5657d128a1c3884af10cdbbbd8fba84090
 Z
 *src/hu/nero/toyota/factory/CarFactory.java,e/e/ee10d834733da7575bb57aea593a9acdf7c2cb2b
 q
 Asrc/hu/nero/toyota/exceptoin/CountryFactoryNotEqualException.java,3/9/39dc2ffc1b1f9ae95931340125ecd5cc7c5e0032
 \
-,src/hu/nero/toyota/test/CreateCamryTest.java,c/6/c6431317f086170655cd00095df688a8d1fa66fe
+,src/hu/nero/toyota/test/CreateCamryTest.java,c\6\c6431317f086170655cd00095df688a8d1fa66fe
 W
 'src/hu/nero/toyota/detail/Capacity.java,c/9/c99babb760a1529bc1973ca5ffd7785a0d5c387a
 a
