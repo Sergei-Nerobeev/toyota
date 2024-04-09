@@ -4,19 +4,20 @@ import hu.nero.toyota.detail.*;
 
 public class DetailFactory {
     private CountryOfProduction countryOfProduction;
+    private int wheelRadius;
 
     public DetailFactory(CountryOfProduction countryOfProduction) {
         this.countryOfProduction = countryOfProduction;
     }
 
-    public Wheel createWheel() {
-        return new Wheel(countryOfProduction);
+    public Wheel createWheel(int wheelRadius) {
+        return new Wheel(countryOfProduction,wheelRadius);
     }
 
     public Wheel[] createFourWheels(CountryOfProduction countryOfProduction) {
         Wheel[] wheels = new Wheel[4];
         for (int i = 0; i < 4; i++) {
-            wheels[i] = new Wheel(countryOfProduction);
+            wheels[i] = new Wheel(countryOfProduction,wheelRadius);
         }
         return wheels;
     }

@@ -38,7 +38,7 @@ public class CarFactory {
 
     public Solara createSolara(Color color, double price) {
         return new Solara(
-                CountryOfProduction.CHINA,
+                countryOfProduction,
                 color,
                 Transmission.ROBOT,
                 detailFactory.createFuelTank(CountryOfProduction.CHINA),
@@ -56,7 +56,7 @@ public class CarFactory {
     }
     public Dyna createDyna(Color color, double price) {
         return new Dyna(
-                CountryOfProduction.CHINA,
+                countryOfProduction,
                 color,
                 Transmission.AUTOMATE,
                 detailFactory.createFuelTank(CountryOfProduction.CHINA),
@@ -74,7 +74,7 @@ public class CarFactory {
     }
     public Hiance createHiance(Color color, double price) {
         return new Hiance(
-                CountryOfProduction.CHINA,
+                countryOfProduction,
                 color,
                 Transmission.MECHANICAL,
                 detailFactory.createFuelTank(CountryOfProduction.CHINA),
@@ -86,7 +86,7 @@ public class CarFactory {
                 countryOfProduction,
                 CarModel.HIANCE,
                 price,
-                new Wheel(CountryOfProduction.CHINA),
+                new Wheel(countryOfProduction,Hiance.HIANCE_RADIUS),
                 Hiance.MAX_CAPACITY
         );
     }

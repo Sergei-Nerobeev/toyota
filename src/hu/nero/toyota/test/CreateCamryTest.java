@@ -21,10 +21,11 @@ public class CreateCamryTest {
         //Arrange
         Color color = Color.BLACK;
         double price = 20000;
+        int wheelRadius = 17;
         FuelTank fuelTank = new FuelTank(0D);
         fuelTank.setLevel(20D);
         CountryOfProduction china = CountryOfProduction.CHINA;
-        Wheel wheel = new Wheel(china);
+        Wheel wheel = new Wheel(china,wheelRadius);
         Wheel[] wheels = {wheel, wheel, wheel, wheel};
 
         Camry expectedCamry = new Camry(
@@ -55,8 +56,8 @@ public class CreateCamryTest {
     }
 
     public static void checkArrayOfWheels() {
-
-        Wheel wheel = new Wheel(CountryOfProduction.CHINA);
+        int wheelRadius = 17;
+        Wheel wheel = new Wheel(CountryOfProduction.CHINA,wheelRadius);
         Wheel[] expWheels = {wheel, wheel, wheel, wheel};
         CountryOfProduction china = CountryOfProduction.CHINA;
         DetailFactory detailFactory = new DetailFactory(china);

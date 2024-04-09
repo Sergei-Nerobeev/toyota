@@ -4,9 +4,11 @@ import java.util.Objects;
 
 public class Wheel extends AbsCrushDetail {
     private CountryOfProduction countryOfProduction;
+    private int wheelRadius;
 
-    public Wheel(CountryOfProduction countryOfProduction) {
+    public Wheel(CountryOfProduction countryOfProduction, int wheelRadius) {
         this.countryOfProduction = countryOfProduction;
+        this.wheelRadius = wheelRadius;
     }
 
     public void setCountryOfProduction(CountryOfProduction countryOfProduction) {
