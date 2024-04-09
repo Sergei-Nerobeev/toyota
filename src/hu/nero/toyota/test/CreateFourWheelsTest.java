@@ -2,7 +2,6 @@ package hu.nero.toyota.test;
 
 import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.detail.Wheel;
-import hu.nero.toyota.detail.WheelRadius;
 import hu.nero.toyota.factory.DetailFactory;
 
 import java.util.Arrays;
@@ -16,11 +15,9 @@ public class CreateFourWheelsTest {
         //Arrange
         CountryOfProduction countryOfProduction = CountryOfProduction.USA;
         DetailFactory detailFactory = new DetailFactory(countryOfProduction);
-        WheelRadius wheelRadius = WheelRadius.SEVENTEEN;
-        WheelRadius testWheelRadius = WheelRadius.SIXTEEN;
         //Act
-        Wheel[] wheels = detailFactory.createFourWheels(wheelRadius);
-        Wheel[] testWheels = detailFactory.createFourWheels(testWheelRadius);
+        Wheel[] wheels = detailFactory.createFourWheels(countryOfProduction);
+        Wheel[] testWheels = detailFactory.createFourWheels(countryOfProduction);
         System.out.println(Arrays.toString(wheels));
         int wheelCount = wheels.length;
         int testWheelCount = 3;

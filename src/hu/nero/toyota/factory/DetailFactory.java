@@ -9,14 +9,14 @@ public class DetailFactory {
         this.countryOfProduction = countryOfProduction;
     }
 
-    public Wheel createWheel(WheelRadius wheelRadius) {
-        return new Wheel(wheelRadius);
+    public Wheel createWheel() {
+        return new Wheel(countryOfProduction);
     }
 
-    public Wheel[] createFourWheels(WheelRadius wheelRadius) {
+    public Wheel[] createFourWheels(CountryOfProduction countryOfProduction) {
         Wheel[] wheels = new Wheel[4];
         for (int i = 0; i < 4; i++) {
-            wheels[i] = new Wheel(wheelRadius);
+            wheels[i] = new Wheel(countryOfProduction);
         }
         return wheels;
     }

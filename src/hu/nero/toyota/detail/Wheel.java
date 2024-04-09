@@ -4,21 +4,9 @@ import java.util.Objects;
 
 public class Wheel extends AbsCrushDetail {
     private CountryOfProduction countryOfProduction;
-    private final WheelRadius wheelRadius;
 
-    public Wheel(WheelRadius wheelRadius) {
-        this.wheelRadius = wheelRadius;
-    }
-
-    public WheelRadius getWheelRadius() {
-        return wheelRadius;
-    }
-
-    @Override
-    public String toString() {
-        return "Wheel{" +
-                "wheelRadius=" + wheelRadius +
-                '}';
+    public Wheel(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
     }
 
     public void setCountryOfProduction(CountryOfProduction countryOfProduction) {
@@ -30,11 +18,11 @@ public class Wheel extends AbsCrushDetail {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Wheel wheel = (Wheel) o;
-        return countryOfProduction == wheel.countryOfProduction && wheelRadius == wheel.wheelRadius;
+        return countryOfProduction == wheel.countryOfProduction;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(countryOfProduction, wheelRadius);
+        return Objects.hash(countryOfProduction);
     }
 }

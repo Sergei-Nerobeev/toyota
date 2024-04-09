@@ -21,7 +21,7 @@ public abstract class AbstractCar {
     protected Wheel[] wheels;
     protected ElectricalSystem electricalSystem;
     protected HeadLights headLights;
-    protected WheelRadius wheelRadius;
+    protected int wheelRadius;
     protected CarModel carModel;
     protected double price;
 
@@ -34,7 +34,7 @@ public abstract class AbstractCar {
                           Wheel[] wheels,
                           ElectricalSystem electricalSystem,
                           HeadLights headLights,
-                          WheelRadius wheelRadius,
+                          int wheelRadius,
                           CarModel carModel,
                           double price) {
         this.countryOfProduction = countryOfProduction;
@@ -87,7 +87,7 @@ public abstract class AbstractCar {
         return carModel;
     }
 
-    public WheelRadius getWheelRadius() {
+    public int getWheelRadius() {
         return wheelRadius;
     }
 
@@ -166,7 +166,7 @@ public abstract class AbstractCar {
     }
 
     private void checkWheel(Wheel wheel) throws RuntimeException {
-        if (wheel == null || wheel.getWheelRadius() != wheelRadius) {
+        if (wheel == null) {
             throw new RuntimeException("Wheel is null or not same radius");
         }
     }

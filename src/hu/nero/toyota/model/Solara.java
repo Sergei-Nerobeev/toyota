@@ -7,7 +7,7 @@ import hu.nero.toyota.type.AbstractCar;
 import java.util.Arrays;
 
 public class Solara extends AbstractCar {
-    public static final WheelRadius SOLARA_RADIUS = WheelRadius.SIXTEEN;
+    public static final int SOLARA_RADIUS = 16;
     public static final Transmission TRANSMISSION = Transmission.ROBOT;
     public static final int MAX_SPEED = 300;
     private Fridge fridge;
@@ -21,7 +21,7 @@ public class Solara extends AbstractCar {
                   Wheel[] wheels,
                   ElectricalSystem electricalSystem,
                   HeadLights headLights,
-                  WheelRadius wheelRadius,
+                  int wheelRadius,
                   CountryOfProduction countryOfProductionAssembly,
                   CarModel carModel,
                   double price,

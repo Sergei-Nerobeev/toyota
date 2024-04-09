@@ -7,7 +7,7 @@ import hu.nero.toyota.type.AbstractCar;
 import java.util.Arrays;
 
 public class Hiance extends AbstractCar {
-    public static final WheelRadius HIANCE_RADIUS = WheelRadius.TWENTY;
+    public static final int HIANCE_RADIUS = 20;
     public static final Transmission TRANSMISSION = Transmission.MECHANICAL;
     public static final int MAX_SPEED = 170;
     public static final int MAX_CAPACITY = 2_000;
@@ -21,7 +21,7 @@ public class Hiance extends AbstractCar {
                   Wheel[] wheels,
                   ElectricalSystem electricalSystem,
                   HeadLights headLights,
-                  WheelRadius wheelRadius,
+                  int wheelRadius,
                   CountryOfProduction countryOfProductionAssembly,
                   CarModel carModel,
                   double price,

@@ -24,7 +24,7 @@ public class CreateCamryTest {
         FuelTank fuelTank = new FuelTank(0D);
         fuelTank.setLevel(20D);
         CountryOfProduction china = CountryOfProduction.CHINA;
-        Wheel wheel = new Wheel(WheelRadius.SEVENTEEN);
+        Wheel wheel = new Wheel(china);
         Wheel[] wheels = {wheel, wheel, wheel, wheel};
 
         Camry expectedCamry = new Camry(
@@ -56,12 +56,12 @@ public class CreateCamryTest {
 
     public static void checkArrayOfWheels() {
 
-        Wheel wheel = new Wheel(WheelRadius.SEVENTEEN);
+        Wheel wheel = new Wheel(CountryOfProduction.CHINA);
         Wheel[] expWheels = {wheel, wheel, wheel, wheel};
         CountryOfProduction china = CountryOfProduction.CHINA;
         DetailFactory detailFactory = new DetailFactory(china);
 
-        Wheel[] actWheels = detailFactory.createFourWheels(Camry.CAMRY_RADIUS);
+        Wheel[] actWheels = detailFactory.createFourWheels(china);
 
         boolean resultTest = Arrays.equals(expWheels, actWheels);
         System.out.println(resultTest);
