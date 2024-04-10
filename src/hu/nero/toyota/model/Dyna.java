@@ -7,31 +7,32 @@ import hu.nero.toyota.type.AbstractCar;
 import java.util.Arrays;
 
 import static hu.nero.toyota.detail.Transmission.MECHANICAL;
-import static hu.nero.toyota.detail.WheelRadius.TWENTY;
 
 public class Dyna extends AbstractCar {
-    public static final WheelRadius DYNA_RADIUS = TWENTY;
+    public static final int DYNA_RADIUS = 20;
     public static final Transmission DYNA_TRANSMISSION = MECHANICAL;
     public static final int MAX_SPEED = 150;
     public static final int MAX_CAPACITY = 3_000;
     private Socket socket;
-    private Usb usb; // todo
+    private Usb usb;
 
-    public Dyna(Color color,
+    public Dyna(CountryOfProduction countryOfProduction,
+                Color color,
                 Transmission transmission,
                 FuelTank fuelTank,
                 Engine engine,
                 Wheel[] wheels,
                 ElectricalSystem electricalSystem,
                 HeadLights headLights,
-                WheelRadius wheelRadius,
+                int wheelRadius,
                 CountryOfProduction countryOfProductionAssembly,
                 CarModel carModel,
                 double price,
                 Socket socket,
                 Usb usb
     ) {
-        super(color,
+        super(countryOfProduction,
+                color,
                 MAX_SPEED,
                 DYNA_TRANSMISSION,
                 fuelTank,

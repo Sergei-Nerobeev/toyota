@@ -11,20 +11,22 @@ import java.util.Objects;
 
 public abstract class AbstractCar {
     public static final int COUNT_WHEELS = 4;
+    protected CountryOfProduction countryOfProduction;
     protected Color color;
     protected int maxSpeed;
     protected Transmission transmission;
-    protected boolean isMove = true;
+    protected boolean isMove = false;
     protected FuelTank fuelTank;
     protected Engine engine;
     protected Wheel[] wheels;
     protected ElectricalSystem electricalSystem;
     protected HeadLights headLights;
-    protected WheelRadius wheelRadius;
+    protected int wheelRadius;
     protected CarModel carModel;
     protected double price;
 
-    protected AbstractCar(Color color,
+    protected AbstractCar(CountryOfProduction countryOfProduction,
+                          Color color,
                           int maxSpeed,
                           Transmission transmission,
                           FuelTank fuelTank,
@@ -32,9 +34,10 @@ public abstract class AbstractCar {
                           Wheel[] wheels,
                           ElectricalSystem electricalSystem,
                           HeadLights headLights,
-                          WheelRadius wheelRadius,
+                          int wheelRadius,
                           CarModel carModel,
                           double price) {
+        this.countryOfProduction = countryOfProduction;
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transmission = transmission;
@@ -80,21 +83,11 @@ public abstract class AbstractCar {
             throw new StartCarFailedException(failures.toString());
         }
     }
-
-    private boolean checkWheelsWork() {
-        for (Wheel wheel : wheels) {
-            if (!wheel.isWork()) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public CarModel getModel() {
         return carModel;
     }
 
-    public WheelRadius getWheelRadius() {
+    public int getWheelRadius() {
         return wheelRadius;
     }
 
@@ -173,7 +166,7 @@ public abstract class AbstractCar {
     }
 
     private void checkWheel(Wheel wheel) throws RuntimeException {
-        if (wheel == null || wheel.getWheelRadius() != wheelRadius) {
+        if (wheel == null) {
             throw new RuntimeException("Wheel is null or not same radius");
         }
     }

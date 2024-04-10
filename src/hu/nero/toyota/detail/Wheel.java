@@ -3,33 +3,28 @@ package hu.nero.toyota.detail;
 import java.util.Objects;
 
 public class Wheel extends AbsCrushDetail {
-  private final WheelRadius wheelRadius;
+    private CountryOfProduction countryOfProduction;
+    private int wheelRadius;
 
-  public Wheel(WheelRadius wheelRadius) {
+    public Wheel(CountryOfProduction countryOfProduction, int wheelRadius) {
+        this.countryOfProduction = countryOfProduction;
         this.wheelRadius = wheelRadius;
     }
 
-  public WheelRadius getWheelRadius() {
-    return wheelRadius;
-  }
+    public void setCountryOfProduction(CountryOfProduction countryOfProduction) {
+        this.countryOfProduction = countryOfProduction;
+    }
 
-  @Override
-  public String toString() {
-    return "Wheel{" +
-            "wheelRadius=" + wheelRadius +
-            '}';
-  }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Wheel wheel = (Wheel) o;
+        return countryOfProduction == wheel.countryOfProduction && wheelRadius == wheel.wheelRadius;
+    }
 
-  @Override
-  public boolean equals(Object object) {
-    if (this == object) return true;
-    if (object == null || getClass() != object.getClass()) return false;
-    Wheel wheel = (Wheel) object;
-    return wheelRadius == wheel.wheelRadius;
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(wheelRadius);
-  }
+    @Override
+    public int hashCode() {
+        return Objects.hash(countryOfProduction);
+    }
 }

@@ -6,14 +6,13 @@ import hu.nero.toyota.type.AbstractCar;
 import java.util.Arrays;
 import java.util.Objects;
 
-import static hu.nero.toyota.detail.WheelRadius.SEVENTEEN;
-
 public class Camry extends AbstractCar {
-    public static final WheelRadius CAMRY_RADIUS = SEVENTEEN;
+    public static final int CAMRY_RADIUS = 17;
     public static final int MAX_SPEED = 225;
     private Usb usb;
 
-    public Camry(Color color,
+    public Camry(CountryOfProduction countryOfProduction,
+                 Color color,
                  Transmission transmission,
                  FuelTank fuelTank,
                  Engine engine,
@@ -23,7 +22,8 @@ public class Camry extends AbstractCar {
                  CarModel carModel,
                  double price,
                  Usb usb) {
-        super(color,
+        super(countryOfProduction,
+                color,
                 MAX_SPEED,
                 transmission,
                 fuelTank,
