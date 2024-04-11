@@ -11,12 +11,10 @@ public class Roof extends AbsTurnDetail {
     }
 
     public void roofUp() {
-        System.out.println("Roof up");
         setOn(true);
     }
 
     public void roofDown() {
-        System.out.println("Roof down");
         setOn(false);
     }
 

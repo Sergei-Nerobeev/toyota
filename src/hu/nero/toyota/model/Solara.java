@@ -48,10 +48,6 @@ public class Solara extends AbstractCar {
         return fridge;
     }
 
-    public Roof getRoof() {
-        return roof;
-    }
-
     public void freezeBeverage() {
         fridge.freeze();
         System.out.println("Fridge is up!");

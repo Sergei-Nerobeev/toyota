@@ -73,7 +73,6 @@ public class DetailFactory {
 
     public Usb createUsb(CountryOfProduction countryOfProduction) {
         Usb usb = new Usb();
-        System.out.println("Usb mounted");
         usb.connectMusic();
         setCountryOfProduction(countryOfProduction);
         return usb;
