@@ -25,18 +25,22 @@ public class CreateStorageTest {
 
         //Act
         storage.addCamry(carFactory.createCamry(Color.BLACK, 20000));
-        storage.addCamry(carFactory.createCamry(Color.BLACK, 20000));
         storage.addSolara(carFactory.createSolara(Color.BLUE, 30000));
-        storage.addSolara(carFactory.createSolara(Color.BLUE, 30000));
-//        storage.addDyna(carFactory.createDyna(Color.ORANGE, 40000));
+        storage.addDyna(carFactory.createDyna(Color.BLUE, 40000));
+        storage.addHiance(carFactory.createHiance(Color.BLUE, 50000));
+//
 
         storage.takenCamry();
         storage.takenSolara();
+        storage.takenDyna();
+        storage.takenHiance();
 
 
         //Assert
         storage.counterOfSolara();
         storage.counterOfCamry();
+        storage.counterOfDyna();
+        storage.counterOfHiance();
 
     }
 }
