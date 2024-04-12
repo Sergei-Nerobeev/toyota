@@ -20,8 +20,6 @@ public class CreateStorageTest {
         CountryOfProduction china = CountryOfProduction.CHINA;
         DetailFactory detailFactory = new DetailFactory(china);
         CarFactory carFactory = new CarFactory(detailFactory, china);
-        Wheel wheel = new Wheel(china, wheelRadius);
-        Wheel[] wheels = {wheel, wheel, wheel, wheel};
 
         //Act
         storage.addCamry(carFactory.createCamry(Color.BLACK, 20000));
