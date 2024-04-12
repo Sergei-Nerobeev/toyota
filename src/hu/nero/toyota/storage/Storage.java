@@ -73,7 +73,7 @@ public class Storage {
         totalSolara++;
         maxNumberOfCars--;
         System.out.println("Added to to Solar Storage: " + solara + ". Total cars on the Storage: " + totalCarsOnStorage +
-                ". Free place for: " + maxNumberOfCars + " cars.");
+                ". Free place for: " + maxNumberOfCars);
     }
 
     public Solara takenSolara() {
@@ -93,7 +93,7 @@ public class Storage {
         totalCarsOnStorage++;
         totalDyna++;
         maxNumberOfCars--;
-        System.out.println("Added to to Dyna Storage: " + dyna + ". Total cars on the storage: " + totalCarsOnStorage +
+        System.out.println("Added to to Dyna Storage: " + dyna + ". Total cars on the Storage: " + totalCarsOnStorage +
                 ". Free place for: " + maxNumberOfCars);
     }
 
@@ -103,7 +103,7 @@ public class Storage {
         totalDyna--;
         maxNumberOfCars += 1;
         System.out.println(
-                "Taken from Dyna Storage: " + takenDyna + ". Total cars on the storage: " + totalCarsOnStorage +
+                "Taken from Dyna Storage: " + takenDyna + ". Total cars on the Storage: " + totalCarsOnStorage +
                         "." + " Free place: " + maxNumberOfCars);
         return takenDyna;
     }
@@ -112,7 +112,7 @@ public class Storage {
         this.carStorage[0][3] = hiance;
         totalCarsOnStorage += 1;
         maxNumberOfCars -= 1;
-        System.out.println("Added to to Hiance Storage: " + hiance + ". Total cars on the storage: " + totalCarsOnStorage +
+        System.out.println("Added to to Hiance Storage: " + hiance + ". Total cars on the Storage: " + totalCarsOnStorage +
                 ". Free place for: " + maxNumberOfCars);
     }
 
@@ -121,7 +121,7 @@ public class Storage {
         totalCarsOnStorage -= 1;
         maxNumberOfCars += 1;
         System.out.println(
-                "Taken from Hiance Storage: " + takenHiance + ". Total cars on the storage: " + totalCarsOnStorage +
+                "Taken from Hiance Storage: " + takenHiance + ". Total cars on the Storage: " + totalCarsOnStorage +
                         "." + " Free place for: " + maxNumberOfCars);
         return takenHiance;
     }

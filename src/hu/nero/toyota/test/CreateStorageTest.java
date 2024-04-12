@@ -14,7 +14,6 @@ public class CreateStorageTest {
     static void createStorageTest() throws CountryFactoryNotEqualException {
         //Arrange
         Storage storage = new Storage();
-        int wheelRadius = 17;
         FuelTank fuelTank = new FuelTank(0D);
         fuelTank.setLevel(20D);
         CountryOfProduction china = CountryOfProduction.CHINA;
