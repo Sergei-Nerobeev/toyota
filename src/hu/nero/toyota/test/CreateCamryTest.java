@@ -62,7 +62,7 @@ public class CreateCamryTest {
         CountryOfProduction china = CountryOfProduction.CHINA;
         DetailFactory detailFactory = new DetailFactory(china);
 
-        Wheel[] actWheels = detailFactory.createFourWheels(china);
+        Wheel[] actWheels = detailFactory.createFourWheels(china, 17);
 
         boolean resultTest = Arrays.equals(expWheels, actWheels);
         System.out.println(resultTest);

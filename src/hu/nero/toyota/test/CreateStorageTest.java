@@ -25,7 +25,8 @@ public class CreateStorageTest {
         storage.addSolara(carFactory.createSolara(Color.BLUE, 30000));
         storage.addDyna(carFactory.createDyna(Color.BLUE, 40000));
         storage.addHiance(carFactory.createHiance(Color.BLUE, 50000));
-//
+        //Assert
+
         storage.takenCamry();
         storage.takenSolara();
         storage.takenDyna();

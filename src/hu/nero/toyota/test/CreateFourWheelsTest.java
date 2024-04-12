@@ -16,8 +16,8 @@ public class CreateFourWheelsTest {
         CountryOfProduction countryOfProduction = CountryOfProduction.USA;
         DetailFactory detailFactory = new DetailFactory(countryOfProduction);
         //Act
-        Wheel[] wheels = detailFactory.createFourWheels(countryOfProduction);
-        Wheel[] testWheels = detailFactory.createFourWheels(countryOfProduction);
+        Wheel[] wheels = detailFactory.createFourWheels(countryOfProduction,17);
+        Wheel[] testWheels = detailFactory.createFourWheels(countryOfProduction, 17);
         System.out.println(Arrays.toString(wheels));
         int wheelCount = wheels.length;
         int testWheelCount = 3;
