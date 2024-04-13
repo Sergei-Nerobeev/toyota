@@ -42,7 +42,7 @@ public class Storage {
         System.out.println("Count of Hiance in Hiance Storage now are: " + result);
     }
 
-    public void addCamry(Camry camry) {
+    public Camry addCamry(Camry camry) {
         this.mainStorage[0][0] = camry;
         totalCarsInMainStorage++;
         totalCamryStorage++;
@@ -50,6 +50,7 @@ public class Storage {
         System.out.println("Added to to Camry Storage: " + camry + ". Total cars on the Storage: " + totalCarsInMainStorage
                 + ". Free place for: " + maxNumberOfCars + " cars.");
 
+        return camry;
     }
 
     public Camry takenCamry() {
