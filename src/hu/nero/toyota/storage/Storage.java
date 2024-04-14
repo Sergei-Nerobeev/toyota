@@ -48,7 +48,7 @@ public class Storage {
         totalCamryStorage++;
         maxNumberOfCars--;
         System.out.println("Added to to Camry Storage: " + camry + ". Total cars on the Storage: " + totalCarsInMainStorage
-                + ". Free place for: " + maxNumberOfCars + " cars.");
+                + ". Free place for: " + maxNumberOfCars);
 
         return camry;
     }
