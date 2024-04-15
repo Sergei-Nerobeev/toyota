@@ -23,11 +23,14 @@ public class StorageTest {
         storage.addCamry(carFactory.createCamry(Color.ORANGE, 20000));
         storage.addDyna(carFactory.createDyna(Color.ORANGE, 40000));
 
-        int countCamry = storage.getTotalCarsInMainStorage();
-        if (countCamry == 0) {
-            System.out.println("Main Storage is empty - " + countCamry);
+        int actualCounterTotalCarsInMainStorage = 0;
+        int expectedCounterTotalCarsInMainStorage = storage.getTotalCarsInMainStorage();
+        if (expectedCounterTotalCarsInMainStorage == actualCounterTotalCarsInMainStorage) {
+            System.out.println("Actual equals expected! Expected == " + expectedCounterTotalCarsInMainStorage);
+            System.out.println("_____________________________");
         }
-        System.out.println("Main Storage is not empty - " + countCamry);
+        System.out.println("Actual not equals expected! Expected == " + expectedCounterTotalCarsInMainStorage);
+        System.out.println("_____________________________");
     }
 
     static void testAddCamry() throws CountryFactoryNotEqualException {
@@ -35,26 +38,31 @@ public class StorageTest {
         CarFactory carFactory = new CarFactory(detailFactory, CountryOfProduction.CHINA);
         Storage storage = new Storage();
 
-        Camry camry = storage.addCamry(carFactory.createCamry(Color.ORANGE, 20000));
-
-        int counterCamry = storage.getTotalCamryStorage();
-        if (!(counterCamry == 0)) {
-            System.out.println("Added in Camry Storage: " + counterCamry + " Camry:\n" + camry);
+        storage.addCamry(carFactory.createCamry(Color.ORANGE, 20000));
+        int actualCounterCamryInCamryStorage = 0;
+        int expectedCounterCamryInCamryStorage = storage.getTotalCamryStorage();
+        if (expectedCounterCamryInCamryStorage == actualCounterCamryInCamryStorage) {
+            System.out.println("Actual equals expected! Expected == " + expectedCounterCamryInCamryStorage);
+            System.out.println("_____________________________");
         }
+        System.out.println("Actual not equals expected! Expected == " + expectedCounterCamryInCamryStorage);
+        System.out.println("_____________________________");
     }
+
     static void testTakenCamry() throws CountryFactoryNotEqualException {
         DetailFactory detailFactory = new DetailFactory(CountryOfProduction.CHINA);
         CarFactory carFactory = new CarFactory(detailFactory, CountryOfProduction.CHINA);
         Storage storage = new Storage();
 
         storage.addCamry(carFactory.createCamry(Color.ORANGE, 20000));
-        Camry takenCamry = storage.takenCamry();
-
-        int counterCamry = storage.getTotalCamryStorage();
-        if (counterCamry == 0) {
-            System.out.println("Taken 1 Camry from Camry Storage: " + counterCamry + " Camry:\n" + takenCamry);
+        storage.takenCamry();
+        int actualCounterCamry = 1;
+        int expectedCounterCamry = storage.getTotalCamryStorage();
+        if (actualCounterCamry == expectedCounterCamry) {
+            System.out.println("Actual equals expected! Expected == " + expectedCounterCamry);
         }
 
+        System.out.println("Actual not equals expected! Expected == " + expectedCounterCamry);
     }
 
 }
