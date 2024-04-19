@@ -8,7 +8,7 @@ import hu.nero.toyota.model.Solara;
 import java.util.Arrays;
 
 public class Storage {
-    private static final int maxNumberOfCars = 1000; // макс количество машин на складе
+    private static int maxNumberOfCars = 1000; // макс количество машин на складе
     private int totalCarsInMainStorage; // общее количество машин на складе
     private int totalCamryStorage;
     private int totalSolaraStorage;
@@ -45,24 +45,21 @@ public class Storage {
     }
 
     public Camry addCamry(Camry camry) {
+        totalCarsInMainStorage++;
+        totalCamryStorage++;
+        maxNumberOfCars--;
         Arrays.fill(camryArray, camry);
-        //todo
-        int i = totalCarsInMainStorage++;
-        System.out.println(i);
-        System.out.println(totalCamryStorage++);
 
-
-        System.out.println("Added to to Camry Storage: " + camry + ". Total cars on the Storage: " + totalCarsInMainStorage
-                + ". Free place for: " + maxNumberOfCars);
+        System.out.println("Added to Camry Storage: " + camry + "\nTotal cars in Storage: " + totalCarsInMainStorage
+                + "\nFree place: " + maxNumberOfCars + "\nTotal in Camry Storage: " + totalCamryStorage);
 
         return camry;
     }
 
     public Camry takenCamry() {
-//        Camry takenCamry = (Camry) this.mainStorage[0][0];
         totalCarsInMainStorage--;
         totalCamryStorage--;
-//        maxNumberOfCars++;
+        maxNumberOfCars++;
         System.out.println(
                 "Taken from Camry Storage:  Total cars on the Storage: " + totalCarsInMainStorage +
                         "." + " Free place for: " + maxNumberOfCars);
