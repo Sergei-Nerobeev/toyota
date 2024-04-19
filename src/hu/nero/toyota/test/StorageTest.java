@@ -21,7 +21,7 @@ public class StorageTest {
         Storage storage = new Storage();
 
         storage.addCamry(carFactory.createCamry(Color.ORANGE, 20000));
-        storage.addDyna(carFactory.createDyna(Color.ORANGE, 40000));
+
 
         int actualCounterTotalCarsInMainStorage = 0;
         int expectedCounterTotalCarsInMainStorage = storage.getTotalCarsInMainStorage();
