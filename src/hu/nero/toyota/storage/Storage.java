@@ -23,8 +23,8 @@ public class Storage {
         this.totalCarsInMainStorage = 0;
         this.camryArray = new Camry[1000];
         this.solaraArray = new Solara[1000];
-        this.dynaArray = new Dyna[totalDynaStorage];
-        this.hianceArray = new Hiance[totalHianceStorage];
+        this.dynaArray = new Dyna[1000];
+        this.hianceArray = new Hiance[1000];
     }
 
     public int countCamryStorage() {
@@ -74,6 +74,7 @@ public class Storage {
         totalCarsInMainStorage--;
         totalCamryStorage--;
         maxNumberOfCars++;
+        //todo
         System.out.println(
                 "Take from Camry Storage:  Total cars on the Main Storage: " + totalCarsInMainStorage +
                         "\nFree place for: " + maxNumberOfCars);

@@ -20,7 +20,9 @@ public class StorageNewTest {
 
         storage.addCamry(actualCamry);
         storage.addSolara(actualSolara);
+        System.out.println(storage.countCamryStorage());
         storage.takeCamry();
+        System.out.println(storage.countCamryStorage());
         storage.takeSolara();
 
     }
