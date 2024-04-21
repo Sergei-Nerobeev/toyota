@@ -16,8 +16,12 @@ public class StorageNewTest {
         DetailFactory detailFactory = new DetailFactory(CountryOfProduction.USA);
         CarFactory carFactory = new CarFactory(detailFactory,CountryOfProduction.USA);
         var actualCamry = carFactory.createCamry(Color.BLUE, 150000);
+        var actualSolara = carFactory.createSolara(Color.WHITE, 35000);
 
         storage.addCamry(actualCamry);
+        storage.addSolara(actualSolara);
+        storage.takeCamry();
+        storage.takeSolara();
 
     }
 }

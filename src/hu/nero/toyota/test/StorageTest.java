@@ -55,7 +55,7 @@ public class StorageTest {
         Storage storage = new Storage();
 
         storage.addCamry(carFactory.createCamry(Color.ORANGE, 20000));
-        storage.takenCamry();
+        storage.takeCamry();
         int actualCounterCamry = 1;
         int expectedCounterCamry = storage.getTotalCamryStorage();
         if (actualCounterCamry == expectedCounterCamry) {
