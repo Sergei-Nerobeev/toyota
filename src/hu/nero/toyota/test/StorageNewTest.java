@@ -21,11 +21,12 @@ public class StorageNewTest {
         storage.addCamry(actualCamry); //todo
         storage.addCamry(actualCamry);
 //        storage.addSolara(actualSolara);
-        System.out.println(storage.countCamryStorage());
+        storage.takeCamry(actualCamry);
         storage.takeCamry(actualCamry);
         storage.takeCamry(actualCamry);
 
-        System.out.println(storage.getTotalCamryStorage());
+
+
 
 
     }

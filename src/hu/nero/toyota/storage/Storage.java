@@ -8,7 +8,7 @@ import hu.nero.toyota.model.Solara;
 import java.util.Arrays;
 
 public class Storage {
-    private static int maxNumberOfCars = 4_000; // макс количество машин на складе
+    private int maxNumberOfCars = 4_000; // макс количество машин на складе
     private int totalCarsInMainStorage; // общее количество машин на складе
     private int totalCamryStorage;
     private int totalSolaraStorage;
@@ -66,26 +66,29 @@ public class Storage {
         Arrays.fill(solaraArray, solara);
 
         System.out.println("Added to Solara Storage: " + solara + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
-                + "\nFree place: " + maxNumberOfCars + "\nTotal in Solara Storage: " + totalSolaraStorage);
+                + "\nFree place: " + maxNumberOfCars + "\nTotal in Solara Storage: " + totalSolaraStorage +
+                "\n------------------------------------");
 
         return solara;
     }
 
     public void takeCamry(Camry camry) {
+        if (totalCarsInMainStorage <= 0 || totalCamryStorage <= 0 || maxNumberOfCars > 4_000) {
+            throw new RuntimeException("Camry Storage is empty.");
+        }
         totalCarsInMainStorage--;
         totalCamryStorage--;
         maxNumberOfCars++;
         for (int i = 0; i < camryArray.length; i++) {
-            if (camryArray[i].equals(camry)) {
+            if (camryArray[i] != null && camryArray[i].equals(camry)) {
                 camryArray[i] = null;
-                break;
+                throw new RuntimeException("Camry Storage is empty.");
             }
-
-            throw new RuntimeException("Camry Storage is empty");
 
         }
         System.out.println(
-                "Take from Camry Storage: " + getTotalCamryStorage() +  "\nTotal cars on the Main Storage: " + totalCarsInMainStorage +
+                "Take from Camry Storage: " + getTotalCamryStorage() + "\nTotal cars on the Main Storage: " +
+                        totalCarsInMainStorage + "\nTotal in Camry Storage: " + totalCamryStorage +
                         "\nFree place for: " + maxNumberOfCars + "\n------------------------------------");
 
     }
@@ -100,28 +103,28 @@ public class Storage {
     }
 
 
-public static int getMaxNumberOfCars() {
-    return maxNumberOfCars;
-}
+    public int getMaxNumberOfCars() {
+        return maxNumberOfCars;
+    }
 
-public int getTotalCarsInMainStorage() {
-    return totalCarsInMainStorage;
-}
+    public int getTotalCarsInMainStorage() {
+        return totalCarsInMainStorage;
+    }
 
-public int getTotalCamryStorage() {
-    return totalCamryStorage;
-}
+    public int getTotalCamryStorage() {
+        return totalCamryStorage;
+    }
 
-public int getTotalSolaraStorage() {
-    return totalSolaraStorage;
-}
+    public int getTotalSolaraStorage() {
+        return totalSolaraStorage;
+    }
 
-public int getTotalDynaStorage() {
-    return totalDynaStorage;
-}
+    public int getTotalDynaStorage() {
+        return totalDynaStorage;
+    }
 
-public int getTotalHianceStorage() {
-    return totalHianceStorage;
-}
+    public int getTotalHianceStorage() {
+        return totalHianceStorage;
+    }
 
 }
