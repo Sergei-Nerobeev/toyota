@@ -37,8 +37,6 @@ R
 "src/hu/nero/toyota/detail/Usb.java,2\b\2b3d8aa2882cbb3d0877764e9e3f75c0a3263a00
 T
 $src/hu/nero/toyota/detail/Wheel.java,e\f\ef1c5abffd3590564815c7292a6f88c8a522c422
-Z
-*src/hu/nero/toyota/detail/WheelRadius.java,5\f\5f72efb56c4252d78e6476b2c88a1e3262b4b2da
 N
 src/hu/nero/toyota/Runner.java,f\d\fdce2447fded17f85662ce04a665223923126e77
 T
@@ -71,3 +69,7 @@ a
 1src/hu/nero/toyota/test/CreateFourWheelsTest.java,d\a\dad2dc9a48ab70f48651531375ee4cf1657c50f9
 b
 2src/hu/nero/toyota/detail/CountryOfProduction.java,7\a\7accb2d8483fbf53fca648420e6193b4cc4849a7
+X
+(src/hu/nero/toyota/test/StorageTest.java,5/7/57559b7c2adac35e6cdf5074cfb234c9c30192e2
+[
++src/hu/nero/toyota/test/StorageNewTest.java,0/d/0d04dd8fba536ea157c0c1fe5239ae049fa8a845

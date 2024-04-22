@@ -21,14 +21,14 @@ public class Storage {
 
     public Storage() {
         this.totalCarsInMainStorage = 0;
-        this.camryArray = new Camry[1000];
-        this.solaraArray = new Solara[1000];
-        this.dynaArray = new Dyna[1000];
-        this.hianceArray = new Hiance[1000];
+        this.camryArray = new Camry[totalCamryStorage];
+        this.solaraArray = new Solara[totalSolaraStorage];
+        this.dynaArray = new Dyna[totalDynaStorage];
+        this.hianceArray = new Hiance[totalHianceStorage];
     }
 
     public int countCamryStorage() {
-        if(getTotalCamryStorage() == 0) {
+        if (getTotalCamryStorage() == 0) {
             throw new RuntimeException("Camry Storage is empty");
         }
         return getTotalCamryStorage();
@@ -53,7 +53,8 @@ public class Storage {
         Arrays.fill(camryArray, camry);
 
         System.out.println("Added to Camry Storage: " + camry + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
-                + "\nFree place: " + maxNumberOfCars + "\nTotal in Camry Storage: " + totalCamryStorage);
+                + "\nFree place: " + maxNumberOfCars + "\nTotal in Camry Storage: " + totalCamryStorage +
+                "\n------------------------------------");
 
         return camry;
     }
@@ -70,17 +71,24 @@ public class Storage {
         return solara;
     }
 
-    public void takeCamry() {
+    public void takeCamry(Camry camry) {
         totalCarsInMainStorage--;
         totalCamryStorage--;
         maxNumberOfCars++;
-        //todo
+        for (int i = 0; i < camryArray.length; i++) {
+            if (camryArray[i].equals(camry)) {
+                camryArray[i] = null;
+                break;
+            }
+
+            throw new RuntimeException("Camry Storage is empty");
+
+        }
         System.out.println(
-                "Take from Camry Storage:  Total cars on the Main Storage: " + totalCarsInMainStorage +
-                        "\nFree place for: " + maxNumberOfCars);
+                "Take from Camry Storage: " + getTotalCamryStorage() +  "\nTotal cars on the Main Storage: " + totalCarsInMainStorage +
+                        "\nFree place for: " + maxNumberOfCars + "\n------------------------------------");
 
     }
-
 
     public void takeSolara() {
         totalCarsInMainStorage--;
@@ -92,28 +100,28 @@ public class Storage {
     }
 
 
-    public int getTotalCamryStorage() {
-        return totalCamryStorage;
-    }
+public static int getMaxNumberOfCars() {
+    return maxNumberOfCars;
+}
 
-    public int getTotalSolaraStorage() {
-        return totalSolaraStorage;
-    }
+public int getTotalCarsInMainStorage() {
+    return totalCarsInMainStorage;
+}
 
-    public int getTotalDynaStorage() {
-        return totalDynaStorage;
-    }
+public int getTotalCamryStorage() {
+    return totalCamryStorage;
+}
 
-    public int getTotalHianceStorage() {
-        return totalHianceStorage;
-    }
+public int getTotalSolaraStorage() {
+    return totalSolaraStorage;
+}
 
-    public int getMaxNumberOfCars() {
-        return maxNumberOfCars;
-    }
+public int getTotalDynaStorage() {
+    return totalDynaStorage;
+}
 
-    public int getTotalCarsInMainStorage() {
-        return totalCarsInMainStorage;
-    }
+public int getTotalHianceStorage() {
+    return totalHianceStorage;
+}
 
 }

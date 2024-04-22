@@ -18,12 +18,15 @@ public class StorageNewTest {
         var actualCamry = carFactory.createCamry(Color.BLUE, 150000);
         var actualSolara = carFactory.createSolara(Color.WHITE, 35000);
 
+        storage.addCamry(actualCamry); //todo
         storage.addCamry(actualCamry);
-        storage.addSolara(actualSolara);
+//        storage.addSolara(actualSolara);
         System.out.println(storage.countCamryStorage());
-        storage.takeCamry();
-        System.out.println(storage.countCamryStorage());
-        storage.takeSolara();
+        storage.takeCamry(actualCamry);
+        storage.takeCamry(actualCamry);
+
+        System.out.println(storage.getTotalCamryStorage());
+
 
     }
 }
