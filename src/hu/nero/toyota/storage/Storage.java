@@ -5,10 +5,8 @@ import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
 
-import java.util.Arrays;
-
 public class Storage {
-    private int maxNumberOfCars = 4_000; // макс количество машин на складе
+    private static final int MAX_NUMBER_OF_CARS = 1_000; // размер массива
     private int totalCarsInMainStorage; // общее количество машин на складе
     private int totalCamryStorage;
     private int totalSolaraStorage;
@@ -21,10 +19,14 @@ public class Storage {
 
     public Storage() {
         this.totalCarsInMainStorage = 0;
-        this.camryArray = new Camry[totalCamryStorage];
-        this.solaraArray = new Solara[totalSolaraStorage];
-        this.dynaArray = new Dyna[totalDynaStorage];
-        this.hianceArray = new Hiance[totalHianceStorage];
+        this.totalCamryStorage = 0;
+        this.totalSolaraStorage = 0;
+        this.totalDynaStorage = 0;
+        this.totalHianceStorage = 0;
+        this.camryArray = new Camry[MAX_NUMBER_OF_CARS];
+        this.solaraArray = new Solara[MAX_NUMBER_OF_CARS];
+        this.dynaArray = new Dyna[MAX_NUMBER_OF_CARS];
+        this.hianceArray = new Hiance[MAX_NUMBER_OF_CARS];
     }
 
     public int countCamryStorage() {
@@ -47,64 +49,82 @@ public class Storage {
     }
 
     public Camry addCamry(Camry camry) {
+        if (totalCamryStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
+            throw new RuntimeException("");
+        }
         totalCarsInMainStorage++;
         totalCamryStorage++;
-        maxNumberOfCars--;
-        Arrays.fill(camryArray, camry);
-
+        for (int index = 0; index < solaraArray.length; index++) {
+            if (camryArray[index] == null) {
+                camryArray[index] = camry;
+                break;
+            }
+        }
         System.out.println("Added to Camry Storage: " + camry + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
-                + "\nFree place: " + maxNumberOfCars + "\nTotal in Camry Storage: " + totalCamryStorage +
+                + "\nTotal in Camry Storage: " + totalCamryStorage +
                 "\n------------------------------------");
 
         return camry;
     }
 
+    public Camry takeCamry(Camry camry) {
+        if (totalCarsInMainStorage < 0 || totalCamryStorage < 0) { //todo
+            throw new RuntimeException("Camry Storage is empty.");
+        }
+        totalCarsInMainStorage--;
+        totalCamryStorage--;
+        for (int index = 0; index < solaraArray.length; index++) {
+            if (camryArray[index] != null && camryArray[index].equals(camry)) {
+                camryArray[index] = null;
+            }
+        }
+        System.out.println(
+                "Take from Camry Storage: " + getTotalCamryStorage() + "\nTotal cars on the Main Storage: " +
+                        totalCarsInMainStorage + "\nTotal in Camry Storage: " + totalCamryStorage +
+                        "\n------------------------------------");
+        return camry;
+    }
+
+    public Solara takeSolara(Solara solara) {
+        if (totalCarsInMainStorage <= 0 || totalCamryStorage <= 0) {
+            throw new RuntimeException("Solara Storage is empty.");
+        }
+        totalCarsInMainStorage--;
+        totalCamryStorage--;
+        for (int index = 0; index < solaraArray.length; index++) {
+            if (solaraArray[index] != null && solaraArray[index].equals(solara)) {
+                solaraArray[index] = null;
+            }
+        }
+        System.out.println(
+                "Take from Solara Storage: " + getTotalSolaraStorage() + "\nTotal cars on the Main Storage: " +
+                        totalCarsInMainStorage + "\nTotal in Solara Storage: " + totalSolaraStorage +
+                        "\n------------------------------------");
+        return solara;
+    }
+
     public Solara addSolara(Solara solara) {
+        if (totalSolaraStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
+            throw new RuntimeException("");
+        }
         totalCarsInMainStorage++;
         totalSolaraStorage++;
-        maxNumberOfCars--;
-        Arrays.fill(solaraArray, solara);
-
+        for (int index = 0; index < solaraArray.length; index++) {
+            if (solaraArray[index] == null) {
+                solaraArray[index] = solara;
+                break;
+            }
+        }
         System.out.println("Added to Solara Storage: " + solara + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
-                + "\nFree place: " + maxNumberOfCars + "\nTotal in Solara Storage: " + totalSolaraStorage +
+                + "\nTotal in Solara Storage: " + totalSolaraStorage +
                 "\n------------------------------------");
 
         return solara;
     }
 
-    public void takeCamry(Camry camry) {
-        if (totalCarsInMainStorage <= 0 || totalCamryStorage <= 0 || maxNumberOfCars > 4_000) {
-            throw new RuntimeException("Camry Storage is empty.");
-        }
-        totalCarsInMainStorage--;
-        totalCamryStorage--;
-        maxNumberOfCars++;
-        for (int i = 0; i < camryArray.length; i++) {
-            if (camryArray[i] != null && camryArray[i].equals(camry)) {
-                camryArray[i] = null;
-                throw new RuntimeException("Camry Storage is empty.");
-            }
-
-        }
-        System.out.println(
-                "Take from Camry Storage: " + getTotalCamryStorage() + "\nTotal cars on the Main Storage: " +
-                        totalCarsInMainStorage + "\nTotal in Camry Storage: " + totalCamryStorage +
-                        "\nFree place for: " + maxNumberOfCars + "\n------------------------------------");
-
-    }
-
-    public void takeSolara() {
-        totalCarsInMainStorage--;
-        totalSolaraStorage--;
-        maxNumberOfCars++;
-        System.out.println(
-                "Take from Solara Storage:  Total cars on the Main Storage: " + totalCarsInMainStorage +
-                        "\nFree place for: " + maxNumberOfCars);
-    }
-
 
     public int getMaxNumberOfCars() {
-        return maxNumberOfCars;
+        return MAX_NUMBER_OF_CARS;
     }
 
     public int getTotalCarsInMainStorage() {
