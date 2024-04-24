@@ -33,18 +33,31 @@ public class Storage {
         if (getTotalCamryStorage() == 0) {
             throw new RuntimeException("Camry Storage is empty");
         }
+        System.out.print("In Camry Storage: ");
         return getTotalCamryStorage();
     }
 
     public int countSolaraStroge() {
+        if (getTotalSolaraStorage() == 0) {
+            throw new RuntimeException("Solara Storage is empty");
+        }
+        System.out.print("In Solara Storage: ");
         return getTotalSolaraStorage();
     }
 
     public int countDynaStorage() {
+        if (getTotalDynaStorage() == 0) {
+            throw new RuntimeException("Dyna Storage is empty");
+        }
+        System.out.print("In Dyna Storage: ");
         return getTotalDynaStorage();
     }
 
     public int countHianceStorage() {
+        if (getTotalHianceStorage() == 0) {
+            throw new RuntimeException("Hiance Storage is empty");
+        }
+        System.out.println("In Hiance Storage: " + getTotalHianceStorage());
         return getTotalHianceStorage();
     }
 
@@ -68,14 +81,16 @@ public class Storage {
     }
 
     public Camry takeCamry(Camry camry) {
-        if (totalCarsInMainStorage < 0 || totalCamryStorage < 0) { //todo
-            throw new RuntimeException("Camry Storage is empty.");
+
+        if (totalCamryStorage == 0) {
+            System.out.println("Camry Storage is empty!");
         }
         totalCarsInMainStorage--;
         totalCamryStorage--;
-        for (int index = 0; index < solaraArray.length; index++) {
+        for (int index = 0; index < camryArray.length; index++) {
             if (camryArray[index] != null && camryArray[index].equals(camry)) {
                 camryArray[index] = null;
+                break;
             }
         }
         System.out.println(
