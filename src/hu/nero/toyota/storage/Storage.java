@@ -75,7 +75,7 @@ public class Storage {
                 break;
             }
         }
-        System.out.println("Added to Camry Storage: " + camry + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
+        System.out.println("Added: " + camry + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
                 + "\nTotal in Camry Storage: " + totalCamryStorage +
                 "\n------------------------------------");
 
@@ -97,7 +97,7 @@ public class Storage {
             }
         }
         System.out.println(
-                "Take from Camry Storage: " + getTotalCamryStorage() + "\nTotal cars on the Main Storage: " +
+                "Taken one Camry.\nTotal cars on the Main Storage: " +
                         totalCarsInMainStorage + "\nTotal in Camry Storage: " + totalCamryStorage +
                         "\n------------------------------------");
         return camry;
@@ -115,7 +115,7 @@ public class Storage {
             }
         }
         System.out.println(
-                "Take from Solara Storage: " + getTotalSolaraStorage() + "\nTotal cars on the Main Storage: " +
+                "Taken one Solara.\nTotal cars on the Main Storage: " +
                         totalCarsInMainStorage + "\nTotal in Solara Storage: " + totalSolaraStorage +
                         "\n------------------------------------");
         return solara;

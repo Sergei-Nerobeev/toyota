@@ -20,15 +20,15 @@ public class StorageNewTest {
         DetailFactory detailFactory = new DetailFactory(CountryOfProduction.USA);
         CarFactory carFactory = new CarFactory(detailFactory, CountryOfProduction.USA);
         var actualCamry = carFactory.createCamry(Color.BLUE, 150000);
-        var actualCamry2 = carFactory.createCamry(Color.BLUE, 150000);
-        var actualCamry3 = carFactory.createCamry(Color.BLUE, 150000);
-        var actualCamry4 = carFactory.createCamry(Color.BLACK, 150000);
-        var actualCamry5 = carFactory.createCamry(Color.BLUE, 150000);
+        var actualCamry2 = carFactory.createCamry(Color.BLACK, 33000);
+        var actualCamry3 = carFactory.createCamry(Color.ORANGE, 890000);
+        var actualCamry4 = carFactory.createCamry(Color.GREEEN, 150000);
+        var actualCamry5 = carFactory.createCamry(Color.BLUE, 15000000);
         var actualSolara = carFactory.createSolara(Color.WHITE, 35000);
-        var actualSolara2 = carFactory.createSolara(Color.WHITE, 35000);
-        var actualSolara3 = carFactory.createSolara(Color.WHITE, 35000);
-        var actualSolara4 = carFactory.createSolara(Color.WHITE, 35000);
-        var actualSolara5 = carFactory.createSolara(Color.WHITE, 35000);
+        var actualSolara2 = carFactory.createSolara(Color.GREEEN, 35000);
+        var actualSolara3 = carFactory.createSolara(Color.ORANGE, 46000);
+        var actualSolara4 = carFactory.createSolara(Color.BLUE, 67000);
+        var actualSolara5 = carFactory.createSolara(Color.BLACK, 350);
 
         storage.addCamry(actualCamry);
         storage.addCamry(actualCamry2);
@@ -53,8 +53,8 @@ public class StorageNewTest {
         storage.takeSolara(actualSolara4);
         storage.takeSolara(actualSolara5);
         try{
-            Camry takenCamry = storage.takeCamry(actualCamry);
-            Solara takenSolara = storage.takeSolara(actualSolara);
+            Camry takenCamry = storage.takeCamry(actualCamry2);
+            Solara takenSolara = storage.takeSolara(actualSolara3);
             System.out.println(takenCamry);
             System.out.println(takenSolara);
         } catch (StorageIsEmptyException exception) {
