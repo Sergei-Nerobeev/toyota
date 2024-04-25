@@ -36,6 +36,7 @@ public class Storage {
         }
         System.out.print("In Camry Storage: ");
         return getTotalCamryStorage();
+
     }
 
     public int countSolaraStroge() {
@@ -84,8 +85,9 @@ public class Storage {
     public Camry takeCamry(Camry camry) throws StorageIsEmptyException {
 
         if (totalCamryStorage == 0) {
-            System.out.println("Camry Storage is empty!");
+            throw new StorageIsEmptyException();
         }
+
         totalCarsInMainStorage--;
         totalCamryStorage--;
         for (int index = 0; index < camryArray.length; index++) {
@@ -137,7 +139,6 @@ public class Storage {
 
         return solara;
     }
-
 
     public int getMaxNumberOfCars() {
         return MAX_NUMBER_OF_CARS;

@@ -6,6 +6,8 @@ import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
 import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
+import hu.nero.toyota.model.Camry;
+import hu.nero.toyota.model.Solara;
 import hu.nero.toyota.storage.Storage;
 
 public class StorageNewTest {
@@ -33,16 +35,12 @@ public class StorageNewTest {
         storage.addCamry(actualCamry3);
         storage.addCamry(actualCamry4);
         storage.addCamry(actualCamry5);
+
         storage.addSolara(actualSolara);
         storage.addSolara(actualSolara2);
         storage.addSolara(actualSolara3);
         storage.addSolara(actualSolara4);
         storage.addSolara(actualSolara5);
-
-
-        System.out.println(storage.countCamryStorage());
-        System.out.println(storage.countSolaraStroge());
-
 
         storage.takeCamry(actualCamry);
         storage.takeCamry(actualCamry2);
@@ -54,9 +52,17 @@ public class StorageNewTest {
         storage.takeSolara(actualSolara3);
         storage.takeSolara(actualSolara4);
         storage.takeSolara(actualSolara5);
+        try{
+            Camry takenCamry = storage.takeCamry(actualCamry);
+            Solara takenSolara = storage.takeSolara(actualSolara);
+            System.out.println(takenCamry);
+            System.out.println(takenSolara);
+        } catch (StorageIsEmptyException exception) {
+            System.out.println("Exception!This Storages are empty!\n");
+        }
 
 
-        System.out.println(storage.countCamryStorage()); //todo counter of camry storage
+        System.out.println(storage.countCamryStorage());
         System.out.println(storage.countSolaraStroge());
     }
 }
