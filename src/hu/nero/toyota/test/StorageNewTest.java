@@ -3,16 +3,17 @@ package hu.nero.toyota.test;
 import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
+import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.storage.Storage;
 
 public class StorageNewTest {
-    public static void main(String[] args) throws CountryFactoryNotEqualException {
+    public static void main(String[] args) throws CountryFactoryNotEqualException, StorageIsEmptyException {
         createStorageTest();
     }
 
-    public static void createStorageTest() throws CountryFactoryNotEqualException {
+    public static void createStorageTest() throws CountryFactoryNotEqualException, StorageIsEmptyException {
         Storage storage = new Storage();
         DetailFactory detailFactory = new DetailFactory(CountryOfProduction.USA);
         CarFactory carFactory = new CarFactory(detailFactory, CountryOfProduction.USA);
@@ -35,17 +36,25 @@ public class StorageNewTest {
         storage.addSolara(actualSolara);
         storage.addSolara(actualSolara2);
         storage.addSolara(actualSolara3);
+        storage.addSolara(actualSolara4);
         storage.addSolara(actualSolara5);
-        storage.addSolara(actualSolara);
+
 
         System.out.println(storage.countCamryStorage());
         System.out.println(storage.countSolaraStroge());
 
+
         storage.takeCamry(actualCamry);
         storage.takeCamry(actualCamry2);
         storage.takeCamry(actualCamry3);
+        storage.takeCamry(actualCamry4);
+        storage.takeCamry(actualCamry5);
         storage.takeSolara(actualSolara);
         storage.takeSolara(actualSolara2);
+        storage.takeSolara(actualSolara3);
+        storage.takeSolara(actualSolara4);
+        storage.takeSolara(actualSolara5);
+
 
         System.out.println(storage.countCamryStorage()); //todo counter of camry storage
         System.out.println(storage.countSolaraStroge());

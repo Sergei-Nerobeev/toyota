@@ -3,6 +3,7 @@ package hu.nero.toyota.test;
 import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
+import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.model.Camry;
@@ -12,7 +13,7 @@ public class StorageTest {
     public static void main(String[] args) throws CountryFactoryNotEqualException {
         testStorageCreation();
         testAddCamry();
-        testTakenCamry();
+
     }
 
     static void testStorageCreation() throws CountryFactoryNotEqualException {
@@ -49,7 +50,7 @@ public class StorageTest {
         System.out.println("_____________________________");
     }
 
-    static void testTakenCamry() throws CountryFactoryNotEqualException {
+    static void testTakenCamry() throws CountryFactoryNotEqualException, StorageIsEmptyException {
         DetailFactory detailFactory = new DetailFactory(CountryOfProduction.CHINA);
         CarFactory carFactory = new CarFactory(detailFactory, CountryOfProduction.CHINA);
         Storage storage = new Storage();

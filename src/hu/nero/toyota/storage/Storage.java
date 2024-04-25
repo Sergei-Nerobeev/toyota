@@ -1,5 +1,6 @@
 package hu.nero.toyota.storage;
 
+import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
@@ -80,7 +81,7 @@ public class Storage {
         return camry;
     }
 
-    public Camry takeCamry(Camry camry) {
+    public Camry takeCamry(Camry camry) throws StorageIsEmptyException {
 
         if (totalCamryStorage == 0) {
             System.out.println("Camry Storage is empty!");
@@ -101,11 +102,11 @@ public class Storage {
     }
 
     public Solara takeSolara(Solara solara) {
-        if (totalCarsInMainStorage <= 0 || totalCamryStorage <= 0) {
+        if (totalCarsInMainStorage <= 0 || totalSolaraStorage <= 0) {
             throw new RuntimeException("Solara Storage is empty.");
         }
         totalCarsInMainStorage--;
-        totalCamryStorage--;
+        totalSolaraStorage--;
         for (int index = 0; index < solaraArray.length; index++) {
             if (solaraArray[index] != null && solaraArray[index].equals(solara)) {
                 solaraArray[index] = null;
