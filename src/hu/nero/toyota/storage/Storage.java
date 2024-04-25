@@ -17,6 +17,7 @@ public class Storage {
     private Solara[] solaraArray;
     private Dyna[] dynaArray;
     private Hiance[] hianceArray;
+    final String BORDER_LINE = "\n------------------------------------";
 
     public Storage() {
         this.totalCarsInMainStorage = 0;
@@ -77,7 +78,8 @@ public class Storage {
         }
         System.out.println("Added: " + camry + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
                 + "\nTotal in Camry Storage: " + totalCamryStorage +
-                "\n------------------------------------");
+                BORDER_LINE);
+
 
         return camry;
     }
@@ -99,7 +101,7 @@ public class Storage {
         System.out.println(
                 "Taken one Camry.\nTotal cars on the Main Storage: " +
                         totalCarsInMainStorage + "\nTotal in Camry Storage: " + totalCamryStorage +
-                        "\n------------------------------------");
+                        BORDER_LINE);
         return camry;
     }
 
@@ -117,7 +119,7 @@ public class Storage {
         System.out.println(
                 "Taken one Solara.\nTotal cars on the Main Storage: " +
                         totalCarsInMainStorage + "\nTotal in Solara Storage: " + totalSolaraStorage +
-                        "\n------------------------------------");
+                        BORDER_LINE);
         return solara;
     }
 

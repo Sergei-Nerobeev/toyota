@@ -61,7 +61,6 @@ public class StorageNewTest {
             System.out.println("Exception!This Storages are empty!\n");
         }
 
-
         System.out.println(storage.countCamryStorage());
         System.out.println(storage.countSolaraStroge());
     }
