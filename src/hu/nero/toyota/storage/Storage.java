@@ -6,6 +6,8 @@ import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
 
+import java.util.Arrays;
+
 public class Storage {
     private static final int MAX_NUMBER_OF_CARS = 1_000; // размер массива
     private int totalCarsInMainStorage; // общее количество машин на складе
@@ -80,7 +82,6 @@ public class Storage {
                 + "\nTotal in Camry Storage: " + totalCamryStorage +
                 BORDER_LINE);
 
-
         return camry;
     }
 
@@ -136,8 +137,7 @@ public class Storage {
             }
         }
         System.out.println("Added to Solara Storage: " + solara + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
-                + "\nTotal in Solara Storage: " + totalSolaraStorage +
-                "\n------------------------------------");
+                + "\nTotal in Solara Storage: " + totalSolaraStorage + "\n" + BORDER_LINE);
 
         return solara;
     }
@@ -165,5 +165,6 @@ public class Storage {
     public int getTotalHianceStorage() {
         return totalHianceStorage;
     }
+
 
 }

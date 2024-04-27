@@ -42,26 +42,30 @@ public class StorageNewTest {
         storage.addSolara(actualSolara4);
         storage.addSolara(actualSolara5);
 
-        storage.takeCamry(actualCamry);
-        storage.takeCamry(actualCamry2);
-        storage.takeCamry(actualCamry3);
-        storage.takeCamry(actualCamry4);
-        storage.takeCamry(actualCamry5);
+
         storage.takeSolara(actualSolara);
         storage.takeSolara(actualSolara2);
         storage.takeSolara(actualSolara3);
         storage.takeSolara(actualSolara4);
         storage.takeSolara(actualSolara5);
+        storage.takeCamry(actualCamry);
+        storage.takeCamry(actualCamry2);
+        storage.takeCamry(actualCamry3);
+        storage.takeCamry(actualCamry4);
+        storage.takeCamry(actualCamry5);
+
+        System.out.println(storage.countSolaraStroge());
+        System.out.println(storage.countCamryStorage());
+
         try{
             Camry takenCamry = storage.takeCamry(actualCamry2);
             Solara takenSolara = storage.takeSolara(actualSolara3);
             System.out.println(takenCamry);
             System.out.println(takenSolara);
         } catch (StorageIsEmptyException exception) {
-            System.out.println("Exception!This Storages are empty!\n");
+            System.out.println("Exception!This storages are empty!\n");
         }
 
-        System.out.println(storage.countCamryStorage());
-        System.out.println(storage.countSolaraStroge());
+
     }
 }
