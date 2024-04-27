@@ -50,7 +50,7 @@ R
 T
 $src/hu/nero/toyota/model/Hiance.java,8/a/8a0b1e788cecbceafdff623032797cd44140cb4d
 W
-'src/hu/nero/toyota/detail/CarModel.java,4\c\4c8904422acc4c7e8186bd37477c4e7714ec8dca
+'src/hu/nero/toyota/detail/CarModel.java,4/c/4c8904422acc4c7e8186bd37477c4e7714ec8dca
 T
 $src/hu/nero/toyota/detail/Color.java,8/2/82a2cb68fde5c1074754d568156f978315a1133f
 i
@@ -69,7 +69,9 @@ a
 1src/hu/nero/toyota/test/CreateFourWheelsTest.java,d\a\dad2dc9a48ab70f48651531375ee4cf1657c50f9
 b
 2src/hu/nero/toyota/detail/CountryOfProduction.java,7\a\7accb2d8483fbf53fca648420e6193b4cc4849a7
-X
-(src/hu/nero/toyota/test/StorageTest.java,5/7/57559b7c2adac35e6cdf5074cfb234c9c30192e2
 [
 +src/hu/nero/toyota/test/StorageNewTest.java,0/d/0d04dd8fba536ea157c0c1fe5239ae049fa8a845
+U
+%src/hu/nero/toyota/shop/Customer.java,9/3/93ec164569dba99b5e4c7fad4be4489c61138488
+T
+$src/hu/nero/toyota/shop/Manager.java,f/2/f2740d83e3674a23d3a7c12c622b479b7f1a2943
