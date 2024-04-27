@@ -14,7 +14,7 @@ public class DetailFactory {
         return new Wheel(countryOfProduction,wheelRadius);
     }
 
-    public Wheel[] createFourWheels(CountryOfProduction countryOfProduction) {
+    public Wheel[] createFourWheels(CountryOfProduction countryOfProduction,int wheelRadius) {
         Wheel[] wheels = new Wheel[4];
         for (int i = 0; i < 4; i++) {
             wheels[i] = new Wheel(countryOfProduction,wheelRadius);
@@ -73,7 +73,6 @@ public class DetailFactory {
 
     public Usb createUsb(CountryOfProduction countryOfProduction) {
         Usb usb = new Usb();
-        System.out.println("Usb mounted");
         usb.connectMusic();
         setCountryOfProduction(countryOfProduction);
         return usb;

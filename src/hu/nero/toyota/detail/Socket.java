@@ -10,7 +10,7 @@ public class Socket {
     }
 
     public void chargePhone() {
-        System.out.println("Phone charging");
+
     }
 
     @Override

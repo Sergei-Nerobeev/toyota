@@ -5,6 +5,5 @@ public class Usb {
     }
 
     public void connectMusic() {
-        System.out.println("Music on air");
     }
 }

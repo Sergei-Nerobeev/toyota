@@ -27,4 +27,12 @@ public class Wheel extends AbsCrushDetail {
     public int hashCode() {
         return Objects.hash(countryOfProduction);
     }
+
+    @Override
+    public String toString() {
+        return "Wheel{" +
+                countryOfProduction + ", radius: "
+                 + wheelRadius +
+                '}';
+    }
 }
