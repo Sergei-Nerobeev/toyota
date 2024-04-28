@@ -11,18 +11,18 @@ import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
 
-
 public class Runner {
-    public static void main(String[] args) throws StartCarFailedException, CountryFactoryNotEqualException {
-        CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.CHINA), CountryOfProduction.CHINA);
-        Camry camry = carFactory.createCamry(Color.GREEEN, 20000D);
+    public static void main(String[] args) throws CountryFactoryNotEqualException {
+        CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN),CountryOfProduction.JAPAN);
+        Camry camry = carFactory.createCamry(Color.BLACK, 10_000);
         System.out.println(camry);
-        Solara solara = carFactory.createSolara(Color.ORANGE, 40000);
+        Solara solara = carFactory.createSolara(Color.WHITE, 12_000);
         System.out.println(solara);
-        Dyna dyna = carFactory.createDyna(Color.BLUE, 50000);
-        System.out.println(dyna);
-        Hiance hiance = carFactory.createHiance(Color.BLACK, 60000);
+        Hiance hiance = carFactory.createHiance(Color.BLACK, 15_000);
         System.out.println(hiance);
+        Dyna dyna = carFactory.createDyna(Color.BLACK, 22_000);
+        System.out.println(dyna);
+
 
     }
 }
