@@ -10,18 +10,26 @@ import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
+import hu.nero.toyota.storage.Storage;
 
 public class Runner {
     public static void main(String[] args) throws CountryFactoryNotEqualException {
-        CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN),CountryOfProduction.JAPAN);
+
+        CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN), CountryOfProduction.JAPAN);
         Camry camry = carFactory.createCamry(Color.BLACK, 10_000);
         System.out.println(camry);
         Solara solara = carFactory.createSolara(Color.WHITE, 12_000);
         System.out.println(solara);
-        Hiance hiance = carFactory.createHiance(Color.BLACK, 15_000);
+        Hiance hiance = carFactory.createHiance(Color.ORANGE, 15_000);
         System.out.println(hiance);
-        Dyna dyna = carFactory.createDyna(Color.BLACK, 22_000);
+        Dyna dyna = carFactory.createDyna(Color.GREEEN, 22_000);
         System.out.println(dyna);
+
+        Storage storage = new Storage();
+        storage.addCamry(camry);
+        storage.addSolara(solara);
+        storage.addHiance(hiance);
+        storage.addDyna(dyna);
 
 
     }
