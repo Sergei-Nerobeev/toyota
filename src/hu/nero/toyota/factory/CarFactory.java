@@ -25,14 +25,14 @@ public class CarFactory {
                 countryOfProduction,
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(CountryOfProduction.CHINA),
-                detailFactory.createEngine(CountryOfProduction.CHINA),
-                detailFactory.createFourWheels(CountryOfProduction.CHINA, 17),
-                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
-                detailFactory.createHeadLights(CountryOfProduction.CHINA),
+                detailFactory.createFuelTank(countryOfProduction),
+                detailFactory.createEngine(countryOfProduction),
+                detailFactory.createFourWheels(countryOfProduction, 17),
+                detailFactory.createElectricalSystem(countryOfProduction),
+                detailFactory.createHeadLights(countryOfProduction),
                 CarModel.CAMRY,
                 price,
-                detailFactory.createUsb(CountryOfProduction.CHINA)
+                detailFactory.createUsb(countryOfProduction)
         );
     }
 
@@ -41,17 +41,17 @@ public class CarFactory {
                 countryOfProduction,
                 color,
                 Transmission.ROBOT,
-                detailFactory.createFuelTank(CountryOfProduction.CHINA),
-                detailFactory.createEngine(CountryOfProduction.CHINA),
-                detailFactory.createFourWheels(CountryOfProduction.CHINA, 18),
-                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
-                detailFactory.createHeadLights(CountryOfProduction.CHINA),
+                detailFactory.createFuelTank(countryOfProduction),
+                detailFactory.createEngine(countryOfProduction),
+                detailFactory.createFourWheels(countryOfProduction, 18),
+                detailFactory.createElectricalSystem(countryOfProduction),
+                detailFactory.createHeadLights(countryOfProduction),
                 Solara.SOLARA_RADIUS,
                 countryOfProduction,
                 CarModel.SOLARA,
                 price,
-                detailFactory.createRoof(CountryOfProduction.CHINA),
-                detailFactory.createFridge(CountryOfProduction.CHINA)
+                detailFactory.createRoof(countryOfProduction),
+                detailFactory.createFridge(countryOfProduction)
         );
     }
     public Dyna createDyna(Color color, double price) {
@@ -59,17 +59,17 @@ public class CarFactory {
                 countryOfProduction,
                 color,
                 Transmission.AUTOMATE,
-                detailFactory.createFuelTank(CountryOfProduction.CHINA),
-                detailFactory.createEngine(CountryOfProduction.CHINA),
-                detailFactory.createFourWheels(CountryOfProduction.CHINA, 20),
-                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
-                detailFactory.createHeadLights(CountryOfProduction.CHINA),
+                detailFactory.createFuelTank(countryOfProduction),
+                detailFactory.createEngine(countryOfProduction),
+                detailFactory.createFourWheels(countryOfProduction, 20),
+                detailFactory.createElectricalSystem(countryOfProduction),
+                detailFactory.createHeadLights(countryOfProduction),
                 Dyna.DYNA_RADIUS,
                 countryOfProduction,
                 CarModel.DYNA,
                 price,
-                detailFactory.createSocket(CountryOfProduction.CHINA),
-                detailFactory.createUsb(CountryOfProduction.CHINA)
+                detailFactory.createSocket(countryOfProduction),
+                detailFactory.createUsb(countryOfProduction)
         );
     }
     public Hiance createHiance(Color color, double price) {
@@ -77,11 +77,11 @@ public class CarFactory {
                 countryOfProduction,
                 color,
                 Transmission.MECHANICAL,
-                detailFactory.createFuelTank(CountryOfProduction.CHINA),
-                detailFactory.createEngine(CountryOfProduction.CHINA),
-                detailFactory.createFourWheels(CountryOfProduction.CHINA, 20),
-                detailFactory.createElectricalSystem(CountryOfProduction.CHINA),
-                detailFactory.createHeadLights(CountryOfProduction.CHINA),
+                detailFactory.createFuelTank(countryOfProduction),
+                detailFactory.createEngine(countryOfProduction),
+                detailFactory.createFourWheels(countryOfProduction, 20),
+                detailFactory.createElectricalSystem(countryOfProduction),
+                detailFactory.createHeadLights(countryOfProduction),
                 Hiance.HIANCE_RADIUS,
                 countryOfProduction,
                 CarModel.HIANCE,
