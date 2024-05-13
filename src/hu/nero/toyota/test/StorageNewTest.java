@@ -30,17 +30,17 @@ public class StorageNewTest {
         var actualSolara4 = carFactory.createSolara(Color.BLUE, 67000);
         var actualSolara5 = carFactory.createSolara(Color.BLACK, 350);
 
-        storage.addCamry(actualCamry);
-        storage.addCamry(actualCamry2);
-        storage.addCamry(actualCamry3);
-        storage.addCamry(actualCamry4);
-        storage.addCamry(actualCamry5);
+        storage.add(actualCamry);
+        storage.add(actualCamry2);
+        storage.add(actualCamry3);
+        storage.add(actualCamry4);
+        storage.add(actualCamry5);
 
-        storage.addSolara(actualSolara);
-        storage.addSolara(actualSolara2);
-        storage.addSolara(actualSolara3);
-        storage.addSolara(actualSolara4);
-        storage.addSolara(actualSolara5);
+        storage.add(actualSolara);
+        storage.add(actualSolara2);
+        storage.add(actualSolara3);
+        storage.add(actualSolara4);
+        storage.add(actualSolara5);
 
 
         storage.takeSolara(actualSolara);
