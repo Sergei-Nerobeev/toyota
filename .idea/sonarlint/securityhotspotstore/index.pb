@@ -42,7 +42,7 @@ N
 T
 $src/hu/nero/toyota/model/Solara.java,6/7/67119231dd33b0f72b18f42674322d997fb1452d
 S
-#src/hu/nero/toyota/model/Camry.java,8/1/816efad274a82522af69d9c524a18fb60a986fd0
+#src/hu/nero/toyota/model/Camry.java,8\1\816efad274a82522af69d9c524a18fb60a986fd0
 X
 (src/hu/nero/toyota/type/AbstractCar.java,7/b/7b651c4a1d8ab9bd14b30831bfdcc6e956fa8b99
 R
@@ -58,7 +58,7 @@ i
 ]
 -src/hu/nero/toyota/factory/DetailFactory.java,4/4/441d0b5657d128a1c3884af10cdbbbd8fba84090
 Z
-*src/hu/nero/toyota/factory/CarFactory.java,e/e/ee10d834733da7575bb57aea593a9acdf7c2cb2b
+*src/hu/nero/toyota/factory/CarFactory.java,e\e\ee10d834733da7575bb57aea593a9acdf7c2cb2b
 q
 Asrc/hu/nero/toyota/exceptoin/CountryFactoryNotEqualException.java,3/9/39dc2ffc1b1f9ae95931340125ecd5cc7c5e0032
 \

@@ -26,10 +26,10 @@ public class Runner {
         System.out.println(dyna);
 
         Storage storage = new Storage();
-        storage.addCamry(camry);
-        storage.addSolara(solara);
-        storage.addHiance(hiance);
-        storage.addDyna(dyna);
+        storage.add(camry);
+        storage.add(solara);
+        storage.add(hiance);
+        storage.add(dyna);
 
 
     }

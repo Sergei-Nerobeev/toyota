@@ -66,7 +66,7 @@ public class Storage {
         return getTotalHianceStorage();
     }
 
-    public Camry addCamry(Camry camry) {
+    public Camry add(Camry camry) {
         if (totalCamryStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
             throw new RuntimeException("");
         }
@@ -124,7 +124,7 @@ public class Storage {
         return solara;
     }
 
-    public Solara addSolara(Solara solara) {
+    public Solara add(Solara solara) {
         if (totalSolaraStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
             throw new RuntimeException("");
         }
@@ -160,7 +160,7 @@ public class Storage {
         return hiance;
     }
 
-    public Hiance addHiance(Hiance hiance) {
+    public Hiance add(Hiance hiance) {
         if (totalHianceStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
             throw new RuntimeException("");
         }
@@ -196,7 +196,7 @@ public class Storage {
         return dyna;
     }
 
-    public Dyna addDyna(Dyna dyna) {
+    public Dyna add(Dyna dyna) {
         if (totalDynaStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
             throw new RuntimeException("");
         }
