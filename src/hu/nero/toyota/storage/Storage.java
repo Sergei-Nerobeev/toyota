@@ -66,7 +66,7 @@ public class Storage {
         return getTotalHianceStorage();
     }
 
-    public Camry addCamry(Camry camry) {
+    public Camry add(Camry camry) {
         if (totalCamryStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
             throw new RuntimeException("");
         }
@@ -124,7 +124,7 @@ public class Storage {
         return solara;
     }
 
-    public Solara addSolara(Solara solara) {
+    public Solara add(Solara solara) {
         if (totalSolaraStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
             throw new RuntimeException("");
         }
@@ -140,6 +140,78 @@ public class Storage {
                 + "\nTotal in Solara Storage: " + totalSolaraStorage + "\n" + BORDER_LINE);
 
         return solara;
+    }
+
+    public Hiance takeHiance(Hiance hiance) {
+        if (totalCarsInMainStorage <= 0 || totalHianceStorage <= 0) {
+            throw new RuntimeException("Hiance Storage is empty.");
+        }
+        totalCarsInMainStorage--;
+        totalHianceStorage--;
+        for (int index = 0; index < hianceArray.length; index++) {
+            if (hianceArray[index] != null && hianceArray[index].equals(hiance)) {
+                hianceArray[index] = null;
+            }
+        }
+        System.out.println(
+                "Taken one Hiance.\nTotal cars on the Main Storage: " +
+                        totalCarsInMainStorage + "\nTotal in Hiance Storage: " + totalHianceStorage +
+                        BORDER_LINE);
+        return hiance;
+    }
+
+    public Hiance add(Hiance hiance) {
+        if (totalHianceStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
+            throw new RuntimeException("");
+        }
+        totalCarsInMainStorage++;
+        totalHianceStorage++;
+        for (int index = 0; index < hianceArray.length; index++) {
+            if (hianceArray[index] == null) {
+                hianceArray[index] = hiance;
+                break;
+            }
+        }
+        System.out.println("Added to Hiance Storage: " + hiance + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
+                + "\nTotal in Hiance Storage: " + totalHianceStorage + "\n" + BORDER_LINE);
+
+        return hiance;
+    }
+
+    public Dyna takeDyna(Dyna dyna) {
+        if (totalCarsInMainStorage <= 0 || totalDynaStorage <= 0) {
+            throw new RuntimeException("Dyna Storage is empty.");
+        }
+        totalCarsInMainStorage--;
+        totalDynaStorage--;
+        for (int index = 0; index < dynaArray.length; index++) {
+            if (dynaArray[index] != null && dynaArray[index].equals(dyna)) {
+                dynaArray[index] = null;
+            }
+        }
+        System.out.println(
+                "Taken one Dyna.\nTotal cars on the Main Storage: " +
+                        totalCarsInMainStorage + "\nTotal in Hiance Storage: " + totalDynaStorage +
+                        BORDER_LINE);
+        return dyna;
+    }
+
+    public Dyna add(Dyna dyna) {
+        if (totalDynaStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
+            throw new RuntimeException("");
+        }
+        totalCarsInMainStorage++;
+        totalDynaStorage++;
+        for (int index = 0; index < dynaArray.length; index++) {
+            if (dynaArray[index] == null) {
+                dynaArray[index] = dyna;
+                break;
+            }
+        }
+        System.out.println("Added to Dyna Storage: " + dyna + "\nTotal cars in Main Storage: " + totalCarsInMainStorage
+                + "\nTotal in Dyna Storage: " + totalDynaStorage + "\n" + BORDER_LINE);
+
+        return dyna;
     }
 
     public int getMaxNumberOfCars() {

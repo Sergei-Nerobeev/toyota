@@ -6,11 +6,11 @@
 
 toyota.iml,1\7\17d99a84a203438effef318489242a4a371406d5
 S
-#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
--.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 W
-'src/hu/nero/toyota/storage/Storage.java,5/8/584835e5df14123e1539c7a44863034eb24bca77
+'src/hu/nero/toyota/storage/Storage.java,5\8\584835e5df14123e1539c7a44863034eb24bca77
 _
 /src/hu/nero/toyota/detail/ElectricalSystem.java,f\6\f6b8b53885ed1edf61fc42d2b2871d7c103773d2
 Y
@@ -38,11 +38,11 @@ R
 T
 $src/hu/nero/toyota/detail/Wheel.java,e\f\ef1c5abffd3590564815c7292a6f88c8a522c422
 N
-src/hu/nero/toyota/Runner.java,f/d/fdce2447fded17f85662ce04a665223923126e77
+src/hu/nero/toyota/Runner.java,f\d\fdce2447fded17f85662ce04a665223923126e77
 T
 $src/hu/nero/toyota/model/Solara.java,6/7/67119231dd33b0f72b18f42674322d997fb1452d
 S
-#src/hu/nero/toyota/model/Camry.java,8/1/816efad274a82522af69d9c524a18fb60a986fd0
+#src/hu/nero/toyota/model/Camry.java,8\1\816efad274a82522af69d9c524a18fb60a986fd0
 X
 (src/hu/nero/toyota/type/AbstractCar.java,7/b/7b651c4a1d8ab9bd14b30831bfdcc6e956fa8b99
 R
@@ -58,7 +58,7 @@ i
 ]
 -src/hu/nero/toyota/factory/DetailFactory.java,4/4/441d0b5657d128a1c3884af10cdbbbd8fba84090
 Z
-*src/hu/nero/toyota/factory/CarFactory.java,e/e/ee10d834733da7575bb57aea593a9acdf7c2cb2b
+*src/hu/nero/toyota/factory/CarFactory.java,e\e\ee10d834733da7575bb57aea593a9acdf7c2cb2b
 q
 Asrc/hu/nero/toyota/exceptoin/CountryFactoryNotEqualException.java,3/9/39dc2ffc1b1f9ae95931340125ecd5cc7c5e0032
 \
@@ -69,7 +69,5 @@ a
 1src/hu/nero/toyota/test/CreateFourWheelsTest.java,d\a\dad2dc9a48ab70f48651531375ee4cf1657c50f9
 b
 2src/hu/nero/toyota/detail/CountryOfProduction.java,7\a\7accb2d8483fbf53fca648420e6193b4cc4849a7
-X
-(src/hu/nero/toyota/test/StorageTest.java,5/7/57559b7c2adac35e6cdf5074cfb234c9c30192e2
 [
 +src/hu/nero/toyota/test/StorageNewTest.java,0/d/0d04dd8fba536ea157c0c1fe5239ae049fa8a845
