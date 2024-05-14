@@ -3,14 +3,13 @@ package hu.nero.toyota;
 import hu.nero.toyota.detail.Color;
 import hu.nero.toyota.detail.CountryOfProduction;
 import hu.nero.toyota.exceptoin.CountryFactoryNotEqualException;
-import hu.nero.toyota.exceptoin.StartCarFailedException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
-import hu.nero.toyota.storage.Customer;
+import hu.nero.toyota.shop.Customer;
 import hu.nero.toyota.storage.Storage;
 
 public class Runner {
@@ -35,6 +34,7 @@ public class Runner {
         Customer customer = new Customer("John Smith.", 20_000);
         System.out.println(customer.getMoneyAmount());
         System.out.println(customer.getName());
+
 
     }
 }

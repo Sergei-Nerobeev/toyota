@@ -1,4 +1,4 @@
-package hu.nero.toyota.storage;
+package hu.nero.toyota.shop;
 
 public class Customer {
     private String name;
