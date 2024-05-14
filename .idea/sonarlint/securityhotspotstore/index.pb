@@ -70,4 +70,6 @@ a
 b
 2src/hu/nero/toyota/detail/CountryOfProduction.java,7\a\7accb2d8483fbf53fca648420e6193b4cc4849a7
 [
-+src/hu/nero/toyota/test/StorageNewTest.java,0/d/0d04dd8fba536ea157c0c1fe5239ae049fa8a845
++src/hu/nero/toyota/test/StorageNewTest.java,0\d\0d04dd8fba536ea157c0c1fe5239ae049fa8a845
+X
+(src/hu/nero/toyota/storage/Customer.java,5\a\5ad83cfeb6e7f6051fc6dd53a573a141fef29f5b

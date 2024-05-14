@@ -10,6 +10,7 @@ import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
+import hu.nero.toyota.storage.Customer;
 import hu.nero.toyota.storage.Storage;
 
 public class Runner {
@@ -31,6 +32,9 @@ public class Runner {
         storage.add(hiance);
         storage.add(dyna);
 
+        Customer customer = new Customer("John Smith.", 20_000);
+        System.out.println(customer.getMoneyAmount());
+        System.out.println(customer.getName());
 
     }
 }
