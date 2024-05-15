@@ -37,11 +37,11 @@ public class Runner {
         Customer customer2 = new Customer("Sara Conor", 15_000);
         Customer customer3 = new Customer("Tom Yang", 12_000);
 
-        Manager manager = new Manager("Manager #1", storage, carFactory);
+        Manager manager = new Manager("Manager #1", storage, camry);
         try {
-            System.out.println(manager.saleCar(customer, camry));
-            System.out.println(manager.saleCar(customer2, camry));
-            System.out.println(manager.saleCar(customer3, camry));
+            System.out.println(manager.saleCar(customer));
+            System.out.println(manager.saleCar(customer2));
+            System.out.println(manager.saleCar(customer3));
         } catch (StorageIsEmptyException exception) {
             System.out.println("Camry Storage is empty!");
         }

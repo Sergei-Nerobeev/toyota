@@ -1,36 +1,29 @@
 package hu.nero.toyota.shop;
 
-<<<<<<< HEAD
-import hu.nero.toyota.factory.CarFactory;
-
-public class Manager {
-    private final String name;
-    private CarFactory carFactory;
-
-    public Manager(String name, CarFactory carFactory) {
-        this.name = name;
-        this.carFactory = carFactory;
-    }
-=======
 import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.storage.Storage;
+import hu.nero.toyota.factory.CarFactory;
 
 
 public class Manager {
 
     private final String name;
-    private Storage storage;
-    private CarFactory carFactory;
+    private final Storage storage;
+    private final Camry camry;
 
-    public Manager(String name, Storage storage, CarFactory carFactory) {
+    public Manager(String name, Storage storage, Camry camry) {
         this.name = name;
         this.storage = storage;
-        this.carFactory = carFactory;
+        this.camry = camry;
+
     }
 
-    public Camry saleCar(Customer customer, Camry camry) throws StorageIsEmptyException {
+    public Camry saleCar(Customer customer) throws StorageIsEmptyException {
+        for (int index = 0; index < storage.takeCamry(camry).getPrice() ; index++) { // todo!
+
+        }
         if (storage.getTotalCamryStorage() != 0 && customer.getMoneyAmount() >= camry.getPrice()) {
             System.out.println(customer.getName() + " bought the Camry for " + camry.getPrice());
         }
@@ -44,5 +37,5 @@ public class Manager {
         }
         return storage.takeCamry(camry);
     }
->>>>>>> origin/Step-4-4
+
 }
