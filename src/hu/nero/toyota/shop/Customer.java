@@ -10,7 +10,7 @@ public class Customer {
     }
 
     public String getName() {
-        return "My name is " + name;
+        return name;
     }
 
     public double getMoneyAmount() {
