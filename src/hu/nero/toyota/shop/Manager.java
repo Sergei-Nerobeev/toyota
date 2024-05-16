@@ -1,10 +1,8 @@
 package hu.nero.toyota.shop;
 
 import hu.nero.toyota.exceptoin.StorageIsEmptyException;
-import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.storage.Storage;
-import hu.nero.toyota.factory.CarFactory;
 
 
 public class Manager {
@@ -21,10 +19,8 @@ public class Manager {
     }
 
     public Camry saleCar(Customer customer) throws StorageIsEmptyException {
-        for (int index = 0; index < storage.takeCamry(camry).getPrice() ; index++) { // todo!
 
-        }
-        if (storage.getTotalCamryStorage() != 0 && customer.getMoneyAmount() >= camry.getPrice()) {
+        if ((storage.getTotalCamryStorage() != 0 && customer.getMoneyAmount() >= camry.getPrice())) {
             System.out.println(customer.getName() + " bought the Camry for " + camry.getPrice());
         }
 

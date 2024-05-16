@@ -29,6 +29,7 @@ public class Runner {
 
         Storage storage = new Storage();
         storage.add(camry);
+        storage.add(camry);
 //        storage.add(solara);
 //        storage.add(hiance);
 //        storage.add(dyna);

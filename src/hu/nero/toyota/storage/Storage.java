@@ -5,8 +5,7 @@ import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
-
-import java.util.Arrays;
+import hu.nero.toyota.shop.Customer;
 
 public class Storage {
     private static final int MAX_NUMBER_OF_CARS = 1_000; // размер массива
@@ -15,10 +14,10 @@ public class Storage {
     private int totalSolaraStorage;
     private int totalDynaStorage;
     private int totalHianceStorage;
-    private Camry[] camryArray;
-    private Solara[] solaraArray;
-    private Dyna[] dynaArray;
-    private Hiance[] hianceArray;
+    private final Camry[] camryArray;
+    private final Solara[] solaraArray;
+    private final Dyna[] dynaArray;
+    private final Hiance[] hianceArray;
     final String BORDER_LINE = "\n------------------------------------";
 
     public Storage() {
@@ -65,6 +64,17 @@ public class Storage {
         System.out.println("In Hiance Storage: " + getTotalHianceStorage());
         return getTotalHianceStorage();
     }
+
+    public double searchMaxPriceCamry(Camry camry) throws StorageIsEmptyException { //todo
+
+        takeCamry(camry);
+        double expensive = camryArray[0].getPrice();
+        for (int i = 0; i < camryArray.length; i++) {
+            if(camryArray[i].getPrice() > expensive) {
+                expensive = camryArray[i].getPrice();
+            }
+        } return expensive;
+   }
 
     public Camry add(Camry camry) {
         if (totalCamryStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
