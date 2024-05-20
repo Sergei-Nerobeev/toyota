@@ -66,8 +66,6 @@ public class Storage {
     }
 
     public double searchMaxPriceCamry(Camry camry) throws StorageIsEmptyException { //todo
-
-        takeCamry(camry);
         double expensive = camryArray[0].getPrice();
         for (int i = 0; i < camryArray.length; i++) {
             if(camryArray[i].getPrice() > expensive) {
@@ -82,7 +80,7 @@ public class Storage {
         }
         totalCarsInMainStorage++;
         totalCamryStorage++;
-        for (int index = 0; index < solaraArray.length; index++) {
+        for (int index = 0; index < camryArray.length; index++) {
             if (camryArray[index] == null) {
                 camryArray[index] = camry;
                 break;

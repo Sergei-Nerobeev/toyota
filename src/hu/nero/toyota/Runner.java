@@ -15,7 +15,7 @@ import hu.nero.toyota.shop.Manager;
 import hu.nero.toyota.storage.Storage;
 
 public class Runner {
-    public static void main(String[] args) throws CountryFactoryNotEqualException {
+    public static void main(String[] args) throws CountryFactoryNotEqualException, StorageIsEmptyException {
 
         CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN), CountryOfProduction.JAPAN);
         Camry camry = carFactory.createCamry(Color.BLACK, 10_000);
@@ -30,6 +30,9 @@ public class Runner {
         Storage storage = new Storage();
         storage.add(camry);
         storage.add(camry);
+        storage.searchMaxPriceCamry(camry);
+
+
 //        storage.add(solara);
 //        storage.add(hiance);
 //        storage.add(dyna);

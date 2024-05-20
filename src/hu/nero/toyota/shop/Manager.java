@@ -21,6 +21,7 @@ public class Manager {
     public Camry saleCar(Customer customer) throws StorageIsEmptyException {
 
         if ((storage.getTotalCamryStorage() != 0 && customer.getMoneyAmount() >= camry.getPrice())) {
+
             System.out.println(customer.getName() + " bought the Camry for " + camry.getPrice());
         }
 
