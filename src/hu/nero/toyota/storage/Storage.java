@@ -65,11 +65,20 @@ public class Storage {
         return getTotalHianceStorage();
     }
 
-    public Camry getMaxPriceCamry() { // todo
+    //надо написать цикл, чтобы найти первую попавшуюся камри, чтобы потом было с чем сравнить
+    public Camry getMaxPriceCamry() {
+        Camry firstCamry = null;
+        int j = 0;
+        for (; j < camryArray.length; j++) {
+            if (camryArray[j] != null) {
+                firstCamry = camryArray[j];
+                break;
+            }
+        }
 
-        Camry expensiveCamry = camryArray[0];
+        Camry expensiveCamry = firstCamry;
         for (int i = 1; i < camryArray.length; i++) {
-            if (camryArray[i] != null && camryArray[i].getPrice() > expensiveCamry.getPrice())  {
+            if (camryArray[i] != null && camryArray[i].getPrice() > expensiveCamry.getPrice()) {
                 expensiveCamry = camryArray[i];
             }
         }
