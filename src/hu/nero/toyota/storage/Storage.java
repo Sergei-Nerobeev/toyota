@@ -65,16 +65,16 @@ public class Storage {
         return getTotalHianceStorage();
     }
 
-    public double searchMaxPriceCamry(Camry camry) throws StorageIsEmptyException { //todo
+    public Camry getMaxPriceCamry() { // todo
 
-        takeCamry(camry);
-        double expensive = camryArray[0].getPrice();
-        for (int i = 0; i < camryArray.length; i++) {
-            if(camryArray[i].getPrice() > expensive) {
-                expensive = camryArray[i].getPrice();
+        Camry expensiveCamry = camryArray[0];
+        for (int i = 1; i < camryArray.length; i++) {
+            if (camryArray[i] != null && camryArray[i].getPrice() > expensiveCamry.getPrice())  {
+                expensiveCamry = camryArray[i];
             }
-        } return expensive;
-   }
+        }
+        return expensiveCamry;
+    }
 
     public Camry add(Camry camry) {
         if (totalCamryStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
