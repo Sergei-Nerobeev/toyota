@@ -19,6 +19,7 @@ public class Runner {
 
         CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN), CountryOfProduction.JAPAN);
         Camry camry = carFactory.createCamry(Color.BLACK, 10_000);
+        Camry camry2 = carFactory.createCamry(Color.BLACK, 12_000);
 //        System.out.println(camry);
 //        Solara solara = carFactory.createSolara(Color.WHITE, 12_000);
 //        System.out.println(solara);
@@ -29,8 +30,10 @@ public class Runner {
 
         Storage storage = new Storage();
         storage.add(camry);
-        storage.add(camry);
-        storage.searchMaxPriceCamry(camry);
+        storage.add(camry2);
+        storage.takeCamry(camry);
+        Camry expensiveCamry = storage.getMaxPriceCamry();
+        System.out.println("Here is: " + expensiveCamry);
 
 
 //        storage.add(solara);
