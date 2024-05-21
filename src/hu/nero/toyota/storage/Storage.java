@@ -8,7 +8,7 @@ import hu.nero.toyota.model.Solara;
 import hu.nero.toyota.shop.Customer;
 
 public class Storage {
-    private static final int MAX_NUMBER_OF_CARS = 10; // размер массива
+    private static final int MAX_NUMBER_OF_CARS = 4; // размер массива
     private int totalCarsInMainStorage; // общее количество машин на складе
     private int totalCamryStorage;
     private int totalSolaraStorage;
@@ -67,6 +67,33 @@ public class Storage {
 
     //цикл, чтобы найти первую попавшуюся камри
 
+//    public Camry getMaxPriceCamry(double maxPrice) throws StorageIsEmptyException {
+//        Camry firstCamry = null;
+//        int i = 0;
+//        for (; i < camryArray.length; i++) {
+//            if (camryArray[i] != null) {
+//                firstCamry = camryArray[i];
+//                break;
+//            }
+//            if (camryArray[0] == firstCamry) {
+//                firstCamry = camryArray[i];
+//            }
+//            if (camryArray[i] == null) {
+//                throw new StorageIsEmptyException();
+//            }
+//        }
+//        // цикл сравнения
+//        Camry expensiveCamry = firstCamry;
+//
+//        for (; i < camryArray.length; i++) {
+//            if (camryArray[i] != null && camryArray[i].getPrice() <= maxPrice
+//                    && camryArray[i].getPrice() > expensiveCamry.getPrice()) {
+//                expensiveCamry = camryArray[i];
+//            }
+//        }
+//        return expensiveCamry;
+//    }
+
     public Camry getMaxPriceCamry(double maxPrice) throws StorageIsEmptyException {
         Camry firstCamry = null;
         int i = 0;
@@ -75,16 +102,14 @@ public class Storage {
                 firstCamry = camryArray[i];
                 break;
             }
-            if (camryArray[0] == firstCamry) {
-                firstCamry = camryArray[i];
-            }
-            if (camryArray[i] == null) {
-                throw new StorageIsEmptyException();
-            }
+            camryArray[i] = camryArray[0];
         }
+
         // цикл сравнения
         Camry expensiveCamry = firstCamry;
-
+        if (firstCamry == null) {
+            throw new StorageIsEmptyException();
+        }
         for (; i < camryArray.length; i++) {
             if (camryArray[i] != null && camryArray[i].getPrice() <= maxPrice
                     && camryArray[i].getPrice() > expensiveCamry.getPrice()) {
@@ -93,7 +118,6 @@ public class Storage {
         }
         return expensiveCamry;
     }
-
 
     public Camry add(Camry camry) {
         if (totalCamryStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {

@@ -28,8 +28,8 @@ public class Runner {
         Storage storage = new Storage();
         storage.add(camry);
         storage.add(camry2);
-//        storage.takeCamry(camry);
-        storage.takeCamry(camry2);
+        storage.takeCamry(camry);
+//        storage.takeCamry(camry2);
         Camry expensiveCamry = storage.getMaxPriceCamry(9000);
         System.out.println("Expensive Camry is: " + expensiveCamry);
 
