@@ -4,12 +4,12 @@ import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.storage.Storage;
 
-
 public class Manager {
 
     private final String name;
     private final Storage storage;
     private final Camry camry;
+
 
     public Manager(String name, Storage storage, Camry camry) {
         this.name = name;
@@ -27,6 +27,7 @@ public class Manager {
 
         if (storage.getTotalCamryStorage() == 0 && customer.getMoneyAmount() >= camry.getPrice()) {
             System.out.println(customer.getName() + " your order for Camry has been accepted!");
+
             return storage.add(camry);
         }
         if (customer.getMoneyAmount() < camry.getPrice()) {

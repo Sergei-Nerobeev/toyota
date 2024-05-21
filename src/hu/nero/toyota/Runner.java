@@ -7,9 +7,6 @@ import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.model.Camry;
-import hu.nero.toyota.model.Dyna;
-import hu.nero.toyota.model.Hiance;
-import hu.nero.toyota.model.Solara;
 import hu.nero.toyota.shop.Customer;
 import hu.nero.toyota.shop.Manager;
 import hu.nero.toyota.storage.Storage;
@@ -31,9 +28,10 @@ public class Runner {
         Storage storage = new Storage();
         storage.add(camry);
         storage.add(camry2);
-        storage.takeCamry(camry);
-        Camry expensiveCamry = storage.getMaxPriceCamry();
-        System.out.println("Here is: " + expensiveCamry);
+//        storage.takeCamry(camry);
+        storage.takeCamry(camry2);
+        Camry expensiveCamry = storage.getMaxPriceCamry(9000);
+        System.out.println("Expensive Camry is: " + expensiveCamry);
 
 
 //        storage.add(solara);

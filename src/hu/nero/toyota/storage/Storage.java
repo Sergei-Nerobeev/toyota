@@ -8,7 +8,7 @@ import hu.nero.toyota.model.Solara;
 import hu.nero.toyota.shop.Customer;
 
 public class Storage {
-    private static final int MAX_NUMBER_OF_CARS = 1_000; // размер массива
+    private static final int MAX_NUMBER_OF_CARS = 10; // размер массива
     private int totalCarsInMainStorage; // общее количество машин на складе
     private int totalCamryStorage;
     private int totalSolaraStorage;
@@ -65,24 +65,35 @@ public class Storage {
         return getTotalHianceStorage();
     }
 
-    //надо написать цикл, чтобы найти первую попавшуюся камри, чтобы потом было с чем сравнить
-    public Camry getMaxPriceCamry() {
+    //цикл, чтобы найти первую попавшуюся камри
+
+    public Camry getMaxPriceCamry(double maxPrice) throws StorageIsEmptyException {
         Camry firstCamry = null;
-        int j = 0;
-        for (; j < camryArray.length; j++) {
-            if (camryArray[j] != null) {
-                firstCamry = camryArray[j];
+        int i = 0;
+        for (; i < camryArray.length; i++) {
+            if (camryArray[i] != null) {
+                firstCamry = camryArray[i];
                 break;
             }
+            if (camryArray[0] == firstCamry) {
+                firstCamry = camryArray[i];
+            }
+            if (camryArray[i] == null) {
+                throw new StorageIsEmptyException();
+            }
         }
-
+        // цикл сравнения
         Camry expensiveCamry = firstCamry;
-        for (int i = 1; i < camryArray.length; i++) {
-            if (camryArray[i] != null && camryArray[i].getPrice() > expensiveCamry.getPrice()) {
+
+        for (; i < camryArray.length; i++) {
+            if (camryArray[i] != null && camryArray[i].getPrice() <= maxPrice
+                    && camryArray[i].getPrice() > expensiveCamry.getPrice()) {
                 expensiveCamry = camryArray[i];
             }
-        } return expensive;
-   }
+        }
+        return expensiveCamry;
+    }
+
 
     public Camry add(Camry camry) {
         if (totalCamryStorage >= MAX_NUMBER_OF_CARS || totalCarsInMainStorage >= MAX_NUMBER_OF_CARS) {
