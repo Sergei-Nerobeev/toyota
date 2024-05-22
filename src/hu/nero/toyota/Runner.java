@@ -15,8 +15,9 @@ public class Runner {
     public static void main(String[] args) throws CountryFactoryNotEqualException, StorageIsEmptyException {
 
         CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN), CountryOfProduction.JAPAN);
-        Camry camry = carFactory.createCamry(Color.BLACK, 10_000);
-        Camry camry2 = carFactory.createCamry(Color.BLACK, 12_000);
+        Camry camry = carFactory.createCamry(Color.BLACK, 10);
+        Camry camry2 = carFactory.createCamry(Color.BLACK, 12);
+        Camry camry3 = carFactory.createCamry(Color.BLACK, 24);
 //        System.out.println(camry);
 //        Solara solara = carFactory.createSolara(Color.WHITE, 12_000);
 //        System.out.println(solara);
@@ -28,9 +29,10 @@ public class Runner {
         Storage storage = new Storage();
         storage.add(camry);
         storage.add(camry2);
-        storage.takeCamry(camry);
-//        storage.takeCamry(camry2);
-        Camry expensiveCamry = storage.getMaxPriceCamry(9000);
+        storage.add(camry3);
+//        storage.takeCamry(camry);
+
+        Camry expensiveCamry = storage.getMaxPriceCamry(13);
         System.out.println("Expensive Camry is: " + expensiveCamry);
 
 
