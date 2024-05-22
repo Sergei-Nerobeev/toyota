@@ -15,9 +15,9 @@ public class Runner {
     public static void main(String[] args) throws CountryFactoryNotEqualException, StorageIsEmptyException {
 
         CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN), CountryOfProduction.JAPAN);
-        Camry camry = carFactory.createCamry(Color.BLACK, 10);
-        Camry camry2 = carFactory.createCamry(Color.BLACK, 12);
-        Camry camry3 = carFactory.createCamry(Color.BLACK, 24);
+        Camry camry = carFactory.createCamry(Color.BLACK, 10_000);
+        Camry camry2 = carFactory.createCamry(Color.BLACK, 12_000);
+        Camry camry3 = carFactory.createCamry(Color.BLACK, 24_000);
 //        System.out.println(camry);
 //        Solara solara = carFactory.createSolara(Color.WHITE, 12_000);
 //        System.out.println(solara);
@@ -43,12 +43,14 @@ public class Runner {
         Customer customer = new Customer("John Smith", 10_000);
         Customer customer2 = new Customer("Sara Conor", 15_000);
         Customer customer3 = new Customer("Tom Yang", 12_000);
+        Customer customer4 = new Customer("Ben Moor", 100_000);
 
-        Manager manager = new Manager("Manager #1", storage, camry);
+        Manager manager = new Manager("Manager #1", storage, camry, carFactory);
         try {
             System.out.println(manager.saleCar(customer));
             System.out.println(manager.saleCar(customer2));
             System.out.println(manager.saleCar(customer3));
+            System.out.println(manager.saleCar(customer4));
         } catch (StorageIsEmptyException exception) {
             System.out.println("Camry Storage is empty!");
         }

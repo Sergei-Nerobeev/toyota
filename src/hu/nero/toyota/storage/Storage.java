@@ -8,7 +8,7 @@ import hu.nero.toyota.model.Solara;
 import hu.nero.toyota.shop.Customer;
 
 public class Storage {
-    private static final int MAX_NUMBER_OF_CARS = 4; // размер массива
+    private static final int MAX_NUMBER_OF_CARS = 1_000; // размер массива
     private int totalCarsInMainStorage; // общее количество машин на складе
     private int totalCamryStorage;
     private int totalSolaraStorage;
@@ -105,7 +105,7 @@ public class Storage {
         }
         // цикл сравнения
         if (expensiveCamry == null) {
-            throw new StorageIsEmptyException();
+            return null;
         }
         for (; i < camryArray.length; i++) {
             if (camryArray[i] != null && camryArray[i].getPrice() <= maxPrice && camryArray[i].getPrice() > expensiveCamry.getPrice()) {
