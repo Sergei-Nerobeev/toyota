@@ -67,32 +67,7 @@ public class Storage {
 
     //цикл, чтобы найти первую попавшуюся камри
 
-//    public Camry getMaxPriceCamry(double maxPrice) throws StorageIsEmptyException {
-//        Camry firstCamry = null;
-//        int i = 0;
-//        for (; i < camryArray.length; i++) {
-//            if (camryArray[i] != null) {
-//                firstCamry = camryArray[i];
-//                break;
-//            }
-//            if (camryArray[0] == firstCamry) {
-//                firstCamry = camryArray[i];
-//            }
-//            if (camryArray[i] == null) {
-//                throw new StorageIsEmptyException();
-//            }
-//        }
-//        // цикл сравнения
-//        Camry expensiveCamry = firstCamry;
-//
-//        for (; i < camryArray.length; i++) {
-//            if (camryArray[i] != null && camryArray[i].getPrice() <= maxPrice
-//                    && camryArray[i].getPrice() > expensiveCamry.getPrice()) {
-//                expensiveCamry = camryArray[i];
-//            }
-//        }
-//        return expensiveCamry;
-//    }
+//    p
 
     public Camry getMaxPriceCamry(double maxPrice) throws StorageIsEmptyException {
         Camry expensiveCamry = null;
