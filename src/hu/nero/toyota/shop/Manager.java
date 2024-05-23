@@ -20,7 +20,7 @@ public class Manager {
         this.carFactory = carFactory;
     }
 
-//    public Camry saleCar(Customer customer) throws StorageIsEmptyException {
+    //    public Camry saleCar(Customer customer) throws StorageIsEmptyException {
 //        if (storage.getMaxPriceCamry(customer.getMoneyAmount()) != null){
 //            return camry;
 //        }
@@ -37,15 +37,33 @@ public class Manager {
 //        }
 //        return camry;
 //    }
-
+    // У менеджера есть метод - продать машину клиенту: возвращается самая дорогая машина,
+    // которую может купить покупатель со своей суммой денег из имеющихся
+    // Если машин на складе нет, то идет запрос на сборку и производство по ценам выше,
+    // и машина заносится на склад. Если клиенту не хватает денег, то никакую машину он не получает.
     public Camry saleCar2(Customer customer) throws StorageIsEmptyException {
-        // todo
-        if (storage.getMaxPriceCamry(customer.getMoneyAmount()) != null &&
-        customer.getMoneyAmount() != 0){
-            System.out.println("It s your Camry: ");
-        } else {
-            carFactory.createCamry(camry.getColor(),camry.getPrice() * 2);
+        // Получаем самую дорогую машину, которую может купить покупатель
+        Camry camry = storage.getMaxPriceCamry(customer.getMoneyAmount());
+        if (camry != null && customer.getMoneyAmount() >= camry.getPrice()) {
+            // Если такая машина есть на складе, то мы её продаём
+            storage.takeCamry(camry);
+            System.out.println("It is your car: ");
+            return camry;
+
         }
+        if (camry == null && customer.getMoneyAmount() >= camry.getPrice()) {
+            // Если машин на складе нет, то создаём новую по более высокой цене
+            Camry newCamry = carFactory.createCamry(camry.getColor(), camry.getPrice() * 2);
+            storage.add(camry);
+            System.out.println("New car created and added to storage: " + newCamry);
+            return newCamry;
+
+        } // денег нет, но вы держитесь :)
+        if (customer.getMoneyAmount() < camry.getPrice()) {
+            System.out.println("You don't have enough money");
+            return null;
+        }
+
         return camry;
     }
 }

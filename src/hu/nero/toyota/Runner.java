@@ -23,10 +23,10 @@ public class Runner {
         storage.add(camry);
         storage.add(camry2);
         storage.add(camry3);
-//        storage.takeCamry(camry);
+        storage.takeCamry(camry);
 
 
-        Customer customer = new Customer("John Smith", 19_000);
+        Customer customer = new Customer("John Smith", 23_000);
         Camry expensiveCamry = storage.getMaxPriceCamry(customer.getMoneyAmount());
         System.out.println("Expensive Camry is: " + expensiveCamry);
 //        Customer customer2 = new Customer("Sara Conor", 15_000);

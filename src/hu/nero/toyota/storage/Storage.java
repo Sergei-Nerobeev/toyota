@@ -5,7 +5,7 @@ import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
-import hu.nero.toyota.shop.Customer;
+
 
 public class Storage {
     private static final int MAX_NUMBER_OF_CARS = 1_000; // размер массива
@@ -67,7 +67,7 @@ public class Storage {
 
     //цикл, чтобы найти первую попавшуюся камри
 
-    public Camry getMaxPriceCamry(double maxPrice) throws StorageIsEmptyException {
+    public Camry getMaxPriceCamry(double maxPrice) {
         Camry expensiveCamry = null;
         int i = 0;
         for (; i < camryArray.length; i++) {
