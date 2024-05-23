@@ -22,7 +22,9 @@ public class Manager {
     }
 
     public Camry saleCar(Customer customer) throws StorageIsEmptyException {
-
+        if (storage.getMaxPriceCamry(customer.getMoneyAmount()) != null){
+            return camry;
+        }
         if ((storage.getTotalCamryStorage() != 0 && customer.getMoneyAmount() >= camry.getPrice())) {
             System.out.println(customer.getName() + " bought the Camry for " + camry.getPrice());
         }
@@ -34,7 +36,7 @@ public class Manager {
         if (customer.getMoneyAmount() < camry.getPrice()) {
             throw new RuntimeException(customer.getName() + " you don't have enough money");
         }
-        return storage.takeCamry(camry);
+        return camry;// todo
     }
 
 }
