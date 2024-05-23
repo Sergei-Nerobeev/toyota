@@ -67,8 +67,6 @@ public class Storage {
 
     //цикл, чтобы найти первую попавшуюся камри
 
-//    p
-
     public Camry getMaxPriceCamry(double maxPrice) throws StorageIsEmptyException {
         Camry expensiveCamry = null;
         int i = 0;
