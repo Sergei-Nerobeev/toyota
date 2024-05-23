@@ -20,13 +20,13 @@ public class Runner {
         Camry camry3 = carFactory.createCamry(Color.BLACK, 24_000);
 
         Storage storage = new Storage();
-        storage.add(camry);
-        storage.add(camry2);
-        storage.add(camry3);
-        storage.takeCamry(camry);
+//        storage.add(camry);
+//        storage.add(camry2);
+//        storage.add(camry3);
+//        storage.takeCamry(camry);
 
 
-        Customer customer = new Customer("John Smith", 23_000);
+        Customer customer = new Customer("John Smith", 3_000);
         Camry expensiveCamry = storage.getMaxPriceCamry(customer.getMoneyAmount());
         System.out.println("Expensive Camry is: " + expensiveCamry);
 //        Customer customer2 = new Customer("Sara Conor", 15_000);
@@ -34,7 +34,7 @@ public class Runner {
 
         Manager manager = new Manager("Manager #1", storage, camry, carFactory);
         try {
-            System.out.println(manager.saleCar2(customer));
+            System.out.println(manager.saleCar(customer));
 
         } catch (StorageIsEmptyException exception) {
             System.out.println("Camry Storage is empty!");
