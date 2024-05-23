@@ -15,8 +15,8 @@ public class Runner {
     public static void main(String[] args) throws CountryFactoryNotEqualException, StorageIsEmptyException {
 
         CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN), CountryOfProduction.JAPAN);
-        Camry camry = carFactory.createCamry(Color.BLACK, 10_000);
-        Camry camry2 = carFactory.createCamry(Color.BLACK, 12_000);
+        Camry camry = carFactory.createCamry(Color.BLACK, 16_000);
+        Camry camry2 = carFactory.createCamry(Color.BLACK, 18_000);
         Camry camry3 = carFactory.createCamry(Color.BLACK, 24_000);
 
         Storage storage = new Storage();
@@ -25,19 +25,17 @@ public class Runner {
         storage.add(camry3);
 //        storage.takeCamry(camry);
 
-        Camry expensiveCamry = storage.getMaxPriceCamry(13);
+
+        Customer customer = new Customer("John Smith", 19_000);
+        Camry expensiveCamry = storage.getMaxPriceCamry(customer.getMoneyAmount());
         System.out.println("Expensive Camry is: " + expensiveCamry);
-
-
-        Customer customer = new Customer("John Smith", 10_000);
-        Customer customer2 = new Customer("Sara Conor", 15_000);
-        Customer customer3 = new Customer("Tom Yang", 12_000);
+//        Customer customer2 = new Customer("Sara Conor", 15_000);
+//        Customer customer3 = new Customer("Tom Yang", 12_000);
 
         Manager manager = new Manager("Manager #1", storage, camry, carFactory);
         try {
-            System.out.println(manager.saleCar(customer));
-            System.out.println(manager.saleCar(customer2));
-            System.out.println(manager.saleCar(customer3));
+            System.out.println(manager.saleCar2(customer));
+
         } catch (StorageIsEmptyException exception) {
             System.out.println("Camry Storage is empty!");
         }
