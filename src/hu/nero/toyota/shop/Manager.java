@@ -44,7 +44,7 @@ public class Manager {
             return newCamry;
 
         } // денег нет, но вы держитесь :)
-        if (camry != null && customer.getMoneyAmount() < camry.getPrice()) {
+        if (customer.getMoneyAmount() == 0 &&  customer.getMoneyAmount() < camry.getPrice() ) {
             System.out.println("You don't have enough money");
             return null;
         }

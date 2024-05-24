@@ -6,11 +6,11 @@
 
 toyota.iml,1\7\17d99a84a203438effef318489242a4a371406d5
 S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+-.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
 W
-'src/hu/nero/toyota/storage/Storage.java,5\8\584835e5df14123e1539c7a44863034eb24bca77
+'src/hu/nero/toyota/storage/Storage.java,5/8/584835e5df14123e1539c7a44863034eb24bca77
 _
 /src/hu/nero/toyota/detail/ElectricalSystem.java,f\6\f6b8b53885ed1edf61fc42d2b2871d7c103773d2
 Y
@@ -38,11 +38,11 @@ R
 T
 $src/hu/nero/toyota/detail/Wheel.java,e\f\ef1c5abffd3590564815c7292a6f88c8a522c422
 N
-src/hu/nero/toyota/Runner.java,f\d\fdce2447fded17f85662ce04a665223923126e77
+src/hu/nero/toyota/Runner.java,f/d/fdce2447fded17f85662ce04a665223923126e77
 T
 $src/hu/nero/toyota/model/Solara.java,6/7/67119231dd33b0f72b18f42674322d997fb1452d
 S
-#src/hu/nero/toyota/model/Camry.java,8\1\816efad274a82522af69d9c524a18fb60a986fd0
+#src/hu/nero/toyota/model/Camry.java,8/1/816efad274a82522af69d9c524a18fb60a986fd0
 X
 (src/hu/nero/toyota/type/AbstractCar.java,7/b/7b651c4a1d8ab9bd14b30831bfdcc6e956fa8b99
 R
@@ -74,4 +74,10 @@ b
 X
 (src/hu/nero/toyota/storage/Customer.java,5\a\5ad83cfeb6e7f6051fc6dd53a573a141fef29f5b
 T
-$src/hu/nero/toyota/shop/Manager.java,f\2\f2740d83e3674a23d3a7c12c622b479b7f1a2943
+$src/hu/nero/toyota/shop/Manager.java,f/2/f2740d83e3674a23d3a7c12c622b479b7f1a2943
+X
+(src/hu/nero/toyota/test/SaleCarTest.java,4/2/42901d38c24682abb9ac2115f23c7dee73e93637
+`
+0src/hu/nero/toyota/test/SaleCarPositiveTest.java,0/4/04c78c411840a82ddfa2afd0cb259acee0d87acf
+`
+0src/hu/nero/toyota/test/SaleCarNegativeTest.java,9/d/9da8407a3351ef1218b0e5e5752c755e60db3962
