@@ -30,13 +30,13 @@ public class SaleCarNegativeTest {
         storage.add(camry10);
         storage.add(camry20);
         storage.add(camry30);
-//        storage.takeCamry(camry0);
-//        storage.takeCamry(camry20);
-//        storage.takeCamry(camry30);
+        storage.takeCamry(camry10);
+        storage.takeCamry(camry20);
+        storage.takeCamry(camry30);
 
         Camry actualCamry = null;
         try {
-            actualCamry = manager.saleCar(customer);
+//            actualCamry = manager.saleCar(customer);
             actualCamry = manager.saleCar(customer2);
             System.out.println(actualCamry);
 
