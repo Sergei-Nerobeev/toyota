@@ -10,15 +10,13 @@ public class Manager {
 
     private final String name;
     private final Storage storage;
-    private final Camry camry;
     private CarFactory carFactory;
-    private final double MAX_PRICE = 100_000;
+    private final double MAX_PRICE = 100_00;
 
 
-    public Manager(String name, Storage storage, Camry camry, CarFactory carFactory) {
+    public Manager(String name, Storage storage, CarFactory carFactory) {
         this.name = name;
         this.storage = storage;
-        this.camry = camry;
         this.carFactory = carFactory;
     }
 
@@ -38,10 +36,10 @@ public class Manager {
         }
         if (camry == null) {
             // Если машин на складе нет, то создаём новую по более высокой цене
-            Camry newCamry = carFactory.createCamry(Color.WHITE, MAX_PRICE);
-            storage.add(newCamry);
+            camry = carFactory.createCamry(Color.WHITE, MAX_PRICE);
+            storage.add(camry);
             System.out.println("New car created and added to storage: ");
-            return newCamry;
+            return camry;
 
         } // денег нет, но вы держитесь :)
         if (customer.getMoneyAmount() == 0 || customer.getMoneyAmount() < camry.getPrice()) {
