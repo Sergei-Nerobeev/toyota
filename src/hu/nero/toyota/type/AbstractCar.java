@@ -156,6 +156,11 @@ public abstract class AbstractCar {
         return isMove;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+
     private void checkWheels(Wheel[] wheels) {
         if (wheels == null || wheels.length != 4) {
             throw new RuntimeException("Wheels array null or not size " + COUNT_WHEELS);

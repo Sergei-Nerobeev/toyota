@@ -1,4 +1,4 @@
-package hu.nero.toyota.storage;
+package hu.nero.toyota.shop;
 
 public class Customer {
     private String name;
@@ -10,7 +10,7 @@ public class Customer {
     }
 
     public String getName() {
-        return "My name is " + name;
+        return name;
     }
 
     public double getMoneyAmount() {
