@@ -32,7 +32,7 @@ public class Runner {
 //        Customer customer2 = new Customer("Sara Conor", 15_000);
 //        Customer customer3 = new Customer("Tom Yang", 12_000);
 
-        Manager manager = new Manager("Manager #1", storage, camry, carFactory);
+        Manager manager = new Manager("Manager #1", storage, carFactory);
         try {
             System.out.println(manager.saleCar(customer));
 

@@ -14,11 +14,11 @@ import hu.nero.toyota.storage.Storage;
 public class SaleCarPositiveTest {
 
     public static void main(String[] args) throws CountryFactoryNotEqualException {
-        saleCarTest();
+        saleCarPositiveTest();
 
     }
 
-    public static void saleCarTest() throws CountryFactoryNotEqualException {
+    public static void saleCarPositiveTest() throws CountryFactoryNotEqualException {
         //Arrange
         CarFactory carFactory = new CarFactory(new DetailFactory(CountryOfProduction.JAPAN), CountryOfProduction.JAPAN);
         Storage storage = new Storage();
@@ -27,7 +27,7 @@ public class SaleCarPositiveTest {
         Camry camry30 = carFactory.createCamry(Color.WHITE, 30_000);
         Camry camry40 = carFactory.createCamry(Color.WHITE, 40_000);
         Customer customer = new Customer("John Smith", 23_000);
-        Manager manager = new Manager("Manager #1", storage, camry20, carFactory);
+        Manager manager = new Manager("Manager #1", storage, carFactory);
         Camry expensiveCamry = storage.getMaxPriceCamry(customer.getMoneyAmount());
         //Act
         storage.add(camry0);

@@ -31,21 +31,13 @@ public class Manager {
             // Если такая машина есть на складе, то мы её продаём
             storage.takeCamry(camry);
             System.out.println("It is your car: ");
-            return camry;
-
         }
         if (camry == null) {
             // Если машин на складе нет, то создаём новую по более высокой цене
             camry = carFactory.createCamry(Color.WHITE, MAX_PRICE);
-            storage.add(camry);
             System.out.println("New car created and added to storage: ");
-            return camry;
-
-        } // денег нет, но вы держитесь :)
-        if (customer.getMoneyAmount() == 0 || customer.getMoneyAmount() < camry.getPrice()) {
-            throw new RuntimeException("You don't have enough money");
         }
 
-        throw new StorageIsEmptyException();
+        return camry;
     }
 }

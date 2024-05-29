@@ -25,7 +25,7 @@ public class SaleCarNegativeTest {
         Camry camry30 = carFactory.createCamry(Color.WHITE, 30_000);
         Customer customer = new Customer("John Smith", 0); // денег нет
         Customer customer2 = new Customer("John Smith", 9_000); // не достаточно средств
-        Manager manager = new Manager("Manager #1", storage, camry20, carFactory);
+        Manager manager = new Manager("Manager #1", storage, carFactory);
         //Act
         storage.add(camry10);
         storage.add(camry20);
