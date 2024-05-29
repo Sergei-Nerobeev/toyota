@@ -81,3 +81,7 @@ X
 0src/hu/nero/toyota/test/SaleCarPositiveTest.java,0/4/04c78c411840a82ddfa2afd0cb259acee0d87acf
 `
 0src/hu/nero/toyota/test/SaleCarNegativeTest.java,9/d/9da8407a3351ef1218b0e5e5752c755e60db3962
+T
+$src/hu/nero/toyota/shop/Cashier.java,1/8/1858fd44fcb7fc992bcc42cd4b4d868be412e439
+S
+#src/hu/nero/toyota/shop/Report.java,0/a/0aa25ca6d1a30d394602c0639f1c06f8fb3fbfb9

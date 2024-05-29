@@ -7,6 +7,7 @@ import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.model.Camry;
+import hu.nero.toyota.shop.Cashier;
 import hu.nero.toyota.shop.Customer;
 import hu.nero.toyota.shop.Manager;
 import hu.nero.toyota.storage.Storage;
@@ -28,12 +29,16 @@ public class SaleCarPositiveTest {
         Camry camry40 = carFactory.createCamry(Color.WHITE, 40_000);
         Customer customer = new Customer("John Smith", 23_000);
         Manager manager = new Manager("Manager #1", storage, carFactory);
-        Camry expensiveCamry = storage.getMaxPriceCamry(customer.getMoneyAmount());
+        Cashier cashier = new Cashier();
         //Act
         storage.add(camry0);
         storage.add(camry20);
         storage.add(camry30);
         storage.add(camry40);
+        cashier.addIncome(camry20);
+        cashier.addIncome(camry40);
+        double inCome = Cashier.getInCome();
+
         Camry actualCamry = null;
         try {
             actualCamry = manager.saleCar(customer);
@@ -47,6 +52,7 @@ public class SaleCarPositiveTest {
         if (actualCamry.equals(camry20)) resultTest = true;
         else resultTest = false;
         System.out.println(resultTest);
+        System.out.println(inCome);
     }
 
 
