@@ -3,13 +3,13 @@ package hu.nero.toyota.shop;
 import hu.nero.toyota.model.Camry;
 
 public class Cashier {
-    public static Double inCome = (double) 0;
+    private static double income = 0.0;
 
     public void addIncome(Camry camry) {
-        inCome = camry.getPrice();
+        income += camry.getPrice();
     }
 
-    public static Double getInCome() {
-        return inCome;
+    public static double getIncome() {
+        return income;
     }
 }

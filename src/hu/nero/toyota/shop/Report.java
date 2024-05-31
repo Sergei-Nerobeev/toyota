@@ -27,13 +27,15 @@ public class Report {
         soldCamrys[countSoldCamry] = camry;
         countSoldCamry++;
     }
-    public void createFileReport(String filename) {
-        try(FileWriter fileWriter = new FileWriter(filename)) {
+
+    public void createFileReport(String filename) { // todo test
+        try (FileWriter fileWriter = new FileWriter(filename)) {
             fileWriter.append(createTextReport());
         } catch (IOException e) {
             System.out.println("Unable to write to report file");
         }
     }
+
     public String createTextReport() {
         var reportBuilder = new StringBuilder();
         reportBuilder.append(managerName).append(" ");
