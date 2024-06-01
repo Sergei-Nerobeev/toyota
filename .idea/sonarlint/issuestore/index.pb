@@ -71,12 +71,8 @@ b
 2src/hu/nero/toyota/detail/CountryOfProduction.java,7\a\7accb2d8483fbf53fca648420e6193b4cc4849a7
 [
 +src/hu/nero/toyota/test/StorageNewTest.java,0\d\0d04dd8fba536ea157c0c1fe5239ae049fa8a845
-X
-(src/hu/nero/toyota/storage/Customer.java,5\a\5ad83cfeb6e7f6051fc6dd53a573a141fef29f5b
 T
 $src/hu/nero/toyota/shop/Manager.java,f\2\f2740d83e3674a23d3a7c12c622b479b7f1a2943
-X
-(src/hu/nero/toyota/test/SaleCarTest.java,4/2/42901d38c24682abb9ac2115f23c7dee73e93637
 `
 0src/hu/nero/toyota/test/SaleCarPositiveTest.java,0\4\04c78c411840a82ddfa2afd0cb259acee0d87acf
 `
@@ -85,3 +81,5 @@ T
 $src/hu/nero/toyota/shop/Cashier.java,1\8\1858fd44fcb7fc992bcc42cd4b4d868be412e439
 S
 #src/hu/nero/toyota/shop/Report.java,0\a\0aa25ca6d1a30d394602c0639f1c06f8fb3fbfb9
+a
+1src/hu/nero/toyota/test/CreateFileReportTest.java,7\8\78d0fdbb0249605e70f5adb602dcd6d4e83c958b

@@ -81,3 +81,5 @@ T
 $src/hu/nero/toyota/shop/Cashier.java,1\8\1858fd44fcb7fc992bcc42cd4b4d868be412e439
 S
 #src/hu/nero/toyota/shop/Report.java,0\a\0aa25ca6d1a30d394602c0639f1c06f8fb3fbfb9
+a
+1src/hu/nero/toyota/test/CreateFileReportTest.java,7\8\78d0fdbb0249605e70f5adb602dcd6d4e83c958b

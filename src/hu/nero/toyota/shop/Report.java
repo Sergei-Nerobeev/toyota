@@ -28,7 +28,7 @@ public class Report {
         countSoldCamry++;
     }
 
-    public void createFileReport(String filename) { // todo test
+    public void createFileReport(String filename) {
         try (FileWriter fileWriter = new FileWriter(filename)) {
             fileWriter.append(createTextReport());
         } catch (IOException e) {
