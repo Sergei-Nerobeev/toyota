@@ -40,10 +40,23 @@ public class Report {
     // создание текста файла
     public String createTextReport() {
 
-        return managerName + "I sold " + getCountSoldCamry() + " Camry";
+        return managerName + "Продано: " + getCountSoldCamry() + " " + getUnits(getCountSoldCamry());
     }
 
     public int getCountSoldCamry() {
         return countSoldCamry;
     }
+
+    public String getUnits(int carCount) {
+        //1 штука, 2,3,4 штуки, 5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 штук
+
+        if (carCount % 10 == 1 && carCount % 100 != 11) {
+            return "штука";
+        } else if (carCount % 10 >= 2 && carCount % 10 <= 4 && (carCount % 100 < 10 || carCount % 100 >= 20)) {
+            return "штуки";
+        } else {
+            return "штук";
+        }
+    }
+
 }
