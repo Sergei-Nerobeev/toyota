@@ -28,6 +28,7 @@ public class Report {
         countSoldCamry++;
     }
 
+    // создание файла с отчетом
     public void createFileReport(String filename) {
         try (FileWriter fileWriter = new FileWriter(filename)) {
             fileWriter.append(createTextReport());
@@ -36,11 +37,13 @@ public class Report {
         }
     }
 
+    // создание текста файла
     public String createTextReport() {
-        var reportBuilder = new StringBuilder();
-        reportBuilder.append(managerName).append(" ");
 
-        return reportBuilder.toString();
+        return managerName + "I sold " + getCountSoldCamry() + " Camry";
     }
 
+    public int getCountSoldCamry() {
+        return countSoldCamry;
+    }
 }

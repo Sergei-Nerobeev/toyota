@@ -13,7 +13,7 @@ public class CreateFileReportTest {
     }
 
     public static void createFileReportTest() throws IOException {
-        Report report = new Report("Joe");
+        Report report = new Report("Joe: ");
         File temp = null;
         try {
             temp = File.createTempFile("report", ".txt");
@@ -22,8 +22,11 @@ public class CreateFileReportTest {
         }
         report.createFileReport(temp.getAbsolutePath());
         FileReader fileReader = new FileReader(temp);
-
-        int wr = fileReader.read();
-        System.out.println(wr);
+        try {
+            int wr = fileReader.read();
+            System.out.println(wr);
+        } catch (FileNotFoundException exception) {
+            System.out.println("File not found!");
+        }
     }
 }
