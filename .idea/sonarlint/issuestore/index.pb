@@ -6,9 +6,9 @@
 
 toyota.iml,1\7\17d99a84a203438effef318489242a4a371406d5
 S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+-.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
 W
 'src/hu/nero/toyota/storage/Storage.java,5/8/584835e5df14123e1539c7a44863034eb24bca77
 _
@@ -74,12 +74,12 @@ b
 T
 $src/hu/nero/toyota/shop/Manager.java,f\2\f2740d83e3674a23d3a7c12c622b479b7f1a2943
 `
-0src/hu/nero/toyota/test/SaleCarPositiveTest.java,0\4\04c78c411840a82ddfa2afd0cb259acee0d87acf
+0src/hu/nero/toyota/test/SaleCarPositiveTest.java,0/4/04c78c411840a82ddfa2afd0cb259acee0d87acf
 `
 0src/hu/nero/toyota/test/SaleCarNegativeTest.java,9\d\9da8407a3351ef1218b0e5e5752c755e60db3962
 T
-$src/hu/nero/toyota/shop/Cashier.java,1\8\1858fd44fcb7fc992bcc42cd4b4d868be412e439
+$src/hu/nero/toyota/shop/Cashier.java,1/8/1858fd44fcb7fc992bcc42cd4b4d868be412e439
 S
-#src/hu/nero/toyota/shop/Report.java,0\a\0aa25ca6d1a30d394602c0639f1c06f8fb3fbfb9
+#src/hu/nero/toyota/shop/Report.java,0/a/0aa25ca6d1a30d394602c0639f1c06f8fb3fbfb9
 a
-1src/hu/nero/toyota/test/CreateFileReportTest.java,7\8\78d0fdbb0249605e70f5adb602dcd6d4e83c958b
+1src/hu/nero/toyota/test/CreateFileReportTest.java,7/8/78d0fdbb0249605e70f5adb602dcd6d4e83c958b
