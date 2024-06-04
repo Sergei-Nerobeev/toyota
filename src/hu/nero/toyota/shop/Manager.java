@@ -12,12 +12,14 @@ public class Manager {
     private final Storage storage;
     private CarFactory carFactory;
     private final double MAX_PRICE = 100_00;
+    private Report report;
 
 
     public Manager(String name, Storage storage, CarFactory carFactory) {
         this.name = name;
         this.storage = storage;
         this.carFactory = carFactory;
+        this.report = new Report(name);
     }
 
     // У менеджера есть метод - продать машину клиенту: возвращается самая дорогая машина,
@@ -39,5 +41,9 @@ public class Manager {
         }
 
         return camry;
+    }
+
+    public void generateFileReport(String fileName) {
+        report.createFileReport(fileName);
     }
 }

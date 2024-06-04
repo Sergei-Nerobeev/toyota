@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class CreateFileReportTest {
     public static void main(String[] args) throws IOException {
-//        createFileReportTest();
-        getUnitsTest();
+        createFileReportTest();
+//        getUnitsTest();
     }
 
     public static void createFileReportTest() throws IOException {

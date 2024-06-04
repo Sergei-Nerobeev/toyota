@@ -10,6 +10,7 @@ import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.shop.Cashier;
 import hu.nero.toyota.shop.Customer;
 import hu.nero.toyota.shop.Manager;
+import hu.nero.toyota.shop.Report;
 import hu.nero.toyota.storage.Storage;
 
 public class Runner {
@@ -39,6 +40,10 @@ public class Runner {
         }
         Cashier cashier = new Cashier();
         cashier.addIncome(camry);
+
+        String reportCamry = "reportCamry";
+
+        manager.generateFileReport(reportCamry);
 
 
     }
