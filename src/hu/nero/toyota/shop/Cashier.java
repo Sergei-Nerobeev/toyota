@@ -7,6 +7,7 @@ public class Cashier {
 
     public void addIncome(Camry camry) {
         income += camry.getPrice();
+        System.out.printf("Sales amount:%s ",getIncome());
     }
 
     public static double getIncome() {

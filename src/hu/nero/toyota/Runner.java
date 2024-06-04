@@ -7,6 +7,7 @@ import hu.nero.toyota.exceptoin.StorageIsEmptyException;
 import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.factory.DetailFactory;
 import hu.nero.toyota.model.Camry;
+import hu.nero.toyota.shop.Cashier;
 import hu.nero.toyota.shop.Customer;
 import hu.nero.toyota.shop.Manager;
 import hu.nero.toyota.storage.Storage;
@@ -20,17 +21,14 @@ public class Runner {
         Camry camry3 = carFactory.createCamry(Color.BLACK, 24_000);
 
         Storage storage = new Storage();
-//        storage.add(camry);
-//        storage.add(camry2);
-//        storage.add(camry3);
-//        storage.takeCamry(camry);
-
+        storage.add(camry);
+        storage.add(camry2);
+        storage.add(camry3);
 
         Customer customer = new Customer("John Smith", 3_000);
         Camry expensiveCamry = storage.getMaxPriceCamry(customer.getMoneyAmount());
         System.out.println("Expensive Camry is: " + expensiveCamry);
-//        Customer customer2 = new Customer("Sara Conor", 15_000);
-//        Customer customer3 = new Customer("Tom Yang", 12_000);
+
 
         Manager manager = new Manager("Manager #1", storage, carFactory);
         try {
@@ -39,6 +37,8 @@ public class Runner {
         } catch (StorageIsEmptyException exception) {
             System.out.println("Camry Storage is empty!");
         }
+        Cashier cashier = new Cashier();
+        cashier.addIncome(camry);
 
 
     }
