@@ -85,3 +85,5 @@ a
 1src/hu/nero/toyota/test/CreateFileReportTest.java,7\8\78d0fdbb0249605e70f5adb602dcd6d4e83c958b
 V
 &src/hu/nero/toyota/shop/Guidebook.java,3\4\343a94e7f85a768e5a26ee7b8cdd5e98451ad635
+;
+ReportCamry,7\a\7a6197a51fba5349d9bc3da6a1336d20a2968c1d
