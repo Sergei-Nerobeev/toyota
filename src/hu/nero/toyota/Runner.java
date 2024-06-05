@@ -39,11 +39,9 @@ public class Runner {
             System.out.println("Camry Storage is empty!");
         }
         Cashier cashier = new Cashier();
-        cashier.addIncome(camry);
+        cashier.countIncome(camry); //todo
 
-        String reportCamry = "reportCamry";
-
-        manager.generateFileReport(reportCamry);
+        manager.generateFileReport();
 
 
     }

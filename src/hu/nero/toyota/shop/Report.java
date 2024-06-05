@@ -5,6 +5,7 @@ import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -18,11 +19,12 @@ public class Report {
     private int countSoldSolara = 0;
     private int countSoldHiance = 0;
     private int countSoldDyna = 0;
-    private Guidebook guidebook;
+    private final Guidebook guidebook;
 
     public Report(String managerName) {
         this.managerName = managerName;
         this.guidebook = new Guidebook();
+
     }
 
     public void addSoldCamry(Camry camry) {
@@ -42,7 +44,7 @@ public class Report {
     // создание текста файла
     public String createTextReport() {
 
-        return managerName + "Продано: " + getCountSoldCamry() + " " + getUnits(getCountSoldCamry()) + " " +
+        return managerName + " Продано: " + getCountSoldCamry() + " " + getUnits(getCountSoldCamry()) + " " +
                 guidebook.getCAMRY_COST_PRICE();
     }
 
@@ -61,5 +63,6 @@ public class Report {
             return "штук";
         }
     }
+
 
 }
