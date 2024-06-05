@@ -35,8 +35,8 @@ public class SaleCarPositiveTest {
         storage.add(camry20);
         storage.add(camry30);
         storage.add(camry40);
-        cashier.addIncome(camry20);
-        cashier.addIncome(camry40);
+        cashier.countIncome(camry20);
+        cashier.countIncome(camry40);
         double inCome = Cashier.getIncome();
 
         Camry actualCamry = null;

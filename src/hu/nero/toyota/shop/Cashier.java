@@ -5,7 +5,7 @@ import hu.nero.toyota.model.Camry;
 public class Cashier {
     private static double income = 0.0;
 
-    public void addIncome(Camry camry) {
+    public void countIncome(Camry camry) {
         income += camry.getPrice();
         System.out.printf("Sales amount: %s ",getIncome());
     }

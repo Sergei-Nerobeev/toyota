@@ -6,6 +6,9 @@ import hu.nero.toyota.factory.CarFactory;
 import hu.nero.toyota.model.Camry;
 import hu.nero.toyota.storage.Storage;
 
+import java.io.File;
+import java.io.IOException;
+
 public class Manager {
 
     private final String name;
@@ -42,8 +45,15 @@ public class Manager {
 
         return camry;
     }
-
-    public void generateFileReport(String fileName) {
-        report.createFileReport(fileName);
+    // создание отчета
+    public void generateFileReport() {
+        File tempFile = null;
+        try {
+            tempFile = File.createTempFile("m_report", ".txt");
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+        report.createFileReport(tempFile.getAbsolutePath());
+        report.createTextReport();
     }
 }
