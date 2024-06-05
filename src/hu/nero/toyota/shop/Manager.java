@@ -53,6 +53,7 @@ public class Manager {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
         report.createFileReport(tempFile.getAbsolutePath());
         report.createTextReport();
     }
