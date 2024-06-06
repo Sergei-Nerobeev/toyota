@@ -15,7 +15,7 @@ public class Manager {
     private final Storage storage;
     private CarFactory carFactory;
     private final double MAX_PRICE = 100_00;
-    private Report report;
+    private final Report report;
 
 
     public Manager(String name, Storage storage, CarFactory carFactory) {
@@ -23,6 +23,7 @@ public class Manager {
         this.storage = storage;
         this.carFactory = carFactory;
         this.report = new Report(name);
+
     }
 
     // У менеджера есть метод - продать машину клиенту: возвращается самая дорогая машина,
@@ -30,6 +31,23 @@ public class Manager {
     // Если машин на складе нет, то идет запрос на сборку и производство по ценам выше,
     // и машина заносится на склад. Если клиенту не хватает денег, то никакую машину он не получает.
     public Camry saleCar(Customer customer) throws StorageIsEmptyException {
+        Camry camry = sellCarHelper(customer);
+        report.addSoldCamry(camry);
+        return camry;
+    }
+    // создание отчета
+    public void generateFileReport() {
+        File tempFile = null;
+        try {
+            tempFile = File.createTempFile("m_report", ".txt");
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+
+        report.createFileReport(tempFile.getAbsolutePath());
+        report.createTextReport();
+    }
+    private Camry sellCarHelper(Customer customer) throws StorageIsEmptyException {
         // Получаем самую дорогую машину, которую может купить покупатель
         Camry camry = storage.getMaxPriceCamry(customer.getMoneyAmount());
         if (camry != null && customer.getMoneyAmount() >= camry.getPrice()) {
@@ -44,17 +62,5 @@ public class Manager {
         }
 
         return camry;
-    }
-    // создание отчета
-    public void generateFileReport() {
-        File tempFile = null;
-        try {
-            tempFile = File.createTempFile("m_report", ".txt");
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
-
-        report.createFileReport(tempFile.getAbsolutePath());
-        report.createTextReport();
     }
 }

@@ -34,12 +34,12 @@ public class Runner {
         Manager manager = new Manager("Manager #1", storage, carFactory);
         try {
             System.out.println(manager.saleCar(customer));
+            System.out.println(manager.saleCar(customer));
+            System.out.println(manager.saleCar(customer));
 
         } catch (StorageIsEmptyException exception) {
             System.out.println("Camry Storage is empty!");
         }
-        Cashier cashier = new Cashier();
-        cashier.countIncome(camry); //todo
 
         manager.generateFileReport();
 
