@@ -5,27 +5,28 @@ import hu.nero.toyota.model.Dyna;
 import hu.nero.toyota.model.Hiance;
 import hu.nero.toyota.model.Solara;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class Report {
     private final String managerName;
     private final Camry[] soldCamrys = new Camry[1_000];
-    private final Solara[] soldSolaras = new Solara[1_000];
-    private final Hiance[] soldHiances = new Hiance[1_000];
-    private final Dyna[] soldDynas = new Dyna[1_000];
     private int countSoldCamry = 0;
-    private int countSoldSolara = 0;
-    private int countSoldHiance = 0;
-    private int countSoldDyna = 0;
+    private final double camryCostPrice = 5000;
+    private final Cashier cashier;
 
     public Report(String managerName) {
         this.managerName = managerName;
+        this.cashier = new Cashier();
+
     }
 
-    public void addSoldCamry(Camry camry) {
+    public int addSoldCamry(Camry camry) {
         soldCamrys[countSoldCamry] = camry;
+        cashier.countIncome(camry);
         countSoldCamry++;
+        return countSoldCamry;
     }
 
     // создание файла с отчетом
@@ -39,13 +40,43 @@ public class Report {
 
     // создание текста файла
     public String createTextReport() {
+        StringBuilder reportBuilder = new StringBuilder();
+        reportBuilder.append(managerName + "\n" + "Report: sold " + countSoldCamry + " " +
+                getUnits(getCountSoldCamry()) + "\n");
 
-        return managerName + "Продано: " + getCountSoldCamry() + " " + getUnits(getCountSoldCamry());
+        joinCarsToReport(reportBuilder);
+        return reportBuilder.toString();
+
     }
+
+    private void joinCarsToReport(StringBuilder report) {
+        double totalIncome = 0;
+        for (Camry soldCamry : soldCamrys) {
+            if (soldCamry == null) {
+                break;
+            }
+            totalIncome = soldCamry.getPrice();
+
+            report.append("CostPrice Camry: -- " + camryCostPrice + " ")
+                    .append(" SoldPrice Camry: -- ")
+                    .append(soldCamry.getPrice())
+                    .append("\n");
+        }
+        double sum = totalIncome - camryCostPrice;
+        report.append("Total:  income -- ")
+                .append(totalIncome)
+                .append(", outcome -- ")
+                .append(camryCostPrice)
+                .append(", Profit: ")
+                .append(sum);
+
+    }
+
 
     public int getCountSoldCamry() {
         return countSoldCamry;
     }
+
 
     public String getUnits(int carCount) {
         //1 штука, 2,3,4 штуки, 5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 штук
@@ -58,5 +89,6 @@ public class Report {
             return "штук";
         }
     }
+
 
 }
