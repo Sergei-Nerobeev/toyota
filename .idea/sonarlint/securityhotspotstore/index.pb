@@ -83,8 +83,6 @@ S
 #src/hu/nero/toyota/shop/Report.java,0/a/0aa25ca6d1a30d394602c0639f1c06f8fb3fbfb9
 a
 1src/hu/nero/toyota/test/CreateFileReportTest.java,7/8/78d0fdbb0249605e70f5adb602dcd6d4e83c958b
-V
-&src/hu/nero/toyota/shop/Guidebook.java,3/4/343a94e7f85a768e5a26ee7b8cdd5e98451ad635
 ;
 reportCamry,9\e\9e0bac2317775e971f26d16537e0eb621b363c96
 6
